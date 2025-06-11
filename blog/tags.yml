@@ -17,3 +17,74 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+# AutoNateAI Blog Tags
+psychology:
+  label: Psychology
+  permalink: /psychology
+  description: Posts about psychological concepts, theories, and human behavior
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Posts about artificial intelligence, machine learning, and AI systems
+
+technology:
+  label: Technology
+  permalink: /technology
+  description: Posts about technology trends, impacts, and innovations
+
+dependency:
+  label: Dependency
+  permalink: /dependency
+  description: Posts about human dependency on technology and systems
+
+consciousness:
+  label: Consciousness
+  permalink: /consciousness
+  description: Posts about human consciousness, awareness, and cognition
+
+social:
+  label: Social
+  permalink: /social
+  description: Posts about social dynamics, group behavior, and societal trends
+
+culture:
+  label: Culture
+  permalink: /culture
+  description: Posts about cultural trends, influences, and phenomena
+
+unrest:
+  label: Unrest
+  permalink: /unrest
+  description: Posts about social unrest, protests, and civil disorder
+
+collective:
+  label: Collective
+  permalink: /collective
+  description: Posts about collective behavior, group psychology, and shared experiences
+
+entertainment:
+  label: Entertainment
+  permalink: /entertainment
+  description: Posts about entertainment media, streaming, and content consumption
+
+addiction:
+  label: Addiction
+  permalink: /addiction
+  description: Posts about behavioral and substance addictions and dependencies
+
+neuroscience:
+  label: Neuroscience
+  permalink: /neuroscience
+  description: Posts about brain function, neural processes, and cognitive science
+
+digital:
+  label: Digital
+  permalink: /digital
+  description: Posts about digital media, online behavior, and virtual experiences
+
+test:
+  label: Test
+  permalink: /test
+  description: Test content and examples

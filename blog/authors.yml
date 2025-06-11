@@ -23,3 +23,14 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+    
+autonateai:
+  name: AutoNateAI
+  title: Psychology x AI x Culture Insights
+  url: https://autonateai.com
+  image_url: /img/authors/autonateai.png
+  page: true
+  socials:
+    x: autonateai
+    linkedin: autonateai
+    github: autonateai
