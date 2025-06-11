@@ -107,7 +107,7 @@ function HeroSection() {
             Unlock Your Strategic Intelligence
           </Link>
           <Link
-            to="/ai/knowledge-base"
+            to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
             className="button button--secondary button--lg">
             See What You've Been Missing
           </Link>
@@ -242,7 +242,7 @@ function IntersectionSection() {
               
               <div className={styles.naturalCta2}>
                 <Link
-                  to="/ai/knowledge-base"
+                  to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
                   className="button button--outline button--secondary button--lg">
                   Explore the Intersection
                 </Link>
@@ -320,7 +320,7 @@ function BrainPotentialSection() {
             
             <div className={styles.brainCta}>
               <Link
-                to="/ai/knowledge-base"
+                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
                 className="button button--outline button--primary button--lg">
                 Unlock Your Full Potential
               </Link>
@@ -613,7 +613,7 @@ function FinalCtaSection() {
               </Link>
               
               <Link
-                to="/ai/knowledge-base"
+                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
                 className="button button--secondary button--lg">
                 Browse Knowledge Base
               </Link>
