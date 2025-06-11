@@ -298,7 +298,7 @@ function FinalCTASection() {
             </AnimatedSection>
             
             <AnimatedSection delay={1000} className={styles.fadeIn}>
-              <div className={styles.ctaButtons}>
+              <div id="contact-form" className={styles.ctaButtons}>
                 <Link
                   className={clsx('button button--primary button--lg', styles.ctaPrimaryLarge)}
                   to="#contact-form">

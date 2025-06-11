@@ -276,9 +276,9 @@ function BrainPotentialSection() {
             <div className={styles.brainGrid}>
               <div className={styles.brainVisual}>
                 <img 
-                  src="/img/brain-connections.svg" 
-                  alt="Neural connections in the brain" 
-                  className={styles.brainImage} 
+                  src="/img/undraw_docusaurus_tree.svg" 
+                  alt="Neural connections visualization" 
+                  className={styles.brainImage}
                 />
               </div>
               
@@ -437,9 +437,9 @@ function SocialProofSection() {
                 </div>
                 <div className={styles.testimonialAuthor}>
                   <img 
-                    src="/img/testimonials/sarah-j.jpg" 
+                    src="/img/undraw_docusaurus_mountain.svg" 
                     alt="Sarah J." 
-                    className={styles.authorAvatar} 
+                    className={styles.testimonialAuthorImage} 
                   />
                   <div className={styles.authorInfo}>
                     <div className={styles.authorName}>Sarah J.</div>
@@ -456,9 +456,9 @@ function SocialProofSection() {
                 </div>
                 <div className={styles.testimonialAuthor}>
                   <img 
-                    src="/img/testimonials/michael-t.jpg" 
+                    src="/img/logo.svg" 
                     alt="Michael T." 
-                    className={styles.authorAvatar} 
+                    className={styles.testimonialAuthorImage} 
                   />
                   <div className={styles.authorInfo}>
                     <div className={styles.authorName}>Michael T.</div>
@@ -475,9 +475,9 @@ function SocialProofSection() {
                 </div>
                 <div className={styles.testimonialAuthor}>
                   <img 
-                    src="/img/testimonials/elena-r.jpg" 
+                    src="/img/docusaurus.png" 
                     alt="Elena R." 
-                    className={styles.authorAvatar} 
+                    className={styles.testimonialAuthorImage} 
                   />
                   <div className={styles.authorInfo}>
                     <div className={styles.authorName}>Elena R.</div>
@@ -522,9 +522,9 @@ function FutureYouSection() {
             <div className={styles.futureGrid}>
               <div className={styles.futureImage}>
                 <img 
-                  src="/img/future-you.jpg" 
+                  src="/img/undraw_docusaurus_react.svg" 
                   alt="Future version of yourself" 
-                  className={styles.futureVisual} 
+                  className={styles.personaImage}
                 />
               </div>
               
