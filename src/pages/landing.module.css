@@ -1,0 +1,507 @@
+/**
+ * Landing page styles with cyberpunk theme
+ */
+
+/* Hero Section - The Awakening */
+.heroAwakening {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 1200px;
+  width: 100%;
+  padding: 3rem;
+  position: relative;
+  z-index: 2;
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.consciousnessIndicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pulseDot {
+  width: 12px;
+  height: 12px;
+  background: var(--ai-green);
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: pulse 2s infinite;
+}
+
+.statusText {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ai-green);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, var(--ai-green) 0%, var(--psychology-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+}
+
+.heroStats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  background: rgba(26, 54, 93, 0.6);
+  border-radius: var(--card-border-radius);
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  border: 1px solid rgba(56, 161, 105, 0.3);
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--ai-green);
+  box-shadow: 0 8px 20px rgba(56, 161, 105, 0.2);
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--ai-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heroCTAGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Recognition Section */
+.recognitionSection {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.recognitionCard {
+  padding: 3rem;
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.recognitionCard h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--psychology-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.feelingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.feelingItem {
+  display: flex;
+  align-items: flex-start;
+}
+
+.feelingIcon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  margin-top: -0.5rem;
+}
+
+.feelingItem p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.recognitionInsight {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--ai-green);
+  background: rgba(56, 161, 105, 0.1);
+  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+}
+
+.recognitionInsight blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.naturalCta {
+  font-size: 1.1rem;
+}
+
+.inlineCta {
+  color: var(--ai-green);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.inlineCta:hover {
+  color: var(--psychology-purple);
+  text-decoration: none;
+}
+
+.inlineCta:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--ai-green), var(--psychology-purple));
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.inlineCta:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Margin Ads */
+.marginAd {
+  position: fixed;
+  width: 200px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.marginAdVisible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  animation: float 6s ease-in-out infinite;
+}
+
+.leftMargin {
+  left: 20px;
+  top: 20vh;
+}
+
+.rightMargin {
+  right: 20px;
+  top: 60vh;
+}
+
+.workshopTeaser .adCard {
+  background: linear-gradient(135deg, var(--psychology-purple) 0%, var(--culture-orange) 100%);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.workshopTeaser .adCard:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 12px 24px rgba(128, 90, 213, 0.3);
+}
+
+.closeAdBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.workshopTeaser:hover .closeAdBtn {
+  opacity: 1;
+}
+
+.adEmoji {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.adText {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.adArrow, .adLink {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Intersection Revealed Section */
+.intersectionReveal {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.intersectionVisual {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.intersectionCard {
+  padding: 3rem;
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.intersectionCard h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--ai-green) 0%, var(--psychology-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.vennDiagramModern {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.psychology {
+  background: linear-gradient(135deg, var(--psychology-purple) 0%, rgba(128, 90, 213, 0.7) 100%);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ai {
+  background: linear-gradient(135deg, var(--ai-green) 0%, rgba(56, 161, 105, 0.7) 100%);
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.culture {
+  background: linear-gradient(135deg, var(--culture-orange) 0%, rgba(237, 137, 54, 0.7) 100%);
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.intersectionCenter {
+  background: linear-gradient(135deg, var(--neural-blue) 0%, rgba(26, 54, 93, 0.9) 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 0 30px rgba(26, 54, 93, 0.5);
+  z-index: 10;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.circleContent h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.circleContent p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.centerContent {
+  text-align: center;
+  color: white;
+}
+
+.centerContent h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--ai-green) 0%, var(--psychology-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.centerContent p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.intersectionExplanation {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.intersectionExplanation p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.proofPoints {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.proofPoint {
+  background: rgba(26, 54, 93, 0.4);
+  padding: 1rem;
+  border-radius: var(--card-border-radius);
+  border-left: 3px solid var(--ai-green);
+}
+
+.proofPoint strong {
+  color: var(--ai-green);
+}
+
+.naturalCta2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(56, 161, 105, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(56, 161, 105, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(56, 161, 105, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 996px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroContent {
+    padding: 2rem;
+  }
+  
+  .marginAd {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroStats {
+    flex-direction: column;
+  }
+  
+  .heroCTAGroup {
+    flex-direction: column;
+  }
+}
