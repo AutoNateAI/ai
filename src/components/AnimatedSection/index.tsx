@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, ReactNode } from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 export interface AnimatedSectionProps {
   children: ReactNode;
@@ -16,30 +17,50 @@ export default function AnimatedSection({
   threshold = 0.1,
 }: AnimatedSectionProps): JSX.Element {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = React.useState(false);
+  // Start with visible=true in SSR and non-browser environments
+  const [isVisible, setIsVisible] = React.useState(!ExecutionEnvironment.canUseDOM);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
-          observer.unobserve(entry.target);
+    // Set a backup timer to make content visible even if IntersectionObserver fails
+    const backupTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1000); // Show after 1 second as fallback
+
+    // Only use IntersectionObserver in browser environments
+    if (ExecutionEnvironment.canUseDOM && 'IntersectionObserver' in window) {
+      try {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                setIsVisible(true);
+              }, delay);
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold }
+        );
+
+        if (sectionRef.current) {
+          observer.observe(sectionRef.current);
         }
-      },
-      { threshold }
-    );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+        return () => {
+          clearTimeout(backupTimer);
+          if (sectionRef.current) {
+            observer.unobserve(sectionRef.current);
+          }
+        };
+      } catch (err) {
+        console.error('Error with IntersectionObserver:', err);
+        setIsVisible(true); // Show content if observer fails
+        return () => clearTimeout(backupTimer);
       }
-    };
+    } else {
+      // If IntersectionObserver isn't available, make content visible
+      setIsVisible(true);
+      return () => clearTimeout(backupTimer);
+    }
   }, [delay, threshold]);
 
   return (
