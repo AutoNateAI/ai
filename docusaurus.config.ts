@@ -88,6 +88,7 @@ const config: Config = {
           label: 'Knowledge Base',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/workshops', label: 'Workshops', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',

@@ -1,0 +1,355 @@
+/**
+ * CSS for the workshops page with floating cards UI
+ */
+
+/* Global page styles */
+.workshopsPage {
+  --neural-blue: #1a365d;
+  --ai-green: #38a169;
+  --psychology-purple: #805ad5;
+  --culture-orange: #ed8936;
+  --soft-gray-100: #f7fafc;
+  --soft-gray-200: #edf2f7;
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, var(--neural-blue) 0%, var(--ai-green) 100%);
+  padding: 6rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.heroCard {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--neural-blue), var(--psychology-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.workshopPreviewStats {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  background: linear-gradient(135deg, var(--psychology-purple) 0%, var(--culture-orange) 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.ctaPrimary {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, var(--psychology-purple) 0%, var(--culture-orange) 100%);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Story Section */
+.storySection {
+  padding: 5rem 0;
+}
+
+.storyCard {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cardIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.insightHighlight {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--psychology-purple);
+  margin: 2rem 0 1rem;
+  padding: 1rem;
+  border-left: 4px solid var(--psychology-purple);
+  background-color: var(--soft-gray-100);
+  text-align: left;
+}
+
+/* Workshop Experience Section */
+.workshopExperience {
+  padding: 5rem 0;
+  background-color: var(--soft-gray-100);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--psychology-purple) 0%, var(--culture-orange) 100%);
+  margin: 1rem auto 0;
+}
+
+.experienceCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.experienceCard {
+  position: relative;
+  padding-top: 3rem;
+}
+
+.cardNumber {
+  position: absolute;
+  top: -1rem;
+  left: 1.5rem;
+  background: linear-gradient(135deg, var(--neural-blue) 0%, var(--ai-green) 100%);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.cardHighlight {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: var(--soft-gray-200);
+  border-radius: 4px;
+  font-weight: 500;
+  color: var(--neural-blue);
+}
+
+/* Transformation Outcomes Section */
+.transformationOutcomes {
+  padding: 5rem 0;
+}
+
+.outcomesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.outcomeCard {
+  height: 100%;
+}
+
+.outcomeIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefitList {
+  padding-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.benefitList li {
+  margin-bottom: 0.75rem;
+}
+
+/* Workshop Types Section */
+.workshopTypes {
+  padding: 5rem 0;
+  background-color: var(--soft-gray-100);
+}
+
+.workshopCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Social Proof Section */
+.socialProof {
+  padding: 5rem 0;
+}
+
+.testimonialCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Final CTA Section */
+.finalCta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--neural-blue) 0%, var(--ai-green) 100%);
+  position: relative;
+}
+
+.ctaCard {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.urgencyElements {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.scarcityNote {
+  background-color: rgba(237, 137, 54, 0.1);
+  border: 1px solid var(--culture-orange);
+  color: var(--culture-orange);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.nextWorkshop {
+  background-color: rgba(128, 90, 213, 0.1);
+  border: 1px solid var(--psychology-purple);
+  color: var(--psychology-purple);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.ctaPrimaryLarge {
+  background: linear-gradient(135deg, var(--psychology-purple) 0%, var(--culture-orange) 100%);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.ctaSecondary {
+  border: 2px solid white;
+}
+
+.guarantee {
+  margin-top: 2rem;
+}
+
+.guaranteeBadge {
+  background: linear-gradient(135deg, var(--neural-blue) 0%, var(--ai-green) 100%);
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Animation Classes */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fadeInUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .heroCard,
+[data-theme='dark'] .ctaCard {
+  background: rgba(36, 37, 38, 0.9);
+}
+
+[data-theme='dark'] .insightHighlight {
+  background-color: rgba(128, 90, 213, 0.1);
+}
+
+[data-theme='dark'] .workshopExperience,
+[data-theme='dark'] .workshopTypes {
+  background-color: var(--ifm-background-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .heroSection {
+    padding: 4rem 0 2rem;
+  }
+  
+  .heroCard {
+    padding: 2rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+  
+  .workshopPreviewStats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .experienceCardsGrid,
+  .outcomesGrid,
+  .workshopCardsContainer,
+  .testimonialCards {
+    grid-template-columns: 1fr;
+  }
+  
+  .urgencyElements,
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

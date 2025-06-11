@@ -4,27 +4,221 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* AutoNateAI Cyberpunk Theme - Based on the logo */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary Colors */
+  --ifm-color-primary: #38a169; /* AI Green */
+  --ifm-color-primary-dark: #2f8a59;
+  --ifm-color-primary-darker: #2c8154;
+  --ifm-color-primary-darkest: #246a45;
+  --ifm-color-primary-light: #3fb879;
+  --ifm-color-primary-lighter: #47c181;
+  --ifm-color-primary-lightest: #62ca94;
+  
+  /* Secondary Colors */
+  --neural-blue: #1a365d;
+  --psychology-purple: #805ad5;
+  --culture-orange: #ed8936;
+  
+  /* Neutral Colors */
+  --soft-gray-100: #f7fafc;
+  --soft-gray-200: #edf2f7;
+  
+  /* Other Variables */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Font Settings */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-heading-font-family: 'Poppins', var(--ifm-font-family-base);
+  
+  /* Card Styles */
+  --card-border-radius: 16px;
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Navbar Colors */
+  --ifm-navbar-background-color: var(--neural-blue);
+  --ifm-navbar-link-color: rgba(255, 255, 255, 0.85);
+  --ifm-navbar-link-hover-color: #ffffff;
+  
+  /* Footer Colors */
+  --ifm-footer-background-color: var(--neural-blue);
+  --ifm-footer-link-color: rgba(255, 255, 255, 0.75);
+  --ifm-footer-link-hover-color: #ffffff;
+}
+
+/* Global Cyberpunk Styles */
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+}
+
+h1 {
+  background: linear-gradient(135deg, var(--neural-blue), var(--psychology-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Styling */
+.button--primary {
+  background: linear-gradient(135deg, var(--psychology-purple) 0%, var(--culture-orange) 100%);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styling */
+.card {
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section Enhancement */
+.hero--primary {
+  background: linear-gradient(135deg, var(--neural-blue) 0%, var(--ai-green) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+/* Navbar Enhancement */
+.navbar {
+  backdrop-filter: blur(10px);
+}
+
+.navbar__brand {
+  color: white;
+}
+
+.navbar__logo {
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Footer Enhancement */
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Code Block Enhancement */
+div[class^='codeBlockContainer'] {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Table Enhancement */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+th {
+  background: var(--neural-blue);
+  color: white;
+}
+
+/* Admonition Enhancement */
+.alert {
+  border-radius: 12px;
+  border-left-width: 6px;
+}
+
+.alert--info {
+  border-left-color: var(--psychology-purple);
+  background-color: rgba(128, 90, 213, 0.1);
+}
+
+.alert--warning {
+  border-left-color: var(--culture-orange);
+  background-color: rgba(237, 137, 54, 0.1);
+}
+
+.alert--success {
+  border-left-color: var(--ai-green);
+  background-color: rgba(56, 161, 105, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 996px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .navbar__logo {
+    height: 2rem;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #47c181; /* Brighter green for dark mode */
+  --ifm-color-primary-dark: #3fb879;
+  --ifm-color-primary-darker: #3aad72;
+  --ifm-color-primary-darkest: #308f5e;
+  --ifm-color-primary-light: #5ac88f;
+  --ifm-color-primary-lighter: #67cc98;
+  --ifm-color-primary-lightest: #85d7ad;
+  
+  /* Dark Mode Secondary Colors - More vibrant */
+  --neural-blue: #2a4a7d;
+  --psychology-purple: #9d78e5;
+  --culture-orange: #f59e56;
+  
+  /* Dark Mode Card Styles */
+  --card-bg: rgba(36, 37, 38, 0.95);
+  --card-border: 1px solid rgba(80, 80, 80, 0.2);
+  
+  /* Dark Mode Navbar Colors */
+  --ifm-navbar-background-color: rgba(26, 54, 93, 0.95);
+  --ifm-navbar-link-color: rgba(255, 255, 255, 0.9);
+  
+  /* Dark Mode Footer Colors */
+  --ifm-footer-background-color: rgba(26, 54, 93, 0.95);
+  
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
