@@ -46,6 +46,8 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          path: 'knowledge-base',
+          routeBasePath: 'knowledge-base',
         },
         blog: {
           showReadingTime: true,
@@ -81,9 +83,9 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'knowledgeBaseSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Knowledge Base',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -97,11 +99,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Knowledge Base',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Knowledge Base',
+              to: '/knowledge-base/intelligence/cognitive-intelligence-foundations',
             },
           ],
         },

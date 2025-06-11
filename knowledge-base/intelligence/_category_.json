@@ -1,0 +1,8 @@
+{
+    "label":  "Intelligence",
+    "link":  {
+                 "type":  "generated-index",
+                 "description":  "Core concepts about human and artificial intelligence, cognitive capabilities, and decision-making frameworks"
+             },
+    "position":  1
+}
