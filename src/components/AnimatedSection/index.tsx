@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useLayoutEffect } from 'react';
 import clsx from 'clsx';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -41,7 +41,7 @@ function AnimatedSectionBrowser({
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Set a fallback timer to ensure content becomes visible
     // even if IntersectionObserver fails or is unavailable
     const fallbackTimer = setTimeout(() => {
