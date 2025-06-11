@@ -38,7 +38,7 @@ function WorkshopAd({ position, emoji, text, linkText, delay }) {
   };
 
   const handleClick = () => {
-    window.location.href = '/workshops';
+    window.location.href = '/ai/workshops';
   };
 
   const positionClass = position === 'left' ? styles.leftMargin : styles.rightMargin;
@@ -102,12 +102,12 @@ function HeroSection() {
         
         <div className={styles.heroCTAGroup}>
           <Link
-            to="/workshops"
+            to="/ai/workshops"
             className="button button--primary button--lg">
             Unlock Your Strategic Intelligence
           </Link>
           <Link
-            to="/knowledge-base"
+            to="/ai/knowledge-base"
             className="button button--secondary button--lg">
             See What You've Been Missing
           </Link>
@@ -164,7 +164,7 @@ function RecognitionSection() {
             </div>
             
             <div className={styles.naturalCta}>
-              <p>This is exactly why AutoNateAI exists. <Link to="/workshops" className={styles.inlineCta}>Join the community</Link> that's mapping these invisible connections.</p>
+              <p>This is exactly why AutoNateAI exists. <Link to="/ai/workshops" className={styles.inlineCta}>Join the community</Link> that's mapping these invisible connections.</p>
             </div>
           </div>
         </AnimatedSection>
@@ -242,7 +242,7 @@ function IntersectionSection() {
               
               <div className={styles.naturalCta2}>
                 <Link
-                  to="/knowledge-base/intersection/strategic-intelligence-framework"
+                  to="/ai/knowledge-base"
                   className="button button--outline button--secondary button--lg">
                   Explore the Intersection
                 </Link>
@@ -320,7 +320,7 @@ function BrainPotentialSection() {
             
             <div className={styles.brainCta}>
               <Link
-                to="/knowledge-base/intelligence/unlock-cognitive-potential"
+                to="/ai/knowledge-base"
                 className="button button--outline button--primary button--lg">
                 Unlock Your Full Potential
               </Link>
@@ -398,7 +398,7 @@ function CommunitySection() {
             
             <div className={styles.communityCta}>
               <Link
-                to="/community"
+                to="/ai/workshops"
                 className="button button--outline button--secondary button--lg">
                 Join Our Community
               </Link>
@@ -489,7 +489,7 @@ function SocialProofSection() {
             
             <div className={styles.socialCta}>
               <Link
-                to="/workshops"
+                to="/ai/workshops"
                 className="button button--outline button--primary button--lg">
                 Join Them in Transformation
               </Link>
@@ -567,7 +567,7 @@ function FutureYouSection() {
             
             <div className={styles.futureCta}>
               <Link
-                to="/workshops"
+                to="/ai/workshops"
                 className="button button--primary button--lg">
                 Become Your Future Self
               </Link>
@@ -607,13 +607,13 @@ function FinalCtaSection() {
             
             <div className={styles.finalButtons}>
               <Link
-                to="/workshops"
+                to="/ai/workshops"
                 className="button button--primary button--lg">
                 Explore Our Workshops
               </Link>
               
               <Link
-                to="/knowledge-base"
+                to="/ai/knowledge-base"
                 className="button button--secondary button--lg">
                 Browse Knowledge Base
               </Link>
