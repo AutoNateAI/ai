@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -276,7 +277,7 @@ function BrainPotentialSection() {
             <div className={styles.brainGrid}>
               <div className={styles.brainVisual}>
                 <img 
-                  src="/img/undraw_docusaurus_tree.svg" 
+                  src={useBaseUrl('img/undraw_docusaurus_tree.svg')} 
                   alt="Neural connections visualization" 
                   className={styles.brainImage}
                 />
@@ -437,7 +438,7 @@ function SocialProofSection() {
                 </div>
                 <div className={styles.testimonialAuthor}>
                   <img 
-                    src="/img/undraw_docusaurus_mountain.svg" 
+                    src={useBaseUrl('img/undraw_docusaurus_mountain.svg')} 
                     alt="Sarah J." 
                     className={styles.testimonialAuthorImage} 
                   />
@@ -456,7 +457,7 @@ function SocialProofSection() {
                 </div>
                 <div className={styles.testimonialAuthor}>
                   <img 
-                    src="/img/logo.svg" 
+                    src={useBaseUrl('img/logo.svg')} 
                     alt="Michael T." 
                     className={styles.testimonialAuthorImage} 
                   />
@@ -475,7 +476,7 @@ function SocialProofSection() {
                 </div>
                 <div className={styles.testimonialAuthor}>
                   <img 
-                    src="/img/docusaurus.png" 
+                    src={useBaseUrl('img/docusaurus.png')} 
                     alt="Elena R." 
                     className={styles.testimonialAuthorImage} 
                   />
@@ -522,7 +523,7 @@ function FutureYouSection() {
             <div className={styles.futureGrid}>
               <div className={styles.futureImage}>
                 <img 
-                  src="/img/undraw_docusaurus_react.svg" 
+                  src={useBaseUrl('img/undraw_docusaurus_react.svg')} 
                   alt="Future version of yourself" 
                   className={styles.personaImage}
                 />

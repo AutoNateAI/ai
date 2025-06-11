@@ -40,6 +40,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  // GitHub pages deployment requires careful path configuration
+  // We've added trailingSlash above for path resolution,
+  // and use clientModules below for proper baseUrl path resolution
+
   presets: [
     [
       'classic',
