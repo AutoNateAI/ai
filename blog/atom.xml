@@ -274,8 +274,8 @@
             <uri>https://autonateai.com</uri>
         </author>
         <category label="Psychology" term="Psychology"/>
-        <category label="gaming" term="gaming"/>
-        <category label="motivation" term="motivation"/>
+        <category label="Gaming" term="Gaming"/>
+        <category label="Motivation" term="Motivation"/>
         <category label="Technology" term="Technology"/>
         <category label="Neuroscience" term="Neuroscience"/>
         <category label="Digital" term="Digital"/>
@@ -398,7 +398,7 @@
         <category label="Social" term="Social"/>
         <category label="Digital" term="Digital"/>
         <category label="Technology" term="Technology"/>
-        <category label="anxiety" term="anxiety"/>
+        <category label="Anxiety" term="Anxiety"/>
         <category label="Consciousness" term="Consciousness"/>
     </entry>
     <entry>
@@ -534,7 +534,7 @@
         <category label="Social" term="Social"/>
         <category label="Culture" term="Culture"/>
         <category label="Collective" term="Collective"/>
-        <category label="tribal" term="tribal"/>
+        <category label="Tribal" term="Tribal"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
