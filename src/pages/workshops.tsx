@@ -8,11 +8,11 @@ import styles from './workshops.module.css';
 import FloatingCard from '../components/FloatingCard';
 import WorkshopCard from '../components/WorkshopCard';
 import TestimonialCard from '../components/TestimonialCard';
-import AnimatedSection from '../components/AnimatedSection';
+// AnimatedSection removed for stability on deployment
 
 function HeroSection() {
   return (
-    <AnimatedSection>
+    <div className="section">
       <section className={styles.heroSection}>
         <div className="container">
           <FloatingCard className={styles.heroCard}>
@@ -36,13 +36,13 @@ function HeroSection() {
           </FloatingCard>
         </div>
       </section>
-    </AnimatedSection>
+    </div>
   );
 }
 
 function ProblemDiscoverySection() {
   return (
-    <AnimatedSection delay={200}>
+    <div className="section">
       <section className={styles.storySection}>
         <div className="container">
           <FloatingCard className={styles.storyCard}>
@@ -58,13 +58,13 @@ function ProblemDiscoverySection() {
           </FloatingCard>
         </div>
       </section>
-    </AnimatedSection>
+    </div>
   );
 }
 
 function WorkshopExperienceSection() {
   return (
-    <AnimatedSection delay={300}>
+    <div className="section">
       <section className={styles.workshopExperience}>
         <div className="container">
           <Heading as="h2" className={styles.sectionTitle}>
@@ -72,42 +72,42 @@ function WorkshopExperienceSection() {
           </Heading>
           
           <div className={styles.experienceCardsGrid}>
-            <AnimatedSection delay={400} className={styles.slideInRight}>
+            <div className={styles.slideInRight}>
               <FloatingCard className={styles.experienceCard}>
                 <div className={styles.cardNumber}>01</div>
                 <Heading as="h3">Pattern Recognition</Heading>
                 <p>Learn to identify psychological patterns in real-time cultural data and AI behavior</p>
                 <div className={styles.cardHighlight}>Live trend analysis exercises</div>
               </FloatingCard>
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={600} className={styles.slideInRight}>
+            <div className={styles.slideInRight}>
               <FloatingCard className={styles.experienceCard}>
                 <div className={styles.cardNumber}>02</div>
                 <Heading as="h3">Framework Application</Heading>
                 <p>Apply proprietary frameworks to predict emerging trends and AI developments</p>
                 <div className={styles.cardHighlight}>Hands-on prediction modeling</div>
               </FloatingCard>
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={800} className={styles.slideInRight}>
+            <div className={styles.slideInRight}>
               <FloatingCard className={styles.experienceCard}>
                 <div className={styles.cardNumber}>03</div>
                 <Heading as="h3">Strategic Implementation</Heading>
                 <p>Develop action plans that leverage these insights for your specific context</p>
                 <div className={styles.cardHighlight}>Personalized strategy sessions</div>
               </FloatingCard>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
-    </AnimatedSection>
+    </div>
   );
 }
 
 function TransformationOutcomesSection() {
   return (
-    <AnimatedSection delay={400}>
+    <div className="section">
       <section className={styles.transformationOutcomes}>
         <div className="container">
           <Heading as="h2" className={styles.sectionTitle}>
@@ -115,7 +115,7 @@ function TransformationOutcomesSection() {
           </Heading>
           
           <div className={styles.outcomesGrid}>
-            <AnimatedSection delay={500} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <FloatingCard className={styles.outcomeCard}>
                 <div className={styles.outcomeIcon}>🎯</div>
                 <Heading as="h3">Predictive Advantage</Heading>
@@ -126,9 +126,9 @@ function TransformationOutcomesSection() {
                   <li>Competitive intelligence</li>
                 </ul>
               </FloatingCard>
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={700} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <FloatingCard className={styles.outcomeCard}>
                 <div className={styles.outcomeIcon}>🤖</div>
                 <Heading as="h3">AI Collaboration Mastery</Heading>
@@ -139,9 +139,9 @@ function TransformationOutcomesSection() {
                   <li>Automation decision trees</li>
                 </ul>
               </FloatingCard>
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={900} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <FloatingCard className={styles.outcomeCard}>
                 <div className={styles.outcomeIcon}>🌐</div>
                 <Heading as="h3">Cultural Intelligence</Heading>
@@ -152,17 +152,17 @@ function TransformationOutcomesSection() {
                   <li>Influence network analysis</li>
                 </ul>
               </FloatingCard>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
-    </AnimatedSection>
+    </div>
   );
 }
 
 function WorkshopTypesSection() {
   return (
-    <AnimatedSection delay={500}>
+    <div className="section">
       <section id="workshop-types" className={styles.workshopTypes}>
         <div className="container">
           <Heading as="h2" className={styles.sectionTitle}>
@@ -225,13 +225,13 @@ function WorkshopTypesSection() {
           </div>
         </div>
       </section>
-    </AnimatedSection>
+    </div>
   );
 }
 
 function SocialProofSection() {
   return (
-    <AnimatedSection delay={600}>
+    <div className="section">
       <section className={styles.socialProof}>
         <div className="container">
           <Heading as="h2" className={styles.sectionTitle}>
@@ -239,33 +239,33 @@ function SocialProofSection() {
           </Heading>
           
           <div className={styles.testimonialCards}>
-            <AnimatedSection delay={700} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <TestimonialCard
                 content="The workshop completely changed how I think about AI strategy. I can now predict market shifts 4-6 months ahead."
                 authorName="Sarah Chen"
                 authorTitle="VP Strategy, TechCorp"
               />
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={800} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <TestimonialCard
                 content="Finally, someone who understands that AI isn't just about tools—it's about psychology. Game-changing insights."
                 authorName="Marcus Rodriguez"
                 authorTitle="Creative Director, BrandStudio"
               />
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={900} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <TestimonialCard
                 content="The network mapping techniques have 3x'd our content engagement. Worth every minute and dollar."
                 authorName="Jessica Park"
                 authorTitle="Content Strategy Lead"
               />
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
-    </AnimatedSection>
+    </div>
   );
 }
 
@@ -280,7 +280,7 @@ function FinalCTASection() {
   });
 
   return (
-    <AnimatedSection delay={700} className={styles.zoomIn}>
+    <div className={styles.zoomIn}>
       <section id="contact" className={styles.finalCta}>
         <div className="container">
           <FloatingCard className={styles.ctaCard}>
@@ -290,14 +290,14 @@ function FinalCTASection() {
               who can bridge human psychology and artificial intelligence.
             </p>
             
-            <AnimatedSection delay={900} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <div className={styles.urgencyElements}>
                 <div className={styles.scarcityNote}>Limited to 12 participants per workshop</div>
                 <div className={styles.nextWorkshop}>Next Workshop: {formattedDate}</div>
               </div>
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={1000} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <div id="contact-form" className={styles.ctaButtons}>
                 <Link
                   className={clsx('button button--primary button--lg', styles.ctaPrimaryLarge)}
@@ -310,18 +310,18 @@ function FinalCTASection() {
                   Schedule Consultation Call
                 </Link>
               </div>
-            </AnimatedSection>
+            </div>
             
-            <AnimatedSection delay={1100} className={styles.fadeIn}>
+            <div className={styles.fadeIn}>
               <div className={styles.guarantee}>
                 <div className={styles.guaranteeBadge}>100% Application Guarantee</div>
                 <p>If you don't apply at least 3 frameworks within 30 days, full refund.</p>
               </div>
-            </AnimatedSection>
+            </div>
           </FloatingCard>
         </div>
       </section>
-    </AnimatedSection>
+    </div>
   );
 }
 
@@ -350,7 +350,7 @@ function useScrollAnimation() {
   }, []);
 }
 
-export default function Workshops(): JSX.Element {
+export default function Workshops() {
   const {siteConfig} = useDocusaurusContext();
   useScrollAnimation();
   

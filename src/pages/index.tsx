@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import AnimatedSection from '@site/src/components/AnimatedSection';
+// AnimatedSection removed for stability on deployment
 import FloatingCard from '@site/src/components/FloatingCard';
 
 import styles from './landing.module.css';
@@ -132,7 +132,7 @@ function RecognitionSection() {
   return (
     <section className={styles.recognitionSection}>
       <div className={styles.contentContainer}>
-        <AnimatedSection>
+        <div className="section">
           <div className={styles.recognitionCard}>
             <h2>You've Felt It, Haven't You?</h2>
             
@@ -168,7 +168,7 @@ function RecognitionSection() {
               <p>This is exactly why AutoNateAI exists. <Link to="/ai/workshops" className={styles.inlineCta}>Join the community</Link> that's mapping these invisible connections.</p>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
       
       {/* Margin Ad 2 - appears after 7 seconds */}
@@ -188,7 +188,7 @@ function IntersectionSection() {
   return (
     <section className={styles.intersectionReveal}>
       <div className={styles.intersectionVisual}>
-        <AnimatedSection>
+        <div className="section">
           <div className={styles.intersectionCard}>
             <h2>The Intersection Revealed</h2>
             
@@ -250,7 +250,7 @@ function IntersectionSection() {
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
       
       {/* Margin Ad 3 - appears after 12 seconds */}
@@ -270,7 +270,7 @@ function BrainPotentialSection() {
   return (
     <section className={styles.brainPotential}>
       <div className={styles.brainContent}>
-        <AnimatedSection>
+        <div className="section">
           <div className={styles.brainCard}>
             <h2>Your Brain's Untapped Potential</h2>
             
@@ -327,7 +327,7 @@ function BrainPotentialSection() {
               </Link>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
       
       {/* Margin Ad 4 - appears after 15 seconds */}
@@ -347,7 +347,7 @@ function CommunitySection() {
   return (
     <section className={styles.communityExperience}>
       <div className={styles.communityContent}>
-        <AnimatedSection>
+        <div className="section">
           <div className={styles.communityCard}>
             <h2>The Community Experience</h2>
             
@@ -405,7 +405,7 @@ function CommunitySection() {
               </Link>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
       
       {/* Margin Ad 5 - appears after 10 seconds */}
@@ -425,7 +425,7 @@ function SocialProofSection() {
   return (
     <section className={styles.socialProof}>
       <div className={styles.socialContent}>
-        <AnimatedSection>
+        <div className="section">
           <div className={styles.socialCard}>
             <h2>Transformation Stories</h2>
             
@@ -496,7 +496,7 @@ function SocialProofSection() {
               </Link>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
       
       {/* Margin Ad 6 - appears after 8 seconds */}
@@ -516,7 +516,7 @@ function FutureYouSection() {
   return (
     <section className={styles.futureYou}>
       <div className={styles.futureContent}>
-        <AnimatedSection>
+        <div className="section">
           <div className={styles.futureCard}>
             <h2>The Future You</h2>
             
@@ -574,7 +574,7 @@ function FutureYouSection() {
               </Link>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
       
       {/* Margin Ad 7 - appears after 13 seconds */}
@@ -594,7 +594,7 @@ function FinalCtaSection() {
   return (
     <section className={styles.finalCta}>
       <div className={styles.finalContent}>
-        <AnimatedSection>
+        <div className="section">
           <div className={styles.finalCard}>
             <div className={styles.finalTitle}>
               Ready to Unlock Your Strategic Intelligence?
@@ -634,7 +634,7 @@ function FinalCtaSection() {
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </div>
       </div>
       
       {/* Margin Ad 8 - appears after 5 seconds */}
