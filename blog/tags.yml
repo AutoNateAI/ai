@@ -88,3 +88,24 @@ test:
   label: Test
   permalink: /test
   description: Test content and examples
+
+# Added missing tags
+gaming:
+  label: Gaming
+  permalink: /gaming
+  description: Posts about video games, gaming culture, and player psychology
+
+motivation:
+  label: Motivation
+  permalink: /motivation
+  description: Posts about human motivation, drive, and achievement psychology
+
+anxiety:
+  label: Anxiety
+  permalink: /anxiety
+  description: Posts about anxiety disorders, stress responses, and coping mechanisms
+
+tribal:
+  label: Tribal
+  permalink: /tribal
+  description: Posts about tribal psychology, group identity, and community dynamics
