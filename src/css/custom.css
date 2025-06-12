@@ -231,7 +231,7 @@ h3 {
   transform: translateY(-1px);
 }
 
-.navbar-sidebar {
+/* .navbar-sidebar {
   background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(20px) !important;
 }
@@ -244,7 +244,7 @@ h3 {
 .navbar-sidebar .navbar__link {
   color: var(--autonate-text-primary) !important;
   text-shadow: none !important;
-}
+} */
 
 /* Section Spacing - Premium Layout */
 .section {
