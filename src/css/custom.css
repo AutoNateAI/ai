@@ -1,62 +1,261 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * AutoNateAI Professional Theme - Bright Cognitive Clarity
+ * Where Psychology Meets AI Meets Strategic Thinking
  */
 
-/* AutoNateAI Cyberpunk Theme - Based on the logo */
+/* AutoNateAI Professional Light Theme */
 :root {
-  /* Primary Colors */
-  --ifm-color-primary: #38a169; /* AI Green */
-  --ifm-color-primary-dark: #2f8a59;
-  --ifm-color-primary-darker: #2c8154;
-  --ifm-color-primary-darkest: #246a45;
-  --ifm-color-primary-light: #3fb879;
-  --ifm-color-primary-lighter: #47c181;
-  --ifm-color-primary-lightest: #62ca94;
+  /* Brand Gradient Colors - Light Professional Application */
+  --primary-light-teal: #0EA5E9;
+  --primary-light-blue: #38BDF8;
+  --secondary-light-purple: #8B5CF6;
+  --secondary-soft-lavender: #A78BFA;
+  --accent-warm-peach: #FB923C;
+  --accent-soft-coral: #FCA5A5;
   
-  /* Secondary Colors */
-  --neural-blue: #1a365d;
-  --psychology-purple: #805ad5;
-  --culture-orange: #ed8936;
+  /* Background Colors - Bright & Airy */
+  --background-white: #FFFFFF;
+  --background-light-gray: #FAFAFA;
+  --background-soft-gray: #F8FAFC;
   
-  /* Neutral Colors */
-  --soft-gray-100: #f7fafc;
-  --soft-gray-200: #edf2f7;
+  /* Supporting Neutrals */
+  --neutral-light-gray: #E2E8F0;
+  --neutral-medium-gray: #CBD5E1;
+  
+  /* Text Colors - Executive Level */
+  --text-primary: #334155;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+  
+  /* Primary Docusaurus Colors */
+  --ifm-color-primary: var(--primary-light-teal);
+  --ifm-color-primary-dark: #0284C7;
+  --ifm-color-primary-darker: #0369A1;
+  --ifm-color-primary-darkest: #075985;
+  --ifm-color-primary-light: var(--primary-light-blue);
+  --ifm-color-primary-lighter: #7DD3FC;
+  --ifm-color-primary-lightest: #BAE6FD;
   
   /* Background Colors */
-  --site-background: #0f172a; /* Dark cyberpunk background */
-  --site-background-light: #1e293b; /* Slightly lighter for contrast */
+  --ifm-background-color: var(--background-white);
+  --ifm-background-surface-color: var(--background-light-gray);
+  --ifm-color-content: var(--text-primary);
+  --ifm-color-content-secondary: var(--text-secondary);
   
-  /* Other Variables */
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  
-  /* Font Settings */
+  /* Font Settings - Executive Typography */
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --ifm-heading-font-family: 'Poppins', var(--ifm-font-family-base);
+  --ifm-heading-font-family: 'Inter', var(--ifm-font-family-base);
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
   
-  /* Card Styles */
-  --card-border-radius: 16px;
-  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --card-bg: rgba(30, 41, 59, 0.8); /* Dark card background with transparency */
-  --card-border: 1px solid rgba(56, 161, 105, 0.3); /* Subtle green border */
+  /* Card Styles - Premium Light */
+  --card-border-radius: 12px;
+  --card-shadow: 0 4px 24px rgba(51, 65, 85, 0.08);
+  --card-shadow-hover: 0 8px 40px rgba(51, 65, 85, 0.12);
+  --card-bg: var(--background-white);
+  --card-border: 1px solid var(--neutral-light-gray);
   
-  /* Navbar Colors */
-  --ifm-navbar-background-color: var(--neural-blue);
-  --ifm-navbar-link-color: rgba(255, 255, 255, 0.85);
-  --ifm-navbar-link-hover-color: #ffffff;
+  /* Navbar Colors - Clean & Bright */
+  --ifm-navbar-background-color: var(--background-white);
+  --ifm-navbar-link-color: var(--text-primary);
+  --ifm-navbar-link-hover-color: var(--primary-light-teal);
+  --ifm-navbar-shadow: 0 2px 16px rgba(51, 65, 85, 0.08);
   
   /* Footer Colors */
-  --ifm-footer-background-color: var(--neural-blue);
-  --ifm-footer-link-color: rgba(255, 255, 255, 0.75);
-  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-footer-background-color: var(--background-soft-gray);
+  --ifm-footer-link-color: var(--text-secondary);
+  --ifm-footer-link-hover-color: var(--primary-light-teal);
   
-  /* Global Page Colors */
-  --ifm-background-color: var(--site-background);
-  --ifm-background-surface-color: var(--site-background-light);
-  --ifm-color-content: rgba(255, 255, 255, 0.9);
-  --ifm-color-content-secondary: rgba(255, 255, 255, 0.7);
+  /* Brand Gradients - Subtle Application */
+  --gradient-primary: linear-gradient(135deg, var(--primary-light-teal) 0%, var(--primary-light-blue) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-light-purple) 0%, var(--secondary-soft-lavender) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-warm-peach) 0%, var(--accent-soft-coral) 100%);
+  --gradient-text: linear-gradient(135deg, var(--primary-light-teal) 0%, var(--secondary-light-purple) 100%);
+  
+  /* Code highlighting */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(14, 165, 233, 0.1);
+}
+
+/* Global Professional Styles */
+
+/* Typography Enhancements - Executive Level */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-font-weight-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+/* Gradient Text Utility */
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Styling - Premium Professional */
+.button--primary {
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 8px;
+  font-weight: var(--ifm-font-weight-semibold);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.2);
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
+  text-decoration: none;
+}
+
+.button--secondary {
+  background: var(--background-white);
+  border: 2px solid var(--neutral-light-gray);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-weight: var(--ifm-font-weight-semibold);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button--secondary:hover {
+  background: var(--background-light-gray);
+  border-color: var(--primary-light-teal);
+  color: var(--primary-light-teal);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* Card Styling - Clean & Professional */
+.card {
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  background: var(--card-bg);
+  border: var(--card-border);
+  color: var(--text-primary);
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* Navbar Enhancements */
+.navbar {
+  box-shadow: var(--ifm-navbar-shadow);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--neutral-light-gray);
+}
+
+.navbar__brand {
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+/* Section Spacing - Premium Layout */
+.section {
+  padding: 4rem 0;
+}
+
+.section--large {
+  padding: 6rem 0;
+}
+
+/* Container Enhancements */
+.container {
+  max-width: 1200px;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.bg-light {
+  background-color: var(--background-light-gray);
+}
+
+.bg-soft {
+  background-color: var(--background-soft-gray);
+}
+
+/* Animation Utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Pulse Animation for Status Indicators */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section--large {
+    padding: 4rem 0;
+  }
 }
 
 /* Global Cyberpunk Styles */

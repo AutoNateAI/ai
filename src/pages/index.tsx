@@ -5,646 +5,486 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-// AnimatedSection removed for stability on deployment
-import FloatingCard from '@site/src/components/FloatingCard';
 
 import styles from './landing.module.css';
 
-// Workshop Ad Component
-function WorkshopAd({ position, emoji, text, linkText, delay }) {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const adRef = useRef(null);
-
-  useEffect(() => {
-    // Show the ad after the specified delay
-    const showTimer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
-
-    // Hide the ad after 15 seconds
-    const hideTimer = setTimeout(() => {
-      setIsVisible(false);
-    }, delay + 15000); // 15 seconds after appearing
-
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
-    };
-  }, [delay]);
-
-  const handleClose = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsVisible(false);
-  };
-
-  const handleClick = () => {
-    window.location.href = '/ai/workshops';
-  };
-
-  const positionClass = position === 'left' ? styles.leftMargin : styles.rightMargin;
-
-  return (
-    <div 
-      className={clsx(
-        styles.marginAd, 
-        positionClass, 
-        styles.workshopTeaser,
-        isVisible && styles.marginAdVisible
-      )}
-      ref={adRef}
-      onClick={handleClick}
-    >
-      <div className={styles.adCard}>
-        <div className={styles.closeAdBtn} onClick={handleClose}>×</div>
-        <div className={styles.adEmoji}>{emoji}</div>
-        <div className={styles.adText}>{text}</div>
-        <div className={styles.adArrow}>{linkText}</div>
-      </div>
-    </div>
-  );
-}
-
-// Hero Section - The Awakening
+// Hero Section - Strategic Intelligence Hub
 function HeroSection() {
   return (
-    <section className={styles.heroAwakening}>
-      <div className={styles.heroContent}>
-        <div className={styles.consciousnessIndicator}>
-          <span className={styles.pulseDot}></span>
-          <span className={styles.statusText}>Consciousness: Expanding</span>
-        </div>
-        
-        <Heading as="h1" className={styles.heroTitle}>
-          Your Mind Deserves More Than<br/>
-          <span className={styles.gradientText}>Surface-Level Thinking</span>
-        </Heading>
-        
-        <p className={styles.heroSubtitle}>
-          Join 2,170+ professionals who've discovered the hidden patterns where 
-          psychology meets AI meets culture. Because your brain is capable of 
-          connections others can't even see.
-        </p>
-        
-        <div className={styles.heroStats}>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>98%</div>
-            <div className={styles.statLabel}>Apply insights immediately</div>
+    <section className={styles.heroStrategic}>
+      <div className="container">
+        <div className={styles.heroContent}>
+          <div className={styles.cognitiveIndicator}>
+            <span className={styles.pulseDot}></span>
+            <span className={styles.statusText}>Cognitive Intelligence: Active</span>
           </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>3x</div>
-            <div className={styles.statLabel}>Faster pattern recognition</div>
+          
+          <Heading as="h1" className={styles.heroTitle}>
+            Where Psychology Meets AI<br/>
+            <span className="gradient-text">Meets Strategic Thinking</span>
+          </Heading>
+          
+          <p className={styles.heroSubtitle}>
+            Trusted by forward-thinking professionals who optimize their cognitive approach 
+            through frameworks that enhance mental bandwidth and strategic performance.
+          </p>
+          
+          <div className={styles.heroValueProps}>
+            <div className={styles.valueCard}>
+              <div className={styles.valueIcon}>🧠</div>
+              <div className={styles.valueText}>Cognitive Frameworks</div>
+            </div>
+            <div className={styles.valueCard}>
+              <div className={styles.valueIcon}>⚡</div>
+              <div className={styles.valueText}>Mental Models</div>
+            </div>
+            <div className={styles.valueCard}>
+              <div className={styles.valueIcon}>🎯</div>
+              <div className={styles.valueText}>Strategic Insights</div>
+            </div>
           </div>
-          <div className={styles.statCard}>
-            <div className={styles.statNumber}>500+</div>
-            <div className={styles.statLabel}>Strategic advantages gained</div>
+          
+          <div className={styles.heroCTAGroup}>
+            <Link
+              to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
+              className="button button--primary button--lg">
+              Explore the Frameworks
+            </Link>
+            <Link
+              to="/ai/workshops"
+              className="button button--secondary button--lg">
+              Discover Strategic Insights
+            </Link>
           </div>
-        </div>
-        
-        <div className={styles.heroCTAGroup}>
-          <Link
-            to="/ai/workshops"
-            className="button button--primary button--lg">
-            Unlock Your Strategic Intelligence
-          </Link>
-          <Link
-            to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
-            className="button button--secondary button--lg">
-            See What You've Been Missing
-          </Link>
         </div>
       </div>
-      
-      {/* Margin Ad 1 - appears after 3 seconds */}
-      <WorkshopAd 
-        position="left" 
-        emoji="🧠⚡" 
-        text="Workshops that make your neurons dance" 
-        linkText="→" 
-        delay={3000} 
-      />
     </section>
   );
 }
 
-// Section 1 - The Recognition
+// Section 1 - Light Recognition of Mental Clarity
 function RecognitionSection() {
   return (
-    <section className={styles.recognitionSection}>
-      <div className={styles.contentContainer}>
-        <div className="section">
-          <div className={styles.recognitionCard}>
-            <h2>You've Felt It, Haven't You?</h2>
-            
-            <div className={styles.feelingGrid}>
-              <div className={styles.feelingItem}>
-                <div className={styles.feelingIcon}>🤔</div>
-                <p>That moment when you see a trend explode and think "I could have predicted that"</p>
-              </div>
-              
-              <div className={styles.feelingItem}>
-                <div className={styles.feelingIcon}>🎯</div>
-                <p>The frustration of having great ideas but missing the perfect timing</p>
-              </div>
-              
-              <div className={styles.feelingItem}>
-                <div className={styles.feelingIcon}>🔍</div>
-                <p>Knowing there are patterns everywhere, but lacking the framework to see them</p>
-              </div>
-              
-              <div className={styles.feelingItem}>
-                <div className={styles.feelingIcon}>⚡</div>
-                <p>That hunger for insights that actually change how you think, not just what you know</p>
-              </div>
+    <section className={clsx(styles.recognitionLight, 'section bg-light')}>
+      <div className="container">
+        <div className={styles.sectionContent}>
+          <div className={styles.lightHeader}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              Frameworks That Optimize Cognitive Performance
+            </Heading>
+            <p className={styles.sectionSubtitle}>
+              Professional cognitive optimization through strategic intelligence and mental model mastery.
+            </p>
+          </div>
+          
+          <div className={styles.clarityGrid}>
+            <div className={styles.clarityCard}>
+              <div className={styles.cardIcon}>🔍</div>
+              <h3 className={styles.cardTitle}>Pattern Recognition</h3>
+              <p className={styles.cardDescription}>
+                Transform from information processor to strategic pattern recognizer through 
+                AI-enhanced cognitive frameworks.
+              </p>
             </div>
             
-            <div className={styles.recognitionInsight}>
-              <blockquote>
-                "Your intuition is right. The patterns ARE there. You just need the right lens to see them."
-              </blockquote>
+            <div className={styles.clarityCard}>
+              <div className={styles.cardIcon}>💡</div>
+              <h3 className={styles.cardTitle}>Mental Bandwidth</h3>
+              <p className={styles.cardDescription}>
+                Recover cognitive capacity for high-value strategic activities by optimizing 
+                how your mind processes information.
+              </p>
             </div>
             
-            <div className={styles.naturalCta}>
-              <p>This is exactly why AutoNateAI exists. <Link to="/ai/workshops" className={styles.inlineCta}>Join the community</Link> that's mapping these invisible connections.</p>
+            <div className={styles.clarityCard}>
+              <div className={styles.cardIcon}>🚀</div>
+              <h3 className={styles.cardTitle}>Strategic Decision-Making</h3>
+              <p className={styles.cardDescription}>
+                Enhance decision-making under uncertainty through psychology-backed AI collaboration.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Margin Ad 2 - appears after 7 seconds */}
-      <WorkshopAd 
-        position="right" 
-        emoji="🎭🤖" 
-        text="Where serious meets silly (but outcomes are serious)" 
-        linkText="Workshops →" 
-        delay={7000} 
-      />
     </section>
   );
 }
 
-// Intersection Revealed Section
+// Section 2 - Gentle AI-Human Partnership Visualization
 function IntersectionSection() {
   return (
-    <section className={styles.intersectionReveal}>
-      <div className={styles.intersectionVisual}>
-        <div className="section">
-          <div className={styles.intersectionCard}>
-            <h2>The Intersection Revealed</h2>
-            
-            <div className={styles.vennDiagramModern}>
-              <div className={clsx(styles.circle, styles.psychology)}>
-                <div className={styles.circleContent}>
-                  <h3>Psychology</h3>
-                  <p>Human behavior, cognitive biases, and decision frameworks</p>
-                </div>
-              </div>
-              
-              <div className={clsx(styles.circle, styles.ai)}>
-                <div className={styles.circleContent}>
-                  <h3>AI</h3>
-                  <p>Machine learning, neural networks, and algorithmic thinking</p>
-                </div>
-              </div>
-              
-              <div className={clsx(styles.circle, styles.culture)}>
-                <div className={styles.circleContent}>
-                  <h3>Culture</h3>
-                  <p>Trends, social dynamics, and emerging patterns</p>
-                </div>
-              </div>
-              
-              <div className={styles.intersectionCenter}>
-                <div className={styles.centerContent}>
-                  <h3>Strategic Intelligence</h3>
-                  <p>Where the magic happens</p>
-                </div>
+    <section className={clsx(styles.intersectionGentle, 'section')}>
+      <div className="container">
+        <div className={styles.partnershipContent}>
+          <div className={styles.partnershipHeader}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              AI as Cognitive Enhancement, Not Replacement
+            </Heading>
+            <p className={styles.sectionSubtitle}>
+              Distributed cognition where AI handles processing, humans provide strategic interpretation.
+            </p>
+          </div>
+          
+          <div className={styles.partnershipDiagram}>
+            <div className={styles.partnershipColumn}>
+              <div className={styles.partnershipCard}>
+                <div className={styles.partnershipIcon}>🤖</div>
+                <h3 className={styles.partnershipTitle}>AI Handles</h3>
+                <ul className={styles.partnershipList}>
+                  <li>Information filtering & sorting</li>
+                  <li>Pattern highlighting</li>
+                  <li>Data processing & validation</li>
+                  <li>Real-time monitoring</li>
+                </ul>
               </div>
             </div>
             
-            <div className={styles.intersectionExplanation}>
-              <p>
-                Most people operate in silos, missing the powerful connections between these domains. 
-                At AutoNateAI, we've mapped the hidden patterns where these fields converge—unlocking 
-                insights that give you a strategic advantage in today's complex world.
-              </p>
-              
-              <div className={styles.proofPoints}>
-                <div className={styles.proofPoint}>
-                  <p><strong>Pattern Recognition:</strong> Identify emerging trends before they become mainstream</p>
-                </div>
-                <div className={styles.proofPoint}>
-                  <p><strong>Decision Frameworks:</strong> Make better choices with multi-disciplinary mental models</p>
-                </div>
-                <div className={styles.proofPoint}>
-                  <p><strong>Strategic Foresight:</strong> Navigate complexity with confidence and clarity</p>
-                </div>
-              </div>
-              
-              <div className={styles.naturalCta2}>
-                <Link
-                  to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
-                  className="button button--outline button--secondary button--lg">
-                  Explore the Intersection
-                </Link>
+            <div className={styles.partnershipArrow}>
+              <span className={styles.arrowIcon}>⚡</span>
+              <span className={styles.arrowText}>Enhanced Collaboration</span>
+            </div>
+            
+            <div className={styles.partnershipColumn}>
+              <div className={styles.partnershipCard}>
+                <div className={styles.partnershipIcon}>🧠</div>
+                <h3 className={styles.partnershipTitle}>You Focus On</h3>
+                <ul className={styles.partnershipList}>
+                  <li>Strategic interpretation</li>
+                  <li>Creative problem-solving</li>
+                  <li>Decision-making under uncertainty</li>
+                  <li>Innovation & insight generation</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Margin Ad 3 - appears after 12 seconds */}
-      <WorkshopAd 
-        position="left" 
-        emoji="🔍🔮" 
-        text="Spot patterns others miss with our Pattern Recognition workshop" 
-        linkText="Learn more →" 
-        delay={12000} 
-      />
     </section>
   );
 }
 
-// Brain's Potential Section
+// Section 3 - Light Cognitive Framework Presentation
 function BrainPotentialSection() {
   return (
-    <section className={styles.brainPotential}>
-      <div className={styles.brainContent}>
-        <div className="section">
-          <div className={styles.brainCard}>
-            <h2>Your Brain's Untapped Potential</h2>
-            
-            <div className={styles.brainGrid}>
-              <div className={styles.brainVisual}>
-                <img 
-                  src={useBaseUrl('img/undraw_docusaurus_tree.svg')} 
-                  alt="Neural connections visualization" 
-                  className={styles.brainImage}
-                />
-              </div>
-              
-              <div className={styles.brainCapabilities}>
-                <div className={styles.capabilityCard}>
-                  <div className={styles.capabilityTitle}>Pattern Recognition</div>
-                  <div className={styles.capabilityDescription}>
-                    Your brain is wired to spot patterns, but most people never train this 
-                    capability. Our workshops activate your natural pattern recognition 
-                    abilities across disciplines.
-                  </div>
-                </div>
-                
-                <div className={styles.capabilityCard}>
-                  <div className={styles.capabilityTitle}>Mental Models</div>
-                  <div className={styles.capabilityDescription}>
-                    Powerful frameworks for decision-making that combine insights from 
-                    psychology, AI, and cultural analysis—giving you an edge in any situation.
-                  </div>
-                </div>
-                
-                <div className={styles.capabilityCard}>
-                  <div className={styles.capabilityTitle}>Strategic Foresight</div>
-                  <div className={styles.capabilityDescription}>
-                    Develop the ability to anticipate trends and changes before they happen, 
-                    positioning yourself ahead of the curve in your career and personal growth.
-                  </div>
-                </div>
-                
-                <div className={styles.capabilityCard}>
-                  <div className={styles.capabilityTitle}>Cognitive Flexibility</div>
-                  <div className={styles.capabilityDescription}>
-                    Learn to rapidly switch between different thinking modes and perspectives, 
-                    adapting to new information and complex situations with ease.
-                  </div>
-                </div>
-              </div>
+    <section className={clsx(styles.frameworkLight, 'section bg-soft')}>
+      <div className="container">
+        <div className={styles.frameworkContent}>
+          <div className={styles.frameworkHeader}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              The Cognitive Load Optimization Method
+            </Heading>
+            <p className={styles.sectionSubtitle}>
+              Four-phase approach to transforming cognitive overload into strategic advantage.
+            </p>
+          </div>
+          
+          <div className={styles.frameworkGrid}>
+            <div className={styles.frameworkPhase}>
+              <div className={styles.phaseNumber}>01</div>
+              <h3 className={styles.phaseTitle}>Cognitive Audit</h3>
+              <p className={styles.phaseDescription}>
+                Identify where mental energy is wasted on low-value processing tasks.
+              </p>
             </div>
             
-            <div className={styles.brainCta}>
-              <Link
-                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
-                className="button button--outline button--primary button--lg">
-                Unlock Your Full Potential
-              </Link>
+            <div className={styles.frameworkPhase}>
+              <div className={styles.phaseNumber}>02</div>
+              <h3 className={styles.phaseTitle}>AI-Human Task Allocation</h3>
+              <p className={styles.phaseDescription}>
+                Design optimal division of cognitive labor between AI and human intelligence.
+              </p>
+            </div>
+            
+            <div className={styles.frameworkPhase}>
+              <div className={styles.phaseNumber}>03</div>
+              <h3 className={styles.phaseTitle}>Strategic Thinking Amplification</h3>
+              <p className={styles.phaseDescription}>
+                Channel recovered cognitive capacity toward high-value strategic activities.
+              </p>
+            </div>
+            
+            <div className={styles.frameworkPhase}>
+              <div className={styles.phaseNumber}>04</div>
+              <h3 className={styles.phaseTitle}>Continuous Optimization</h3>
+              <p className={styles.phaseDescription}>
+                Monitor and adjust AI-human collaboration based on strategic outcomes.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Margin Ad 4 - appears after 15 seconds */}
-      <WorkshopAd 
-        position="right" 
-        emoji="🧠🔥" 
-        text="Mental Models Workshop: Build your strategic toolkit" 
-        linkText="Reserve your spot →" 
-        delay={15000} 
-      />
     </section>
   );
 }
 
-// Community Experience Section
+// Section 4 - Cognitive Intelligence Library
 function CommunitySection() {
   return (
-    <section className={styles.communityExperience}>
-      <div className={styles.communityContent}>
-        <div className="section">
-          <div className={styles.communityCard}>
-            <h2>The Community Experience</h2>
-            
-            <div className={styles.communityFeatures}>
-              <div className={styles.communityFeature}>
-                <div className={styles.featureIcon}>🔥</div>
-                <div className={styles.featureTitle}>Live Workshops</div>
-                <div className={styles.featureDescription}>
-                  Interactive sessions where theory meets practice. Engage with experts and 
-                  peers in a collaborative environment designed for breakthrough insights.
-                </div>
-              </div>
-              
-              <div className={styles.communityFeature}>
-                <div className={styles.featureIcon}>👥</div>
-                <div className={styles.featureTitle}>Peer Network</div>
-                <div className={styles.featureDescription}>
-                  Connect with forward-thinking professionals across industries who share 
-                  your curiosity and drive for intellectual growth.
-                </div>
-              </div>
-              
-              <div className={styles.communityFeature}>
-                <div className={styles.featureIcon}>📖</div>
-                <div className={styles.featureTitle}>Knowledge Base</div>
-                <div className={styles.featureDescription}>
-                  Access our curated library of resources, frameworks, and case studies 
-                  that bridge psychology, AI, and cultural analysis.
-                </div>
+    <section className={clsx(styles.intelligenceLibrary, 'section')}>
+      <div className="container">
+        <div className={styles.libraryContent}>
+          <div className={styles.libraryHeader}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              Strategic Intelligence in Your Inbox
+            </Heading>
+            <p className={styles.sectionSubtitle}>
+              Explore frameworks that optimize cognitive performance through Psychology × AI × Culture insights.
+            </p>
+          </div>
+          
+          <div className={styles.libraryGrid}>
+            <div className={styles.libraryCard}>
+              <div className={styles.categoryTag}>Cognitive Frameworks</div>
+              <h3 className={styles.libraryTitle}>Pattern Recognition Systems</h3>
+              <p className={styles.libraryPreview}>
+                How to transform your brain from data processor to strategic pattern recognizer...
+              </p>
+              <div className={styles.libraryMeta}>
+                <span className={styles.readTime}>8 min read</span>
+                <Link to="/ai/knowledge-base" className={styles.readMore}>Read →</Link>
               </div>
             </div>
             
-            <div className={styles.communityStats}>
-              <div className={styles.communityStat}>
-                <div className={styles.statValue}>2,170+</div>
-                <div className={styles.statLabel}>Community Members</div>
-              </div>
-              
-              <div className={styles.communityStat}>
-                <div className={styles.statValue}>87%</div>
-                <div className={styles.statLabel}>Report Expanded Network</div>
-              </div>
-              
-              <div className={styles.communityStat}>
-                <div className={styles.statValue}>24</div>
-                <div className={styles.statLabel}>Industries Represented</div>
+            <div className={styles.libraryCard}>
+              <div className={styles.categoryTag}>Mental Models</div>
+              <h3 className={styles.libraryTitle}>Cognitive Load Distribution</h3>
+              <p className={styles.libraryPreview}>
+                Frameworks for optimal AI-human task allocation in strategic thinking...
+              </p>
+              <div className={styles.libraryMeta}>
+                <span className={styles.readTime}>12 min read</span>
+                <Link to="/ai/knowledge-base" className={styles.readMore}>Read →</Link>
               </div>
             </div>
             
-            <div className={styles.communityCta}>
-              <Link
-                to="/ai/workshops"
-                className="button button--outline button--secondary button--lg">
-                Join Our Community
-              </Link>
+            <div className={styles.libraryCard}>
+              <div className={styles.categoryTag}>Strategic Intelligence</div>
+              <h3 className={styles.libraryTitle}>Decision-Making Under Uncertainty</h3>
+              <p className={styles.libraryPreview}>
+                Psychology-backed approaches to enhance strategic decision-making capabilities...
+              </p>
+              <div className={styles.libraryMeta}>
+                <span className={styles.readTime}>10 min read</span>
+                <Link to="/ai/knowledge-base" className={styles.readMore}>Read →</Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Margin Ad 5 - appears after 10 seconds */}
-      <WorkshopAd 
-        position="left" 
-        emoji="🌐👥" 
-        text="Connect with forward-thinking professionals in our community" 
-        linkText="Learn more →" 
-        delay={10000} 
-      />
     </section>
   );
 }
 
-// Social Proof Section
+// Section 5 - Visual Intelligence Showcase
 function SocialProofSection() {
   return (
-    <section className={styles.socialProof}>
-      <div className={styles.socialContent}>
-        <div className="section">
-          <div className={styles.socialCard}>
-            <h2>Transformation Stories</h2>
-            
-            <div className={styles.testimonialGrid}>
-              <div className={styles.testimonialCard}>
-                <div className={styles.testimonialQuote}>
-                  "The mental models I learned at AutoNateAI's workshops have completely 
-                  transformed how I approach complex problems. I'm seeing connections 
-                  that were invisible to me before."
-                </div>
-                <div className={styles.testimonialAuthor}>
-                  <img 
-                    src={useBaseUrl('img/undraw_docusaurus_mountain.svg')} 
-                    alt="Sarah J." 
-                    className={styles.testimonialAuthorImage} 
-                  />
-                  <div className={styles.authorInfo}>
-                    <div className={styles.authorName}>Sarah J.</div>
-                    <div className={styles.authorRole}>Product Strategy Director</div>
-                  </div>
-                </div>
+    <section className={clsx(styles.visualShowcase, 'section bg-light')}>
+      <div className="container">
+        <div className={styles.showcaseContent}>
+          <div className={styles.showcaseHeader}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              Visual Intelligence That Enhances Understanding
+            </Heading>
+            <p className={styles.sectionSubtitle}>
+              High-quality visual content that represents the Psychology × AI × Culture intersection.
+            </p>
+          </div>
+          
+          <div className={styles.showcaseGrid}>
+            <div className={styles.showcaseCard}>
+              <div className={styles.showcaseImage}>
+                <div className={styles.imagePreview}>🧠⚡🎯</div>
               </div>
-              
-              <div className={styles.testimonialCard}>
-                <div className={styles.testimonialQuote}>
-                  "I've attended dozens of professional workshops, but none have had the 
-                  lasting impact of AutoNateAI's programs. The intersection of psychology, 
-                  AI, and culture is where the real magic happens."
-                </div>
-                <div className={styles.testimonialAuthor}>
-                  <img 
-                    src={useBaseUrl('img/logo.svg')} 
-                    alt="Michael T." 
-                    className={styles.testimonialAuthorImage} 
-                  />
-                  <div className={styles.authorInfo}>
-                    <div className={styles.authorName}>Michael T.</div>
-                    <div className={styles.authorRole}>Innovation Lead</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className={styles.testimonialCard}>
-                <div className={styles.testimonialQuote}>
-                  "The strategic intelligence framework has given me a competitive edge 
-                  in my industry. I'm now able to anticipate trends months before my 
-                  colleagues even notice them."
-                </div>
-                <div className={styles.testimonialAuthor}>
-                  <img 
-                    src={useBaseUrl('img/docusaurus.png')} 
-                    alt="Elena R." 
-                    className={styles.testimonialAuthorImage} 
-                  />
-                  <div className={styles.authorInfo}>
-                    <div className={styles.authorName}>Elena R.</div>
-                    <div className={styles.authorRole}>Strategic Foresight Consultant</div>
-                  </div>
-                </div>
+              <div className={styles.showcaseCaption}>
+                Cognitive Framework Visualizations
               </div>
             </div>
             
-            <div className={styles.socialCta}>
-              <Link
-                to="/ai/workshops"
-                className="button button--outline button--primary button--lg">
-                Join Them in Transformation
-              </Link>
+            <div className={styles.showcaseCard}>
+              <div className={styles.showcaseImage}>
+                <div className={styles.imagePreview}>📊🔍💡</div>
+              </div>
+              <div className={styles.showcaseCaption}>
+                Strategic Intelligence Diagrams
+              </div>
+            </div>
+            
+            <div className={styles.showcaseCard}>
+              <div className={styles.showcaseImage}>
+                <div className={styles.imagePreview}>🤖🧠🚀</div>
+              </div>
+              <div className={styles.showcaseCaption}>
+                AI-Human Partnership Models
+              </div>
+            </div>
+            
+            <div className={styles.showcaseCard}>
+              <div className={styles.showcaseImage}>
+                <div className={styles.imagePreview}>🎨📈⚡</div>
+              </div>
+              <div className={styles.showcaseCaption}>
+                Cultural Intelligence Infographics
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Margin Ad 6 - appears after 8 seconds */}
-      <WorkshopAd 
-        position="right" 
-        emoji="💡🔮" 
-        text="Strategic Foresight Workshop: See what others miss" 
-        linkText="Reserve now →" 
-        delay={8000} 
-      />
     </section>
   );
 }
 
-// Future You Section
+// Section 6 - Your Cognitive Evolution Pathway
 function FutureYouSection() {
   return (
-    <section className={styles.futureYou}>
-      <div className={styles.futureContent}>
-        <div className="section">
-          <div className={styles.futureCard}>
-            <h2>The Future You</h2>
-            
-            <div className={styles.futureGrid}>
-              <div className={styles.futureImage}>
-                <img 
-                  src={useBaseUrl('img/undraw_docusaurus_react.svg')} 
-                  alt="Future version of yourself" 
-                  className={styles.personaImage}
-                />
-              </div>
-              
-              <div className={styles.futureTransformation}>
-                <div className={styles.transformationTitle}>
-                  Transform Your Strategic Intelligence
-                </div>
-                
-                <div className={styles.transformationDescription}>
-                  The difference between where you are now and where you could be is simply a 
-                  matter of activating your brain's natural pattern recognition abilities across 
-                  disciplines that most people keep separate.
-                </div>
-                
-                <div className={styles.beforeAfter}>
-                  <div className={styles.beforeColumn}>
-                    <div className={styles.columnTitle}>Before AutoNateAI</div>
-                    <ul className={styles.columnList}>
-                      <li>Overwhelmed by complexity</li>
-                      <li>Missing critical connections</li>
-                      <li>Reacting to trends too late</li>
-                      <li>Trapped in conventional thinking</li>
-                      <li>Limited by single-discipline approaches</li>
-                    </ul>
-                  </div>
-                  
-                  <div className={styles.afterColumn}>
-                    <div className={styles.columnTitle}>After AutoNateAI</div>
-                    <ul className={styles.columnList}>
-                      <li>Confidently navigate complexity</li>
-                      <li>Spot patterns others miss</li>
-                      <li>Anticipate trends before they emerge</li>
-                      <li>Think in innovative frameworks</li>
-                      <li>Leverage cross-disciplinary insights</li>
-                    </ul>
-                  </div>
-                </div>
+    <section className={clsx(styles.evolutionPathway, 'section')}>
+      <div className="container">
+        <div className={styles.pathwayContent}>
+          <div className={styles.pathwayHeader}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              Your Cognitive Evolution Journey
+            </Heading>
+            <p className={styles.sectionSubtitle}>
+              The transformation from cognitive overload to strategic clarity through expert guidance.
+            </p>
+          </div>
+          
+          <div className={styles.pathwaySteps}>
+            <div className={styles.pathwayStep}>
+              <div className={styles.stepNumber}>1</div>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>Cognitive Overload</h3>
+                <p className={styles.stepDescription}>
+                  Information processing consumes mental bandwidth meant for strategic thinking.
+                </p>
               </div>
             </div>
             
-            <div className={styles.futureCta}>
-              <Link
-                to="/ai/workshops"
-                className="button button--primary button--lg">
-                Become Your Future Self
+            <div className={styles.pathwayArrow}>→</div>
+            
+            <div className={styles.pathwayStep}>
+              <div className={styles.stepNumber}>2</div>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>Framework Discovery</h3>
+                <p className={styles.stepDescription}>
+                  Learn cognitive optimization techniques through Psychology × AI × Culture insights.
+                </p>
+              </div>
+            </div>
+            
+            <div className={styles.pathwayArrow}>→</div>
+            
+            <div className={styles.pathwayStep}>
+              <div className={styles.stepNumber}>3</div>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>Strategic Clarity</h3>
+                <p className={styles.stepDescription}>
+                  Mental energy flows toward high-value pattern recognition and decision-making.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Section 7 - Strategic Intelligence in Action
+function StrategicIntelligenceSection() {
+  return (
+    <section className={clsx(styles.strategicAction, 'section bg-soft')}>
+      <div className="container">
+        <div className={styles.actionContent}>
+          <div className={styles.actionHeader}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              Strategic Intelligence in Action
+            </Heading>
+            <p className={styles.sectionSubtitle}>
+              Real frameworks and insights that demonstrate cognitive performance optimization.
+            </p>
+          </div>
+          
+          <div className={styles.actionGrid}>
+            <div className={styles.actionCard}>
+              <div className={styles.actionIcon}>🎯</div>
+              <h3 className={styles.actionTitle}>Pattern Synthesis Framework</h3>
+              <p className={styles.actionDescription}>
+                AI gathers information dots, humans connect them strategically for competitive advantage.
+              </p>
+              <Link to="/ai/knowledge-base" className={styles.actionLink}>
+                Explore Framework →
+              </Link>
+            </div>
+            
+            <div className={styles.actionCard}>
+              <div className={styles.actionIcon}>🧠</div>
+              <h3 className={styles.actionTitle}>Cognitive Load Distribution</h3>
+              <p className={styles.actionDescription}>
+                Optimal division of mental tasks between AI processing and human strategic thinking.
+              </p>
+              <Link to="/ai/knowledge-base" className={styles.actionLink}>
+                Learn Method →
+              </Link>
+            </div>
+            
+            <div className={styles.actionCard}>
+              <div className={styles.actionIcon}>⚡</div>
+              <h3 className={styles.actionTitle}>Decision Enhancement Systems</h3>
+              <p className={styles.actionDescription}>
+                Psychology-backed approaches to improve strategic decision-making under uncertainty.
+              </p>
+              <Link to="/ai/knowledge-base" className={styles.actionLink}>
+                Access System →
               </Link>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Margin Ad 7 - appears after 13 seconds */}
-      <WorkshopAd 
-        position="left" 
-        emoji="🚀💫" 
-        text="Future Self Workshop: Activate your strategic potential" 
-        linkText="Join now →" 
-        delay={13000} 
-      />
     </section>
   );
 }
 
-// Final CTA Section
+// Final CTA Section - Begin Your Cognitive Optimization
 function FinalCtaSection() {
   return (
-    <section className={styles.finalCta}>
-      <div className={styles.finalContent}>
-        <div className="section">
+    <section className={clsx(styles.finalOptimization, 'section')}>
+      <div className="container">
+        <div className={styles.finalContent}>
           <div className={styles.finalCard}>
             <div className={styles.finalTitle}>
-              Ready to Unlock Your Strategic Intelligence?
+              Begin Your Cognitive Optimization
             </div>
             
             <div className={styles.finalSubtitle}>
-              Join 2,170+ professionals who've discovered the hidden patterns where 
-              psychology meets AI meets culture. Your brain is capable of connections 
-              others can't even see.
+              Ready to optimize how your mind processes information? Join strategic thinkers 
+              who've discovered frameworks that enhance cognitive performance and mental bandwidth.
             </div>
             
             <div className={styles.finalButtons}>
               <Link
-                to="/ai/workshops"
+                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
                 className="button button--primary button--lg">
-                Explore Our Workshops
+                Access the Mental Models
               </Link>
               
               <Link
-                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
+                to="/ai/workshops"
                 className="button button--secondary button--lg">
-                Browse Knowledge Base
+                Begin Strategic Thinking Journey
               </Link>
             </div>
             
-            <div className={styles.finalUrgency}>
-              <div className={styles.urgencyText}>
-                Next workshop starts in 3 days. Limited to 12 participants per session.
-              </div>
-            </div>
-            
-            <div className={styles.finalGuarantee}>
-              <div className={styles.guaranteeIcon}>✔️</div>
-              <div className={styles.guaranteeText}>
-                100% Satisfaction Guarantee: If you don't find value in your first workshop, 
-                we'll refund your investment completely.
+            <div className={styles.finalValue}>
+              <div className={styles.valueStatement}>
+                <div className={styles.valueIcon}>✨</div>
+                <div className={styles.valueText}>
+                  Frameworks that optimize cognitive approach through Psychology × AI × Culture insights
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Margin Ad 8 - appears after 5 seconds */}
-      <WorkshopAd 
-        position="right" 
-        emoji="⏰🔥" 
-        text="Limited spots available! Reserve your workshop seat now" 
-        linkText="Secure your spot →" 
-        delay={5000} 
-      />
     </section>
   );
 }
@@ -654,7 +494,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Where psychology meets AI meets culture">
+      description="Where psychology meets AI meets strategic thinking - Frameworks that optimize cognitive performance">
       <main className="homepage">
         <HeroSection />
         <RecognitionSection />
@@ -663,6 +503,7 @@ export default function Home() {
         <CommunitySection />
         <SocialProofSection />
         <FutureYouSection />
+        <StrategicIntelligenceSection />
         <FinalCtaSection />
       </main>
     </Layout>
