@@ -265,10 +265,232 @@ const workshops: Workshop[] = [
         role: 'Chief Executive Officer'
       }
     ]
+  },
+  {
+    id: '4',
+    slug: 'cognitive-intelligence-frameworks',
+    title: 'Cognitive Intelligence Frameworks',
+    subtitle: 'Next-Level Strategic Thinking',
+    description: 'Develop advanced cognitive frameworks that combine human intuition with AI-powered strategic analysis.',
+    date: '2024-02-25',
+    time: '9:00 AM - 1:00 PM EST',
+    format: 'Virtual',
+    duration: '4 hours',
+    level: 'Executive',
+    price: 747,
+    seatsRemaining: 4,
+    totalSeats: 10,
+    focusArea: 'Strategy',
+    type: 'Intensive',
+    outcomes: [
+      'Master cognitive load theory for executive decision-making',
+      'Implement AI-augmented analysis frameworks',
+      'Design personalized decision-making protocols',
+      'Build strategic thinking automation systems'
+    ],
+    instructor: {
+      name: 'Dr. James Patterson',
+      title: 'Cognitive Systems Researcher',
+      company: 'Advanced Intelligence Institute',
+      expertise: 'Cognitive AI Systems & Strategic Decision Architecture',
+      credentials: [
+        'Led AI strategy implementation for $50B+ revenue division',
+        'PhD in Cognitive Science from Stanford',
+        '15+ years Fortune 100 AI leadership',
+        'Author of "Strategic AI Integration" (Harvard Business Review)'
+      ]
+    },
+    agenda: [
+      {
+        time: '9:00 AM',
+        title: 'Cognitive Load Assessment',
+        description: 'Analyze your current decision-making patterns and identify cognitive bottlenecks affecting strategic performance.'
+      },
+      {
+        time: '9:45 AM',
+        title: 'AI-Augmented Analysis Framework',
+        description: 'Learn the proprietary framework used by Fortune 100 companies to integrate AI insights with human intuition.'
+      },
+      {
+        time: '10:30 AM',
+        title: 'Strategic Decision Protocols',
+        description: 'Design your personalized decision-making system for complex, high-stakes strategic choices.'
+      },
+      {
+        time: '11:15 AM',
+        title: 'Implementation Workshop',
+        description: 'Apply frameworks to your real strategic challenges with expert guidance and peer collaboration.'
+      },
+      {
+        time: '12:00 PM',
+        title: 'Automation & Systems Design',
+        description: 'Build repeatable systems for strategic thinking that compound your cognitive performance over time.'
+      }
+    ],
+    testimonials: [
+      {
+        quote: 'This framework transformed how I approach strategic decisions. The AI integration is game-changing.',
+        author: 'Michael Rodriguez',
+        company: 'Global Manufacturing Corp',
+        role: 'Chief Strategy Officer'
+      }
+    ]
+  },
+  {
+    id: '5',
+    slug: 'advanced-ai-systems-architecture',
+    title: 'Advanced AI Systems Architecture',
+    subtitle: 'Enterprise AI Implementation',
+    description: 'Design and implement scalable AI systems that drive competitive advantage in enterprise environments.',
+    date: '2024-03-05',
+    time: '3:00 PM - 7:00 PM EST',
+    format: 'Virtual',
+    duration: '4 hours',
+    level: 'Advanced',
+    price: 1397,
+    originalPrice: 1897,
+    seatsRemaining: 6,
+    totalSeats: 12,
+    focusArea: 'AI',
+    type: 'Deep Dive',
+    outcomes: [
+      'Architect enterprise-grade AI systems',
+      'Design scalable machine learning pipelines',
+      'Implement AI governance frameworks',
+      'Build competitive AI capabilities'
+    ],
+    instructor: {
+      name: 'Dr. Alex Kumar',
+      title: 'Chief AI Architect',
+      company: 'Fortune 100 Technology Corporation',
+      expertise: 'Enterprise AI Architecture & Machine Learning Systems',
+      credentials: [
+        'Designed AI infrastructure for $100B+ tech companies',
+        'PhD in Computer Science from Carnegie Mellon',
+        'Former Google AI Research Team Lead',
+        'Author of "Enterprise AI Architecture" (O\'Reilly)'
+      ]
+    },
+    agenda: [
+      {
+        time: '3:00 PM',
+        title: 'AI Systems Assessment',
+        description: 'Evaluate current AI capabilities and identify architectural gaps in enterprise environments.'
+      },
+      {
+        time: '3:45 PM',
+        title: 'Scalable Architecture Design',
+        description: 'Learn principles for designing AI systems that scale with business growth and complexity.'
+      },
+      {
+        time: '4:30 PM',
+        title: 'Implementation Strategies',
+        description: 'Master proven approaches for deploying AI systems in large-scale enterprise environments.'
+      },
+      {
+        time: '5:15 PM',
+        title: 'Governance & Ethics Framework',
+        description: 'Build comprehensive AI governance systems for responsible enterprise deployment.'
+      },
+      {
+        time: '6:00 PM',
+        title: 'Competitive Advantage Design',
+        description: 'Create sustainable competitive advantages through unique AI system architecture.'
+      }
+    ],
+    testimonials: [
+      {
+        quote: 'This architecture framework helped us scale our AI initiatives from pilot to enterprise-wide deployment.',
+        author: 'Jennifer Walsh',
+        company: 'Global Financial Services',
+        role: 'Chief Technology Officer'
+      }
+    ]
+  },
+  {
+    id: '6',
+    slug: 'executive-decision-optimization',
+    title: 'Executive Decision Optimization',
+    subtitle: 'Data-Driven Leadership',
+    description: 'Transform executive decision-making with data science frameworks and predictive analytics for strategic advantage.',
+    date: '2024-03-12',
+    time: '11:00 AM - 3:00 PM EST',
+    format: 'Hybrid',
+    duration: '4 hours',
+    level: 'Executive',
+    price: 1597,
+    seatsRemaining: 2,
+    totalSeats: 8,
+    focusArea: 'Strategy',
+    type: 'Masterclass',
+    outcomes: [
+      'Master data-driven decision frameworks',
+      'Implement predictive analytics for strategy',
+      'Design executive intelligence systems',
+      'Build evidence-based leadership practices'
+    ],
+    instructor: {
+      name: 'Dr. Rachel Thompson',
+      title: 'Executive Strategy Consultant',
+      company: 'Fortune 100 Strategy Firm',
+      expertise: 'Executive Decision Science & Predictive Analytics',
+      credentials: [
+        'Advised C-suite leaders at 25+ Fortune 500 companies',
+        'PhD in Decision Science from Stanford',
+        'Former BCG Principal and McKinsey Partner',
+        'Harvard Business Review Strategy Contributor'
+      ]
+    },
+    agenda: [
+      {
+        time: '11:00 AM',
+        title: 'Decision Quality Assessment',
+        description: 'Analyze current decision-making processes and identify opportunities for optimization.'
+      },
+      {
+        time: '11:45 AM',
+        title: 'Predictive Analytics Framework',
+        description: 'Learn to integrate predictive models into strategic decision-making workflows.'
+      },
+      {
+        time: '12:30 PM',
+        title: 'Executive Intelligence Design',
+        description: 'Build personalized intelligence systems that enhance executive decision quality.'
+      },
+      {
+        time: '1:15 PM',
+        title: 'Implementation Workshop',
+        description: 'Apply frameworks to real executive challenges with expert guidance and peer collaboration.'
+      },
+      {
+        time: '2:00 PM',
+        title: 'Leadership System Design',
+        description: 'Create sustainable systems for evidence-based leadership and strategic execution.'
+      }
+    ],
+    testimonials: [
+      {
+        quote: 'These decision frameworks transformed our strategic planning process. We\'re making better decisions faster.',
+        author: 'Mark Stevens',
+        company: 'Global Manufacturing Corp',
+        role: 'Chief Executive Officer'
+      }
+    ]
   }
 ];
 
-// Hero Section - Featured Workshops Showcase
+// Helper function to format dates in human-readable format
+function formatHumanDate(dateString: string): string {
+  const date = new Date(dateString);
+  const options: Intl.DateTimeFormatOptions = { 
+    weekday: 'short', 
+    month: 'short', 
+    day: 'numeric'
+  };
+  return date.toLocaleDateString('en-US', options);
+}
+
+// Featured Workshops Hero Component
 function FeaturedWorkshopsHero() {
   const [selectedWorkshop, setSelectedWorkshop] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
@@ -328,7 +550,7 @@ function FeaturedWorkshopsHero() {
               Previous
             </button>
             
-            <div className={styles.workshopThumbnails}>
+            <div className={`${styles.workshopThumbnails} ${styles.workshopNavContainer}`}>
               {filteredWorkshops.map((workshop, index) => (
                 <div 
                   key={workshop.id}
@@ -342,7 +564,7 @@ function FeaturedWorkshopsHero() {
                     {workshop.title}
                   </div>
                   <div className={styles.thumbnailDate}>
-                    {workshop.date}
+                    {formatHumanDate(workshop.date)}
                   </div>
                 </div>
               ))}
@@ -377,7 +599,7 @@ function FeaturedWorkshopsHero() {
                 <div className={styles.detailIcon}>📅</div>
                 <div className={styles.detailContent}>
                   <div className={styles.detailLabel}>DATE & TIME</div>
-                  <div className={styles.detailValue}>{currentWorkshop.date} • {currentWorkshop.time}</div>
+                  <div className={styles.detailValue}>{formatHumanDate(currentWorkshop.date)} • {currentWorkshop.time}</div>
                 </div>
               </div>
               
@@ -556,7 +778,7 @@ function UpcomingWorkshops() {
                   <div className={styles.cardDetails}>
                     <div className={styles.cardDetailRow}>
                       <span className={styles.detailLabel}>Date:</span>
-                      <span className={styles.detailValue}>{workshop.date}</span>
+                      <span className={styles.detailValue}>{formatHumanDate(workshop.date)}</span>
                     </div>
                     <div className={styles.cardDetailRow}>
                       <span className={styles.detailLabel}>Time:</span>
