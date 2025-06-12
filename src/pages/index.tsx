@@ -46,7 +46,7 @@ function HeroSection() {
           
           <div className={styles.heroCTAGroup}>
             <Link
-              to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
+              to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations/intelligence/cognitive-intelligence-foundations"
               className="button button--primary button--lg">
               Explore the Frameworks
             </Link>
@@ -241,7 +241,7 @@ function CommunitySection() {
               </p>
               <div className={styles.libraryMeta}>
                 <span className={styles.readTime}>8 min read</span>
-                <Link to="/ai/knowledge-base" className={styles.readMore}>Read →</Link>
+                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Read →</Link>
               </div>
             </div>
             
@@ -253,7 +253,7 @@ function CommunitySection() {
               </p>
               <div className={styles.libraryMeta}>
                 <span className={styles.readTime}>12 min read</span>
-                <Link to="/ai/knowledge-base" className={styles.readMore}>Read →</Link>
+                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Read →</Link>
               </div>
             </div>
             
@@ -265,7 +265,7 @@ function CommunitySection() {
               </p>
               <div className={styles.libraryMeta}>
                 <span className={styles.readTime}>10 min read</span>
-                <Link to="/ai/knowledge-base" className={styles.readMore}>Read →</Link>
+                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Read →</Link>
               </div>
             </div>
           </div>
@@ -411,7 +411,7 @@ function StrategicIntelligenceSection() {
               <p className={styles.actionDescription}>
                 AI gathers information dots, humans connect them strategically for competitive advantage.
               </p>
-              <Link to="/ai/knowledge-base" className={styles.actionLink}>
+              <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.actionLink}>
                 Explore Framework →
               </Link>
             </div>
@@ -422,7 +422,7 @@ function StrategicIntelligenceSection() {
               <p className={styles.actionDescription}>
                 Optimal division of mental tasks between AI processing and human strategic thinking.
               </p>
-              <Link to="/ai/knowledge-base" className={styles.actionLink}>
+              <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.actionLink}>
                 Learn Method →
               </Link>
             </div>
@@ -433,7 +433,7 @@ function StrategicIntelligenceSection() {
               <p className={styles.actionDescription}>
                 Psychology-backed approaches to improve strategic decision-making under uncertainty.
               </p>
-              <Link to="/ai/knowledge-base" className={styles.actionLink}>
+              <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.actionLink}>
                 Access System →
               </Link>
             </div>
@@ -462,7 +462,7 @@ function FinalCtaSection() {
             
             <div className={styles.finalButtons}>
               <Link
-                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations"
+                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations/intelligence/cognitive-intelligence-foundations"
                 className="button button--primary button--lg">
                 Access the Mental Models
               </Link>

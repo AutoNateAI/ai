@@ -13,6 +13,26 @@
   --accent-warm-peach: #FB923C;
   --accent-soft-coral: #FCA5A5;
   
+  /* AutoNate Brand Colors - For Workshop Components */
+  --autonate-primary: #6366F1; /* Indigo */
+  --autonate-accent: #EC4899; /* Pink */  
+  --autonate-secondary: #3B82F6; /* Blue */
+  --neural-blue: #1E40AF; /* Deep Blue */
+  --psychology-purple: #7C3AED; /* Purple */
+  --culture-orange: #EA580C; /* Orange */
+  
+  /* AutoNate Text Colors */
+  --autonate-text-primary: #1E293B; /* Dark Slate */
+  --autonate-text-secondary: #475569; /* Slate */
+  --autonate-text-tertiary: #64748B; /* Light Slate */
+  
+  /* AutoNate Color Variations */
+  --autonate-primary-50: #EEF2FF;
+  --autonate-primary-100: #E0E7FF;
+  --autonate-primary-200: #C7D2FE;
+  --autonate-primary-700: #4338CA;
+  --autonate-primary-900: #312E81;
+  
   /* Background Colors - Bright & Airy */
   --background-white: #FFFFFF;
   --background-light-gray: #FAFAFA;
