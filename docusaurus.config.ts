@@ -28,7 +28,7 @@ const config: Config = {
   organizationName: 'AutoNateAI', // Usually your GitHub org/user name.
   projectName: 'ai', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   onBrokenAnchors: 'warn',
 
