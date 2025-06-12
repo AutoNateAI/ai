@@ -20,13 +20,11 @@ function HeroSection() {
           </div>
           
           <Heading as="h1" className={styles.heroTitle}>
-            Where Psychology Meets AI<br/>
-            <span className="gradient-text">Meets Strategic Thinking</span>
+            Unlock Your <span className="gradient-text">Cognitive Edge</span>
           </Heading>
           
           <p className={styles.heroSubtitle}>
-            Trusted by forward-thinking professionals who optimize their cognitive approach 
-            through frameworks that enhance mental bandwidth and strategic performance.
+            Master AI-powered frameworks that amplify mental clarity, strategic thinking, and professional performance.
           </p>
           
           <div className={styles.heroValueProps}>

@@ -141,12 +141,12 @@ h3 {
   border-radius: 8px;
   font-weight: var(--ifm-font-weight-semibold);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.2);
+  box-shadow: 0 4px 16px rgba(51, 65, 85, 0.08);
 }
 
 .button--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 8px 24px rgba(51, 65, 85, 0.12);
   text-decoration: none;
 }
 
@@ -183,15 +183,66 @@ h3 {
   transform: translateY(-4px);
 }
 
-/* Navbar Enhancements */
+/* Navbar Enhancement */
 .navbar {
-  box-shadow: var(--ifm-navbar-shadow);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--neutral-light-gray);
+  background: linear-gradient(135deg, var(--autonate-primary) 0%, var(--autonate-secondary) 50%, var(--autonate-accent) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--autonate-primary) 0%, var(--autonate-secondary) 50%, var(--autonate-accent) 100%);
+  opacity: 0.9;
+  z-index: -1;
 }
 
 .navbar__brand {
-  font-weight: var(--ifm-font-weight-bold);
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar__link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar__link:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+.navbar-sidebar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.navbar-sidebar .navbar__brand {
+  color: var(--autonate-primary) !important;
+  text-shadow: none !important;
+}
+
+.navbar-sidebar .navbar__link {
+  color: var(--autonate-text-primary) !important;
+  text-shadow: none !important;
 }
 
 /* Section Spacing - Premium Layout */
@@ -390,12 +441,7 @@ h1 {
 }
 
 .navbar__brand {
-  color: white;
-}
-
-.navbar__logo {
-  height: 2.5rem;
-  margin-right: 0.5rem;
+  font-weight: var(--ifm-font-weight-bold);
 }
 
 /* Footer Enhancement */
