@@ -92,6 +92,7 @@
   --gradient-secondary: linear-gradient(135deg, var(--secondary-light-purple) 0%, var(--secondary-soft-lavender) 100%);
   --gradient-accent: linear-gradient(135deg, var(--accent-warm-peach) 0%, var(--accent-soft-coral) 100%);
   --gradient-text: linear-gradient(135deg, var(--primary-light-teal) 0%, var(--secondary-light-purple) 100%);
+  --autonate-gradient-primary: linear-gradient(135deg, var(--autonate-primary) 0%, var(--autonate-secondary) 50%, var(--autonate-accent) 100%);
   
   /* Code highlighting */
   --ifm-code-font-size: 95%;

@@ -314,8 +314,8 @@
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -100%;
+  width: 100%;
   height: 4px;
   background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary), var(--autonate-accent));
   opacity: 0;
@@ -540,6 +540,7 @@
   background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary), var(--autonate-accent));
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
 .frameworkPhase:hover {
@@ -554,10 +555,8 @@
 }
 
 .phaseNumber {
-  position: absolute;
   top: -15px;
   left: 50%;
-  transform: translateX(-50%);
   background: var(--autonate-accent);
   color: white;
   width: 30px;
@@ -568,6 +567,8 @@
   justify-content: center;
   font-weight: bold;
   font-size: 0.9rem;
+  z-index: 2;
+  margin: 1rem auto;
 }
 
 .phaseTitle {
@@ -941,6 +942,7 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  color: white;
 }
 
 .finalSubtitle {
@@ -951,6 +953,7 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 .finalButtons {
@@ -1006,6 +1009,7 @@
   font-size: 0.95rem;
   font-weight: 500;
   opacity: 0.95;
+  color: white;
 }
 
 /* Responsive Design */
