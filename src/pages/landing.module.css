@@ -39,7 +39,7 @@
 
 /* Hero Section - Strategic Intelligence Hub */
 .heroStrategic {
-  min-height: 90vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, 
     var(--autonate-primary) 0%, 
     var(--autonate-secondary) 50%,
@@ -47,10 +47,11 @@
   background-size: 400% 400%;
   animation: gradientShift 8s ease-in-out infinite;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   padding: 2rem 0;
+  height: auto;
 }
 
 .heroStrategic::before {
@@ -63,22 +64,24 @@
   background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='7' cy='7' r='3'/%3E%3Ccircle cx='53' cy='53' r='3'/%3E%3Ccircle cx='53' cy='7' r='3'/%3E%3Ccircle cx='7' cy='53' r='3'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   opacity: 0.4;
   animation: floatPattern 20s ease-in-out infinite;
+  height: 100%;
 }
 
 .heroContent {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   position: relative;
   z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .heroTitle {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   animation: fadeInUp 1s ease-out 0.5s both;
@@ -107,6 +110,8 @@
   padding: 0.5rem 1rem;
   margin-bottom: 1.5rem;
   animation: fadeInUp 1s ease-out 0.3s both;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .statusText {
@@ -128,9 +133,10 @@
 .heroValueProps {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .valueCard {
@@ -138,9 +144,10 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  padding: 1.8rem 1.5rem;
+  padding: 0.8rem 0.6rem;
   text-align: center;
-  min-width: 200px;
+  width: 100%;
+  min-width: 100px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
@@ -170,8 +177,8 @@
 }
 
 .valueIcon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
   animation: bounce 3s infinite;
   animation-delay: var(--animation-delay, 0s);
 }
@@ -189,13 +196,14 @@
 
 .heroCTAGroup {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .heroCTAGroup .button {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1.1rem;
   font-weight: 700;
   border-radius: 50px;
@@ -203,6 +211,8 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .heroCTAGroup .button--primary {
@@ -292,8 +302,8 @@
 
 .clarityGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
   margin-top: 4rem;
 }
 
@@ -1094,7 +1104,7 @@
   }
   
   .heroTitle {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
   }
   
   .sectionTitle {
@@ -1104,6 +1114,8 @@
   .heroCTAGroup {
     flex-direction: column;
     align-items: center;
+    gap: 0.6rem;
+    width: 100%;
   }
   
   .heroCTAGroup .button {
@@ -1112,8 +1124,10 @@
   }
   
   .clarityCard,
-  .partnershipCard {
-    padding: 2rem 1.5rem;
+  .cognitiveIndicator {
+    padding: 0.3rem 0.7rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
   }
   
   .finalButtons {
