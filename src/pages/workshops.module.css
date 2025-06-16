@@ -1529,7 +1529,7 @@
 }
 
 /* Mobile App UI Components */
-.mobileHeroContext {
+.mobileHeroContext, .mobileTabNavigation, .mobileTabSection, .mobileFab {
   display: none;
 }
 

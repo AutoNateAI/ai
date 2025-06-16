@@ -694,7 +694,7 @@ function FeaturedWorkshopsHero() {
         
         {/* Floating Action Button - Only visible on mobile */}
         <Link to="#" className={styles.mobileFab}>
-          ✓
+          ↑
         </Link>
 
         {/* Main Featured Workshop Display */}
