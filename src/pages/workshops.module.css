@@ -3,6 +3,26 @@
  * Vibrant, energetic, professional design with premium feel
  */
 
+/* Workshop Page Styles */
+
+/* CSS Variables for Mobile UI */
+:root {
+  /* Success Colors */
+  --autonate-success: #10B981; /* Emerald Green */
+  --autonate-success-rgb: 16, 185, 129;
+  
+  /* Border Colors */
+  --autonate-border-light: #E2E8F0;
+  
+  /* Background Colors */
+  --autonate-background-subtle: #F8FAFC;
+  
+  /* RGB Values for Color Manipulations */
+  --autonate-primary-rgb: 99, 102, 241;
+  --autonate-secondary-rgb: 59, 130, 246;
+  --psychology-purple-rgb: 124, 58, 237;
+}
+
 /* Global page styles */
 .workshopsPage {
   background: linear-gradient(135deg, 
@@ -1668,10 +1688,9 @@
   
   .mobileTabContent {
     display: none;
-    padding: 1.5rem;
+    padding: 1.75rem 1.5rem;
     background: white;
-    margin: 0 1rem;
-    border-radius: 0 0 16px 16px;
+    border-radius: 1rem;
     min-height: 300px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
@@ -1825,17 +1844,39 @@
     padding-bottom: 5rem; /* Space for FAB */
   }
   
+  .mobileOverviewTab h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--autonate-text-primary);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+  }
+  
   .mobileFeatureList {
     margin: 1.5rem 0;
+    background: var(--autonate-background-subtle);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
   }
   
   .mobileFeatureItem {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--autonate-border-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(var(--autonate-primary-rgb), 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .mobileFeatureItem:hover {
+    transform: translateX(3px);
   }
   
   .mobileFeatureItem:last-child {
@@ -1845,8 +1886,8 @@
   }
   
   .mobileFeatureIcon {
-    background: var(--autonate-primary-50);
-    color: var(--autonate-primary);
+    background: linear-gradient(135deg, var(--autonate-primary), var(--autonate-secondary));
+    color: white;
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -1855,12 +1896,14 @@
     justify-content: center;
     font-size: 1rem;
     flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(var(--autonate-primary-rgb), 0.3);
   }
   
   .mobileFeatureText {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--autonate-text-primary);
-    line-height: 1.5;
+    line-height: 1.6;
+    font-weight: 500;
   }
   
   /* Details Tab Content */
@@ -1868,17 +1911,40 @@
     padding-bottom: 5rem; /* Space for FAB */
   }
   
+  .mobileDetailsTab h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--autonate-text-primary);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+  }
+  
   .mobileDetailsList {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background: var(--autonate-background-subtle);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
   }
   
   .mobileDetailItem {
-    background: var(--autonate-background-subtle);
+    background: white;
     border-radius: 16px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--autonate-primary);
+    transition: transform 0.2s ease;
+  }
+  
+  .mobileDetailItem:hover {
+    transform: translateY(-2px);
   }
   
   .mobileDetailLabel {
@@ -1888,12 +1954,15 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
   }
   
   .mobileDetailValue {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--autonate-text-primary);
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 1.4;
   }
   
   /* Instructor Tab Content */
@@ -1901,24 +1970,43 @@
     padding-bottom: 5rem; /* Space for FAB */
   }
   
+  .mobileInstructorTab h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--autonate-text-primary);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+  }
+  
   .mobileInstructorHeader {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+    background: var(--autonate-background-subtle);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
   }
   
   .mobileInstructorAvatar {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--autonate-primary), var(--autonate-secondary));
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
+    box-shadow: 0 4px 12px rgba(var(--autonate-primary-rgb), 0.3);
+    border: 3px solid white;
   }
   
   .mobileInstructorInfo {
@@ -1926,34 +2014,46 @@
   }
   
   .mobileInstructorName {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--autonate-text-primary);
     margin-bottom: 0.25rem;
+    line-height: 1.2;
   }
   
   .mobileInstructorTitle {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--autonate-text-secondary);
     margin-bottom: 0.25rem;
+    font-weight: 500;
   }
   
   .mobileInstructorCompany {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--autonate-text-tertiary);
+    font-weight: 500;
   }
   
   .mobileCredentialsList {
     margin: 1.5rem 0;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
   
   .mobileCredentialItem {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--autonate-border-light);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(var(--autonate-primary-rgb), 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .mobileCredentialItem:hover {
+    transform: translateX(3px);
   }
   
   .mobileCredentialItem:last-child {
@@ -1963,15 +2063,24 @@
   }
   
   .mobileCredentialIcon {
-    color: var(--autonate-success);
-    font-size: 1rem;
+    color: white;
+    font-size: 0.9rem;
     flex-shrink: 0;
+    background: var(--autonate-success);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(var(--autonate-success-rgb), 0.3);
   }
   
   .mobileCredentialText {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--autonate-text-primary);
-    line-height: 1.4;
+    line-height: 1.5;
+    font-weight: 500;
   }
   
   /* Pricing Tab Content */
@@ -1979,9 +2088,38 @@
     padding-bottom: 5rem; /* Space for FAB */
   }
   
+  .mobilePricingTab h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--autonate-text-primary);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+  }
+  
   .mobilePriceDisplay {
     text-align: center;
     margin-bottom: 2rem;
+    background: var(--autonate-background-subtle);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .mobilePriceDisplay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary));
   }
   
   .mobileOriginalPrice {
@@ -1989,27 +2127,39 @@
     color: var(--autonate-text-tertiary);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    font-weight: 500;
   }
   
   .mobileCurrentPrice {
-    color: var(--autonate-primary);
+    background: linear-gradient(90deg, var(--autonate-primary), var(--autonate-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
     font-weight: 800;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+    line-height: 1;
   }
   
   .mobileSavingsLabel {
     background: var(--psychology-purple);
     color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    font-size: 0.8rem;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: 600;
     display: inline-block;
+    box-shadow: 0 3px 8px rgba(var(--psychology-purple-rgb), 0.3);
+    animation: pulse 2s infinite;
   }
   
   .mobilePricingFeatures {
-    margin: 0 0 1.5rem;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
   
   .mobilePricingFeatureItem {
@@ -2018,7 +2168,12 @@
     gap: 0.75rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--autonate-border-light);
+    border-bottom: 1px solid rgba(var(--autonate-primary-rgb), 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .mobilePricingFeatureItem:hover {
+    transform: translateX(3px);
   }
   
   .mobilePricingFeatureItem:last-child {
@@ -2028,15 +2183,24 @@
   }
   
   .mobilePricingFeatureIcon {
-    color: var(--autonate-success);
-    font-size: 1.1rem;
+    color: white;
+    font-size: 0.9rem;
     flex-shrink: 0;
+    background: var(--autonate-success);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(var(--autonate-success-rgb), 0.3);
   }
   
   .mobilePricingFeatureText {
     font-size: 0.95rem;
     color: var(--autonate-text-primary);
-    line-height: 1.4;
+    line-height: 1.5;
+    font-weight: 500;
   }
   
   /* Floating Action Button (FAB) */
