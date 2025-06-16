@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
+  title: 'AutoNateAI',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -92,10 +92,10 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'My Site',
+      title: 'AutoNateAI',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'AutoNateAI Logo',
+        src: 'img/logo.png',
       },
       items: [
         {

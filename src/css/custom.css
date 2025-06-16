@@ -351,8 +351,6 @@ button.clean-btn.navbar-sidebar__close:hover {
   z-index: 10000 !important;
   position: relative !important;
   padding: 0.5rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  border-radius: 6px !important;
   transition: all 0.3s ease !important;
 }
 
