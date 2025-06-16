@@ -1288,6 +1288,11 @@
   line-height: 1.6;
 }
 
+/* Mobile App UI Components */
+.mobileHeroContext, .mobileTabNavigation, .mobileTabSection, .mobileFab {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Horizontally scrollable filter tabs for mobile */
@@ -1543,11 +1548,12 @@
   }
 }
 
-/* Tablet Responsive Design for Split-Screen */
-@media (max-width: 1024px) and (min-width: 769px) {
+/* Tablet Responsive Design for Split-Screen - Only for large tablets in landscape */
+@media (min-width: 992px) and (max-width: 1200px) {
   .featuredMain {
     grid-template-columns: 1fr 320px;
     gap: 2rem;
+    display: none;
   }
   
   .featuredContent {
@@ -1565,15 +1571,16 @@
   .pricingCard {
     padding: 1.75rem;
   }
+
+  .mobileHeroContext {
+    display: flex;
+  }
 }
 
-/* Mobile App UI Components */
-.mobileHeroContext, .mobileTabNavigation, .mobileTabSection, .mobileFab {
-  display: none;
-}
+
 
 /* Mobile App UI - Hero Banner and Tab Navigation */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .mobileHeroContext {
     display: flex;
     flex-direction: column;
@@ -1783,7 +1790,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   /* Hide the old integrated search in main content on mobile */
   .featuredSearchSection {
     display: none;
