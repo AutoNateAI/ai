@@ -15,16 +15,19 @@
 /* Featured Workshops Hero */
 .featuredHero {
   background: linear-gradient(135deg, 
-    var(--autonate-primary) 0%, 
-    var(--autonate-secondary) 50%,
-    var(--autonate-accent) 100%);
-  padding: 2rem 0;
+    #1e293b 0%, 
+    #334155 25%,
+    #475569 50%,
+    #64748b 75%,
+    #94a3b8 100%);
+  padding: 4rem 0 3rem;
   position: relative;
   overflow: hidden;
-  animation: gradientShift 10s ease-in-out infinite;
+  background-size: 200% 200%;
+  animation: subtleGradientShift 20s ease-in-out infinite;
 }
 
-@keyframes gradientShift {
+@keyframes subtleGradientShift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
@@ -36,82 +39,580 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='3'/%3E%3Ccircle cx='53' cy='53' r='3'/%3E%3Ccircle cx='53' cy='7' r='3'/%3E%3Ccircle cx='7' cy='53' r='3'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.6;
-  animation: floatPattern 15s ease-in-out infinite;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+  animation: floatPattern 25s ease-in-out infinite;
 }
 
 @keyframes floatPattern {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(2deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
 }
 
-/* Search Section */
-.heroSearch {
+/* Split-Screen Dashboard Layout */
+.featuredMain {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2.5rem;
   position: relative;
   z-index: 2;
   margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
+  padding: 0 1rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.searchContainer {
-  position: relative;
-  max-width: 600px;
-  width: 100%;
-}
-
-.searchInput {
-  width: 100%;
-  padding: 1rem 3rem 1rem 1.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  font-size: 1rem;
-  color: var(--autonate-text-primary);
+/* Left Panel - Main Content */
+.featuredContent {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(30px);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 
+              0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.searchInput:focus {
-  outline: none;
-  border-color: var(--autonate-accent);
-  box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.2), 0 12px 40px rgba(0, 0, 0, 0.15);
+.featuredContent:hover {
   transform: translateY(-2px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12), 
+              0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-.searchInput::placeholder {
+/* Integrated Search in Left Panel */
+.featuredSearchSection {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.featuredSearchContainer {
+  position: relative;
+  width: 100%;
+}
+
+.featuredSearchInput {
+  width: 100%;
+  padding: 1.25rem 4rem 1.25rem 2rem;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(10px);
+  font-size: 1.1rem;
+  color: #1e293b;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+.featuredSearchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 
+              0 8px 20px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.featuredSearchIcon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: #64748b;
+  pointer-events: none;
+}
+
+/* Right Sidebar - Stacked Navigation and Pricing */
+.featuredSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Workshop Navigation - Sidebar Style */
+.workshopNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(30px);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  transition: all 0.3s ease;
+  height: fit-content;
+}
+
+.workshopNavigation:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Navigation Header */
+.navHeader {
+  text-align: left;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.navTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6d28d9;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.navSubtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.workshopNavContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  min-height: 200px; /* Ensure minimum height for scrollable area */
+  max-height: 280px; /* Limit maximum height */
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background: rgba(139, 92, 246, 0.1);
+  border: none;
+  border-radius: 12px;
+  color: #6d28d9;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.navButton:hover {
+  background: rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(109, 40, 217, 0.1);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.navIcon {
+  font-size: 1.2rem;
+}
+
+.navButton:first-child .navIcon {
+  margin-right: 0.5rem;
+}
+
+.navButton:last-child .navIcon {
+  margin-left: 0.5rem;
+}
+
+/* Navigation Buttons Container */
+.navButtonsContainer {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.navButton:first-child .navIcon {
+  margin-right: 0.5rem;
+}
+
+.navButton:last-child .navIcon {
+  margin-left: 0.5rem;
+}
+
+.workshopThumbnails {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.workshopThumbnails::-webkit-scrollbar {
+  width: 6px;
+}
+
+.workshopThumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.workshopThumbnails::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 20px;
+}
+
+.thumbnailCard {
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.thumbnailCard:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.thumbnailActive {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.thumbnailBadge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: rgba(139, 92, 246, 0.15);
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #6d28d9;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.thumbnailTitle {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.thumbnailDate {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.heroFooter {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.workshopCounter {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  color: var(--autonate-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-block;
+}
+
+/* Pricing Card - Sidebar Style */
+.featuredPricing {
+  position: relative;
+  width: 100%;
+}
+
+.pricingCard {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.urgencyBadge {
+  background: linear-gradient(135deg, var(--neural-blue), var(--psychology-purple));
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+}
+
+.priceDisplay {
+  margin-bottom: 1.2rem;
+}
+
+.originalPrice {
+  text-decoration: line-through;
   color: var(--autonate-text-tertiary);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
 }
 
-.searchIcon {
+.currentPrice {
+  color: var(--autonate-primary);
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.savingsLabel {
+  background: var(--psychology-purple);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.pricingFeatures {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--autonate-text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.reserveButton {
+  background: linear-gradient(135deg, var(--autonate-primary), var(--autonate-secondary));
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1.25rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: block;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.reserveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-decoration: none;
+}
+
+/* Search Section - Hidden in new layout */
+.heroSearch {
+  display: none;
+}
+
+/* Integrated Search in Left Panel */
+.featuredSearchSection {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.featuredSearchContainer {
+  position: relative;
+  width: 100%;
+}
+
+.featuredSearchInput {
+  width: 100%;
+  padding: 1.25rem 4rem 1.25rem 2rem;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(10px);
+  font-size: 1.1rem;
+  color: #1e293b;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+.featuredSearchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 
+              0 8px 20px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.featuredSearchInput::placeholder {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.featuredSearchIcon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: #64748b;
+  pointer-events: none;
+}
+
+/* Search Bar Positioned at Far Right */
+.searchRightContainer {
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.searchAfterContainer {
+  position: relative;
+  width: 100%;
+}
+
+.searchAfterInput {
+  width: 100%;
+  padding: 1rem 3.5rem 1rem 1.5rem;
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  color: #1e293b;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+.searchAfterInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 
+              0 8px 20px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.searchAfterIcon {
   position: absolute;
   right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
-  color: var(--autonate-text-tertiary);
+  color: #64748b;
   pointer-events: none;
+}
+
+/* Mobile Layout Restructuring */
+@media (max-width: 768px) {
+  /* Hide the desktop search on mobile */
+  .searchRightContainer {
+    display: none;
+  }
+  
+  /* Mobile Layout Restructuring */
+  .featuredMain {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile Order: 1. Context (set in context section), 2. Navigation, 3. Featured Content, 4. Pricing */
+  .workshopNavigation {
+    order: 2;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    height: auto;
+    max-height: 350px;
+  }
+  
+  .featuredContent {
+    order: 3;
+    margin: 0 1rem;
+    padding: 1.75rem 1.5rem;
+  }
+  
+  .featuredPricing {
+    order: 4;
+    margin: 0 1rem;
+    position: static;
+    width: 100%;
+  }
 }
 
 /* Main Featured Content */
 .featuredMain {
   display: grid;
-  grid-template-columns: 280px 1fr 320px;
-  gap: 1.5rem;
+  grid-template-columns: 300px 1fr 340px;
+  gap: 2rem;
   position: relative;
   z-index: 2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .featuredContent {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(30px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 
+              0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.featuredContent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12), 
+              0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .featuredBadge {
@@ -319,246 +820,6 @@
   color: white;
   text-decoration: none;
   transform: translateY(-1px);
-}
-
-/* Pricing Card */
-.featuredPricing {
-  position: sticky;
-  top: 2rem;
-  align-self: start;
-}
-
-.pricingCard {
-  background: white;
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  border: 2px solid var(--autonate-primary-100);
-  text-align: center;
-}
-
-.urgencyBadge {
-  background: linear-gradient(135deg, var(--neural-blue), var(--psychology-purple));
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 25px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-  display: inline-block;
-}
-
-.priceDisplay {
-  margin-bottom: 1.2rem;
-}
-
-.originalPrice {
-  text-decoration: line-through;
-  color: var(--autonate-text-tertiary);
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.currentPrice {
-  color: var(--autonate-primary);
-  font-weight: 800;
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.savingsLabel {
-  background: var(--psychology-purple);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.pricingFeatures {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.feature {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--autonate-text-primary);
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.feature:last-child {
-  margin-bottom: 0;
-}
-
-.reserveButton {
-  background: linear-gradient(135deg, var(--autonate-primary), var(--autonate-secondary));
-  border: none;
-  color: white;
-  font-weight: 700;
-  font-size: 1.125rem;
-  padding: 1.25rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  width: 100%;
-  display: block;
-  text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.reserveButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  color: white;
-  text-decoration: none;
-}
-
-/* Workshop Navigation */
-.workshopNavigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.75rem;
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(20px);
-  padding: 1.2rem;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  height: 500px;
-  overflow: hidden;
-}
-
-.workshopNavContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: 400px;
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  /* Hide scrollbar while keeping scroll functionality */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
-
-.workshopNavContainer::-webkit-scrollbar {
-  display: none;
-}
-
-.navButton {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: linear-gradient(135deg, var(--autonate-primary), var(--autonate-secondary));
-  border: none;
-  color: white;
-  font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.8rem;
-  width: 100%;
-  justify-content: center;
-}
-
-.navButton:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.navButton:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.navIcon {
-  font-size: 0.9rem;
-}
-
-.workshopThumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  width: 100%;
-  flex: 1;
-  overflow-y: auto;
-  padding: 0.5rem 0;
-}
-
-.thumbnailCard {
-  background: white;
-  border: 2px solid var(--autonate-border-light);
-  border-radius: 10px;
-  padding: 0.6rem;
-  width: 100%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: left;
-}
-
-.thumbnailCard:hover {
-  border-color: var(--autonate-primary);
-  transform: translateX(4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.thumbnailActive {
-  border-color: var(--autonate-primary);
-  background: var(--autonate-primary-50);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateX(4px);
-}
-
-.thumbnailBadge {
-  background: var(--autonate-primary);
-  color: white;
-  padding: 0.2rem 0.4rem;
-  border-radius: 6px;
-  font-size: 0.6rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  display: inline-block;
-}
-
-.thumbnailTitle {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--autonate-text-primary);
-  margin-bottom: 0.2rem;
-  line-height: 1.2;
-}
-
-.thumbnailDate {
-  font-size: 0.6rem;
-  color: var(--autonate-text-tertiary);
-  font-weight: 500;
-}
-
-.heroFooter {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.workshopCounter {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(20px);
-  color: var(--autonate-text-secondary);
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: inline-block;
 }
 
 /* Workshop Grid Section */
@@ -1082,5 +1343,335 @@
   
   .workshopCard {
     min-height: 290px;
+  }
+}
+
+/* Enhanced Mobile Responsive Design for Hero Section */
+@media (max-width: 768px) {
+  .featuredHero {
+    padding: 3rem 0 2rem;
+    background-size: 300% 300%;
+  }
+  
+  .heroSearch {
+    display: none; /* Hide the old search since we have integrated search now */
+  }
+  
+  /* Mobile Split-Screen becomes Stacked Layout */
+  .featuredMain {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featuredContent {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+  
+  /* Mobile Search Integration */
+  .featuredSearchSection {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .featuredSearchInput {
+    padding: 1rem 3.5rem 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 16px;
+  }
+  
+  .featuredSearchIcon {
+    right: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .featuredTitle {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .featuredSubtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featuredDetails {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .detailCard {
+    padding: 1.25rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+  }
+  
+  .detailIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+  
+  .detailContent {
+    align-items: flex-start;
+  }
+  
+  .detailLabel {
+    font-size: 0.75rem;
+  }
+  
+  .detailValue {
+    font-size: 0.9rem;
+  }
+  
+  .featuredCTAs {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .primaryCTA,
+  .secondaryCTA {
+    min-width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Mobile Sidebar Stacking */
+  .featuredSidebar {
+    gap: 1.5rem;
+  }
+  
+  /* Workshop Navigation Mobile */
+  .workshopNavigation {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .workshopNavContainer {
+    height: 200px;
+  }
+  
+  /* Pricing Card Mobile */
+  .featuredPricing {
+    position: static;
+    width: 100%;
+  }
+  
+  .pricingCard {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .urgencyBadge {
+    margin-bottom: 1rem;
+  }
+  
+  .currentPrice {
+    font-size: 2rem;
+  }
+  
+  .reserveButton {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Responsive Design for Split-Screen */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .featuredMain {
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+  }
+  
+  .featuredContent {
+    padding: 2.5rem 2rem;
+  }
+  
+  .workshopNavigation {
+    padding: 1.25rem;
+  }
+  
+  .workshopNavContainer {
+    height: 250px;
+  }
+  
+  .pricingCard {
+    padding: 1.75rem;
+  }
+}
+
+/* Mobile-First Context Section */
+.mobileHeroContext {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileHeroContext {
+    display: block;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem;
+    margin: 0 1rem 1.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    order: 1;
+  }
+  
+  .mobileHeroTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .mobileHeroSubtitle {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  
+  .mobileStatsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .mobileStat {
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(248, 250, 252, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+  }
+  
+  .mobileStatNumber {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .mobileStatLabel {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Search Bar Repositioning - Under Reservation Modal */
+.searchAfterReservation {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Hide the old integrated search in main content on mobile */
+  .featuredSearchSection {
+    display: none;
+  }
+  
+  /* Show search after reservation modal */
+  .searchAfterReservation {
+    display: block;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 0 1rem 1.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .searchAfterTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .searchAfterContainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  .searchAfterInput {
+    width: 100%;
+    padding: 1rem 3.5rem 1rem 1.5rem;
+    border: 2px solid rgba(148, 163, 184, 0.2);
+    border-radius: 16px;
+    background: rgba(248, 250, 252, 0.8);
+    backdrop-filter: blur(10px);
+    font-size: 1rem;
+    color: #1e293b;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+  }
+  
+  .searchAfterInput:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), 
+                0 8px 20px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .searchAfterIcon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #64748b;
+    pointer-events: none;
+  }
+  
+  /* Mobile Layout Restructuring */
+  .featuredMain {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile Order: 1. Context, 2. Navigation, 3. Featured Content, 4. Pricing, 5. Search */
+  .mobileHeroContext {
+    order: 1;
+  }
+  
+  .workshopNavigation {
+    order: 2;
+    margin: 0 1rem;
+  }
+  
+  .featuredContent {
+    order: 3;
+    margin: 0 1rem;
+  }
+  
+  .featuredPricing {
+    order: 4;
+    margin: 0 1rem;
+  }
+  
+  .searchAfterReservation {
+    order: 5;
   }
 }

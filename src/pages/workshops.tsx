@@ -520,20 +520,23 @@ function FeaturedWorkshopsHero() {
   return (
     <section className={styles.featuredHero}>
       <div className="container">
-        {/* Search Bar */}
-        <div className={styles.heroSearch}>
-          <div className={styles.searchContainer}>
-            <input
-              type="text"
-              placeholder="Search workshops by title, focus area, or instructor..."
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setSelectedWorkshop(0); // Reset selection when searching
-              }}
-              className={styles.searchInput}
-            />
-            <div className={styles.searchIcon}>🔍</div>
+        {/* Mobile Context Section - Only visible on mobile */}
+        <div className={styles.mobileHeroContext}>
+          <Heading as="h1" className={styles.mobileHeroTitle}>
+            Professional Workshops
+          </Heading>
+          <p className={styles.mobileHeroSubtitle}>
+            Discover AI-augmented strategic frameworks from Fortune 100 experts
+          </p>
+          <div className={styles.mobileStatsGrid}>
+            <div className={styles.mobileStat}>
+              <span className={styles.mobileStatNumber}>12+</span>
+              <span className={styles.mobileStatLabel}>Workshops</span>
+            </div>
+            <div className={styles.mobileStat}>
+              <span className={styles.mobileStatNumber}>4.9</span>
+              <span className={styles.mobileStatLabel}>Star Rating</span>
+            </div>
           </div>
         </div>
 
@@ -541,14 +544,10 @@ function FeaturedWorkshopsHero() {
         <div className={styles.featuredMain}>
           {/* Vertical Workshop Navigation */}
           <div className={styles.workshopNavigation}>
-            <button 
-              onClick={handlePrev}
-              disabled={filteredWorkshops.length <= 1}
-              className={styles.navButton}
-            >
-              <span className={styles.navIcon}>↑</span>
-              Previous
-            </button>
+            <div className={styles.navHeader}>
+              <h3 className={styles.navTitle}>Workshop Selection</h3>
+              <p className={styles.navSubtitle}>Browse our upcoming professional workshops</p>
+            </div>
             
             <div className={`${styles.workshopThumbnails} ${styles.workshopNavContainer}`}>
               {filteredWorkshops.map((workshop, index) => (
@@ -570,14 +569,25 @@ function FeaturedWorkshopsHero() {
               ))}
             </div>
             
-            <button 
-              onClick={handleNext}
-              disabled={filteredWorkshops.length <= 1}
-              className={styles.navButton}
-            >
-              <span className={styles.navIcon}>↓</span>
-              Next
-            </button>
+            <div className={styles.navButtonsContainer}>
+              <button 
+                onClick={handlePrev}
+                disabled={filteredWorkshops.length <= 1}
+                className={styles.navButton}
+              >
+                <span className={styles.navIcon}>←</span>
+                Previous
+              </button>
+              
+              <button 
+                onClick={handleNext}
+                disabled={filteredWorkshops.length <= 1}
+                className={styles.navButton}
+              >
+                Next
+                <span className={styles.navIcon}>→</span>
+              </button>
+            </div>
           </div>
 
           <div className={styles.featuredContent}>
@@ -645,6 +655,7 @@ function FeaturedWorkshopsHero() {
           </div>
           
           <div className={styles.featuredPricing}>
+            
             <div className={styles.pricingCard}>
               <div className={styles.urgencyBadge}>
                 Only {currentWorkshop.seatsRemaining} seats left
@@ -675,6 +686,22 @@ function FeaturedWorkshopsHero() {
               >
                 Reserve Your Strategic Advantage
               </Link>
+            </div>
+            {/* Search Bar - Positioned at the far right */}
+            <div className={styles.searchRightContainer}>
+              <div className={styles.searchAfterContainer}>
+                <input
+                  type="text"
+                  placeholder="Search workshops by title, focus area, or instructor..."
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setSelectedWorkshop(0); // Reset selection when searching
+                  }}
+                  className={styles.searchAfterInput}
+                />
+                <div className={styles.searchAfterIcon}>🔍</div>
+              </div>
             </div>
           </div>
         </div>
