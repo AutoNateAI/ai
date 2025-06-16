@@ -494,6 +494,7 @@ function formatHumanDate(dateString: string): string {
 function FeaturedWorkshopsHero() {
   const [selectedWorkshop, setSelectedWorkshop] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeTab, setActiveTab] = useState('overview'); // 'overview', 'details', 'instructor', 'pricing'
   
   // Filter workshops based on search query
   const filteredWorkshops = workshops.filter(workshop =>
@@ -522,23 +523,179 @@ function FeaturedWorkshopsHero() {
       <div className="container">
         {/* Mobile Context Section - Only visible on mobile */}
         <div className={styles.mobileHeroContext}>
+          <div className={styles.mobileHeroBadge}>
+            <span className={styles.mobileHeroBadgeIcon}>⚡</span>
+            Next Intensive
+          </div>
           <Heading as="h1" className={styles.mobileHeroTitle}>
-            Professional Workshops
+            {currentWorkshop.title}
           </Heading>
           <p className={styles.mobileHeroSubtitle}>
-            Discover AI-augmented strategic frameworks from Fortune 100 experts
+            {currentWorkshop.subtitle} — {currentWorkshop.description}
           </p>
           <div className={styles.mobileStatsGrid}>
             <div className={styles.mobileStat}>
-              <span className={styles.mobileStatNumber}>12+</span>
-              <span className={styles.mobileStatLabel}>Workshops</span>
+              <span className={styles.mobileStatNumber}>{currentWorkshop.seatsRemaining}</span>
+              <span className={styles.mobileStatLabel}>Seats Left</span>
             </div>
             <div className={styles.mobileStat}>
-              <span className={styles.mobileStatNumber}>4.9</span>
-              <span className={styles.mobileStatLabel}>Star Rating</span>
+              <span className={styles.mobileStatNumber}>${currentWorkshop.price}</span>
+              <span className={styles.mobileStatLabel}>Price</span>
+            </div>
+          </div>
+          {/* Mobile Workshop Navigation Buttons - Only visible on mobile */}
+          <div className={styles.mobileNavButtons}>
+            <button 
+              className={styles.mobileNavButton} 
+              onClick={handlePrev}
+              aria-label="Previous workshop"
+            >
+              ← Previous
+            </button>
+            <button 
+              className={styles.mobileNavButton} 
+              onClick={handleNext}
+              aria-label="Next workshop"
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+        
+        {/* Mobile Tab Navigation - Only visible on mobile */}
+        <div className={styles.mobileTabNavigation}>
+          <div 
+            className={clsx(styles.mobileTab, activeTab === 'overview' && styles.mobileTabActive)}
+            onClick={() => setActiveTab('overview')}
+          >
+            Overview
+          </div>
+          <div 
+            className={clsx(styles.mobileTab, activeTab === 'details' && styles.mobileTabActive)}
+            onClick={() => setActiveTab('details')}
+          >
+            Details
+          </div>
+          <div 
+            className={clsx(styles.mobileTab, activeTab === 'instructor' && styles.mobileTabActive)}
+            onClick={() => setActiveTab('instructor')}
+          >
+            Instructor
+          </div>
+          <div 
+            className={clsx(styles.mobileTab, activeTab === 'pricing' && styles.mobileTabActive)}
+            onClick={() => setActiveTab('pricing')}
+          >
+            Pricing
+          </div>
+        </div>
+        
+        {/* Mobile Tab Content Sections - Only visible on mobile */}
+        <div className={styles.mobileTabSection}>
+          {/* Overview Tab */}
+          <div className={clsx(styles.mobileTabContent, styles.mobileOverviewTab, activeTab === 'overview' && styles.mobileTabContentActive)}>
+            <h3>What You'll Learn</h3>
+            <div className={styles.mobileFeatureList}>
+              {currentWorkshop.outcomes.map((outcome, index) => (
+                <div key={index} className={styles.mobileFeatureItem}>
+                  <div className={styles.mobileFeatureIcon}>✓</div>
+                  <div className={styles.mobileFeatureText}>{outcome}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Details Tab */}
+          <div className={clsx(styles.mobileTabContent, styles.mobileDetailsTab, activeTab === 'details' && styles.mobileTabContentActive)}>
+            <div className={styles.mobileDetailsList}>
+              <div className={styles.mobileDetailItem}>
+                <div className={styles.mobileDetailLabel}>Date & Time</div>
+                <div className={styles.mobileDetailValue}>{formatHumanDate(currentWorkshop.date)} • {currentWorkshop.time}</div>
+              </div>
+              <div className={styles.mobileDetailItem}>
+                <div className={styles.mobileDetailLabel}>Format</div>
+                <div className={styles.mobileDetailValue}>{currentWorkshop.format} • {currentWorkshop.duration}</div>
+              </div>
+              <div className={styles.mobileDetailItem}>
+                <div className={styles.mobileDetailLabel}>Seats Remaining</div>
+                <div className={styles.mobileDetailValue}>{currentWorkshop.seatsRemaining} of {currentWorkshop.totalSeats}</div>
+              </div>
+              <div className={styles.mobileDetailItem}>
+                <div className={styles.mobileDetailLabel}>Level</div>
+                <div className={styles.mobileDetailValue}>{currentWorkshop.level}</div>
+              </div>
+              <div className={styles.mobileDetailItem}>
+                <div className={styles.mobileDetailLabel}>Focus Area</div>
+                <div className={styles.mobileDetailValue}>{currentWorkshop.focusArea}</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Instructor Tab */}
+          <div className={clsx(styles.mobileTabContent, styles.mobileInstructorTab, activeTab === 'instructor' && styles.mobileTabContentActive)}>
+            <div className={styles.mobileInstructorHeader}>
+              <div className={styles.mobileInstructorAvatar}>
+                {currentWorkshop.instructor.name.charAt(0)}
+              </div>
+              <div className={styles.mobileInstructorInfo}>
+                <div className={styles.mobileInstructorName}>{currentWorkshop.instructor.name}</div>
+                <div className={styles.mobileInstructorTitle}>{currentWorkshop.instructor.title}</div>
+                <div className={styles.mobileInstructorCompany}>{currentWorkshop.instructor.company}</div>
+              </div>
+            </div>
+            
+            <h3>Expertise</h3>
+            <p>{currentWorkshop.instructor.expertise}</p>
+            
+            <h3>Credentials</h3>
+            <div className={styles.mobileCredentialsList}>
+              {currentWorkshop.instructor.credentials.map((credential, index) => (
+                <div key={index} className={styles.mobileCredentialItem}>
+                  <div className={styles.mobileCredentialIcon}>✓</div>
+                  <div className={styles.mobileCredentialText}>{credential}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Pricing Tab */}
+          <div className={clsx(styles.mobileTabContent, styles.mobilePricingTab, activeTab === 'pricing' && styles.mobileTabContentActive)}>
+            <div className={styles.mobilePriceDisplay}>
+              {currentWorkshop.originalPrice && (
+                <div className={styles.mobileOriginalPrice}>${currentWorkshop.originalPrice}</div>
+              )}
+              <div className={styles.mobileCurrentPrice}>${currentWorkshop.price}</div>
+              {currentWorkshop.originalPrice && (
+                <div className={styles.mobileSavingsLabel}>Save ${currentWorkshop.originalPrice - currentWorkshop.price}</div>
+              )}
+            </div>
+            
+            <h3>What's Included</h3>
+            <div className={styles.mobilePricingFeatures}>
+              <div className={styles.mobilePricingFeatureItem}>
+                <div className={styles.mobilePricingFeatureIcon}>✓</div>
+                <div className={styles.mobilePricingFeatureText}>100% Money-Back Guarantee</div>
+              </div>
+              <div className={styles.mobilePricingFeatureItem}>
+                <div className={styles.mobilePricingFeatureIcon}>✓</div>
+                <div className={styles.mobilePricingFeatureText}>Lifetime Community Access</div>
+              </div>
+              <div className={styles.mobilePricingFeatureItem}>
+                <div className={styles.mobilePricingFeatureIcon}>✓</div>
+                <div className={styles.mobilePricingFeatureText}>AI Prompt Library Included</div>
+              </div>
+              <div className={styles.mobilePricingFeatureItem}>
+                <div className={styles.mobilePricingFeatureIcon}>✓</div>
+                <div className={styles.mobilePricingFeatureText}>Certificate of Completion</div>
+              </div>
             </div>
           </div>
         </div>
+        
+        {/* Floating Action Button - Only visible on mobile */}
+        <Link to="#" className={styles.mobileFab}>
+          ✓
+        </Link>
 
         {/* Main Featured Workshop Display */}
         <div className={styles.featuredMain}>
