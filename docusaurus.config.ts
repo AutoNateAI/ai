@@ -98,18 +98,13 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
+        {to: '/workshops', label: 'Workshops', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'knowledgeBaseSidebar',
           position: 'left',
           label: 'Knowledge Base',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {to: '/workshops', label: 'Workshops', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
         },
       ],
     },
