@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://autonateal.github.io/ai/blog/"/>
     <subtitle>AutoNateAI Blog</subtitle>
-    <icon>https://autonateal.github.io/ai/img/favicon.ico</icon>
+    <icon>https://autonateal.github.io/ai/img/logo.png</icon>
     <entry>
         <title type="html"><![CDATA[Why 'ChatGPT Down' Broke 500,000 Brains: The Psychology of AI Dependency]]></title>
         <id>https://autonateal.github.io/ai/blog/blog-1-psychology-ai-dependency/</id>
