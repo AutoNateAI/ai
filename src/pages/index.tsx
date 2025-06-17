@@ -16,29 +16,29 @@ function HeroSection() {
         <div className={styles.heroContent}>
           <div className={styles.cognitiveIndicator}>
             <span className={styles.pulseDot}></span>
-            <span className={styles.statusText}>Cognitive Intelligence: Active</span>
+            <span className={styles.statusText}>Private Intelligence Suite: Active</span>
           </div>
           
           <Heading as="h1" className={styles.heroTitle}>
-            Unlock Your <span className="gradient-text">Cognitive Edge</span>
+            Curate Your <span className="gradient-text">Cognitive Advantage</span>
           </Heading>
           
           <p className={styles.heroSubtitle}>
-            Master AI-powered frameworks that amplify mental clarity, strategic thinking, and professional performance.
+            Private frameworks for families who don't just build businesses—but dynasties of discernment.
           </p>
           
           <div className={styles.heroValueProps}>
             <div className={styles.valueCard}>
-              <div className={styles.valueIcon}>🧠</div>
-              <div className={styles.valueText}>Cognitive Frameworks</div>
+              <div className={styles.valueIcon}>♟️</div>
+              <div className={styles.valueText}>Decision Architecture</div>
             </div>
             <div className={styles.valueCard}>
-              <div className={styles.valueIcon}>⚡</div>
-              <div className={styles.valueText}>Mental Models</div>
+              <div className={styles.valueIcon}>⚜️</div>
+              <div className={styles.valueText}>Legacy Readiness</div>
             </div>
             <div className={styles.valueCard}>
-              <div className={styles.valueIcon}>🎯</div>
-              <div className={styles.valueText}>Strategic Insights</div>
+              <div className={styles.valueIcon}>🔍</div>
+              <div className={styles.valueText}>Intergenerational Fluency</div>
             </div>
           </div>
           
@@ -46,12 +46,12 @@ function HeroSection() {
             <Link
               to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations/intelligence/cognitive-intelligence-foundations"
               className="button button--primary button--lg">
-              Explore the Frameworks
+              Request Private Access
             </Link>
             <Link
               to="/ai/workshops"
               className="button button--secondary button--lg">
-              Discover Strategic Insights
+              Apply for Legacy Briefing
             </Link>
           </div>
         </div>
@@ -68,37 +68,38 @@ function RecognitionSection() {
         <div className={styles.sectionContent}>
           <div className={styles.lightHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Frameworks That Optimize Cognitive Performance
+              Cognitive Architecture for Discerning Minds
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Professional cognitive optimization through strategic intelligence and mental model mastery.
+              Custom strategies for pattern recognition, decision stability, and mental load liberation—built for families making generational choices under pressure.
             </p>
           </div>
           
           <div className={styles.clarityGrid}>
             <div className={styles.clarityCard}>
-              <div className={styles.cardIcon}>🔍</div>
-              <h3 className={styles.cardTitle}>Pattern Recognition</h3>
+              <div className={styles.cardIcon}>♟️</div>
+              <h3 className={styles.cardTitle}>Bespoke Pattern Recognition</h3>
               <p className={styles.cardDescription}>
-                Transform from information processor to strategic pattern recognizer through 
-                AI-enhanced cognitive frameworks.
+                Cultivate the discerning eye that separates signal from noise—a curated approach to 
+                information filtering reserved for those who shape industries.
               </p>
             </div>
             
             <div className={styles.clarityCard}>
-              <div className={styles.cardIcon}>💡</div>
-              <h3 className={styles.cardTitle}>Mental Bandwidth</h3>
+              <div className={styles.cardIcon}>⚜️</div>
+              <h3 className={styles.cardTitle}>Mental Clarity Preservation</h3>
               <p className={styles.cardDescription}>
-                Recover cognitive capacity for high-value strategic activities by optimizing 
-                how your mind processes information.
+                Safeguard your most valuable asset—cognitive bandwidth—through private systems 
+                designed for those whose decisions impact generations.
               </p>
             </div>
             
             <div className={styles.clarityCard}>
-              <div className={styles.cardIcon}>🚀</div>
-              <h3 className={styles.cardTitle}>Strategic Decision-Making</h3>
+              <div className={styles.cardIcon}>⚖️</div>
+              <h3 className={styles.cardTitle}>Legacy Decision Architecture</h3>
               <p className={styles.cardDescription}>
-                Enhance decision-making under uncertainty through psychology-backed AI collaboration.
+                Elevate family decision-making through proprietary frameworks that enhance foresight 
+                and cultivate intergenerational wisdom transfer.
               </p>
             </div>
           </div>
@@ -116,41 +117,41 @@ function IntersectionSection() {
         <div className={styles.partnershipContent}>
           <div className={styles.partnershipHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              AI as Cognitive Enhancement, Not Replacement
+              Your Private Cognitive Concierge
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Distributed cognition where AI handles processing, humans provide strategic interpretation.
+              We engineer elite AI-human collaboration so your mind is free to do what only legacy-level intelligence can: interpret, synthesize, and shape futures.
             </p>
           </div>
           
           <div className={styles.partnershipDiagram}>
             <div className={styles.partnershipColumn}>
               <div className={styles.partnershipCard}>
-                <div className={styles.partnershipIcon}>🤖</div>
-                <h3 className={styles.partnershipTitle}>AI Handles</h3>
+                <div className={styles.partnershipIcon}>⌛</div>
+                <h3 className={styles.partnershipTitle}>Discreet Automation</h3>
                 <ul className={styles.partnershipList}>
-                  <li>Information filtering & sorting</li>
-                  <li>Pattern highlighting</li>
-                  <li>Data processing & validation</li>
-                  <li>Real-time monitoring</li>
+                  <li>Signal filtering, decision prep</li>
+                  <li>Noise reduction & curation</li>
+                  <li>Pattern identification & analysis</li>
+                  <li>Continuous environmental scanning</li>
                 </ul>
               </div>
             </div>
             
             <div className={styles.partnershipArrow}>
-              <span className={styles.arrowIcon}>⚡</span>
-              <span className={styles.arrowText}>Enhanced Collaboration</span>
+              <span className={styles.arrowIcon}>⚜️</span>
+              <span className={styles.arrowText}>Bespoke Collaboration</span>
             </div>
             
             <div className={styles.partnershipColumn}>
               <div className={styles.partnershipCard}>
-                <div className={styles.partnershipIcon}>🧠</div>
-                <h3 className={styles.partnershipTitle}>You Focus On</h3>
+                <div className={styles.partnershipIcon}>♟️</div>
+                <h3 className={styles.partnershipTitle}>Your Legacy Focus</h3>
                 <ul className={styles.partnershipList}>
-                  <li>Strategic interpretation</li>
-                  <li>Creative problem-solving</li>
-                  <li>Decision-making under uncertainty</li>
-                  <li>Innovation & insight generation</li>
+                  <li>Insight generation, vision-led decisioning</li>
+                  <li>Intergenerational wisdom cultivation</li>
+                  <li>Strategic foresight under complexity</li>
+                  <li>Long-term synthesis & legacy planning</li>
                 </ul>
               </div>
             </div>
@@ -169,43 +170,43 @@ function BrainPotentialSection() {
         <div className={styles.frameworkContent}>
           <div className={styles.frameworkHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              The Cognitive Load Optimization Method
+              Mental Efficiency for Empire Thinkers
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Four-phase approach to transforming cognitive overload into strategic advantage.
+              Our proprietary four-phase methodology for transforming cognitive demands into generational advantage.
             </p>
           </div>
           
           <div className={styles.frameworkGrid}>
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>01</div>
-              <h3 className={styles.phaseTitle}>Cognitive Audit</h3>
+              <h3 className={styles.phaseTitle}>Clarity Baseline Assessment</h3>
               <p className={styles.phaseDescription}>
-                Identify where mental energy is wasted on low-value processing tasks.
+                Identify where legacy-building mental capacity is diverted to tasks beneath your station.
               </p>
             </div>
             
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>02</div>
-              <h3 className={styles.phaseTitle}>AI-Human Task Allocation</h3>
+              <h3 className={styles.phaseTitle}>Precision Delegation Matrix</h3>
               <p className={styles.phaseDescription}>
-                Design optimal division of cognitive labor between AI and human intelligence.
+                Architect the optimal division between discreet automation and your irreplaceable strategic insight.
               </p>
             </div>
             
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>03</div>
-              <h3 className={styles.phaseTitle}>Strategic Thinking Amplification</h3>
+              <h3 className={styles.phaseTitle}>Cognitive Advantage Alignment</h3>
               <p className={styles.phaseDescription}>
-                Channel recovered cognitive capacity toward high-value strategic activities.
+                Channel liberated mental bandwidth toward legacy-defining decisions and intergenerational planning.
               </p>
             </div>
             
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>04</div>
-              <h3 className={styles.phaseTitle}>Continuous Optimization</h3>
+              <h3 className={styles.phaseTitle}>Legacy Feedback Loop</h3>
               <p className={styles.phaseDescription}>
-                Monitor and adjust AI-human collaboration based on strategic outcomes.
+                Continuously refine your private cognitive system based on multi-generational outcomes.
               </p>
             </div>
           </div>
@@ -223,47 +224,47 @@ function CommunitySection() {
         <div className={styles.libraryContent}>
           <div className={styles.libraryHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Strategic Intelligence in Your Inbox
+              Elite Briefings for Discerning Minds
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Explore frameworks that optimize cognitive performance through Psychology × AI × Culture insights.
+              Private dispatches on AI, psychology, and modern mental clarity—tailored for families who think three generations ahead.
             </p>
           </div>
           
           <div className={styles.libraryGrid}>
             <div className={styles.libraryCard}>
-              <div className={styles.categoryTag}>Cognitive Frameworks</div>
-              <h3 className={styles.libraryTitle}>Pattern Recognition Systems</h3>
+              <div className={styles.categoryTag}>Mental Infrastructure</div>
+              <h3 className={styles.libraryTitle}>Bespoke Pattern Recognition</h3>
               <p className={styles.libraryPreview}>
-                How to transform your brain from data processor to strategic pattern recognizer...
+                How distinguished families cultivate the discernment to separate signal from market noise...
               </p>
               <div className={styles.libraryMeta}>
-                <span className={styles.readTime}>8 min read</span>
-                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Read →</Link>
+                <span className={styles.readTime}>Curated Insight</span>
+                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Request Access →</Link>
               </div>
             </div>
             
             <div className={styles.libraryCard}>
-              <div className={styles.categoryTag}>Mental Models</div>
-              <h3 className={styles.libraryTitle}>Cognitive Load Distribution</h3>
+              <div className={styles.categoryTag}>Legacy Frameworks</div>
+              <h3 className={styles.libraryTitle}>Intergenerational Intelligence</h3>
               <p className={styles.libraryPreview}>
-                Frameworks for optimal AI-human task allocation in strategic thinking...
+                Proprietary systems for cultivating wisdom transfer across generations of leadership...
               </p>
               <div className={styles.libraryMeta}>
-                <span className={styles.readTime}>12 min read</span>
-                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Read →</Link>
+                <span className={styles.readTime}>Private Methodology</span>
+                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Inquire →</Link>
               </div>
             </div>
             
             <div className={styles.libraryCard}>
-              <div className={styles.categoryTag}>Strategic Intelligence</div>
-              <h3 className={styles.libraryTitle}>Decision-Making Under Uncertainty</h3>
+              <div className={styles.categoryTag}>Decision Architecture</div>
+              <h3 className={styles.libraryTitle}>Navigating Complexity with Clarity</h3>
               <p className={styles.libraryPreview}>
-                Psychology-backed approaches to enhance strategic decision-making capabilities...
+                Discreet approaches that ensure family decisions maintain precision under uncertainty...
               </p>
               <div className={styles.libraryMeta}>
-                <span className={styles.readTime}>10 min read</span>
-                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Read →</Link>
+                <span className={styles.readTime}>Exclusive Protocol</span>
+                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Schedule Consultation →</Link>
               </div>
             </div>
           </div>
@@ -281,26 +282,17 @@ function SocialProofSection() {
         <div className={styles.showcaseContent}>
           <div className={styles.showcaseHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Visual Intelligence That Enhances Understanding
+              Cognitive Diagrams, Engineered for Precision
             </Heading>
             <p className={styles.sectionSubtitle}>
-              High-quality visual content that represents the Psychology × AI × Culture intersection.
+              Curated visual frameworks that distill complex insights into elegant representations for discerning minds.
             </p>
           </div>
           
           <div className={styles.showcaseGrid}>
             <div className={styles.showcaseCard}>
               <div className={styles.showcaseImage}>
-                <div className={styles.imagePreview}>🧠⚡🎯</div>
-              </div>
-              <div className={styles.showcaseCaption}>
-                Cognitive Framework Visualizations
-              </div>
-            </div>
-            
-            <div className={styles.showcaseCard}>
-              <div className={styles.showcaseImage}>
-                <div className={styles.imagePreview}>📊🔍💡</div>
+                <div className={styles.imagePreview}>♟️ ⚜️ ⚖️</div>
               </div>
               <div className={styles.showcaseCaption}>
                 Strategic Intelligence Diagrams
@@ -309,19 +301,28 @@ function SocialProofSection() {
             
             <div className={styles.showcaseCard}>
               <div className={styles.showcaseImage}>
-                <div className={styles.imagePreview}>🤖🧠🚀</div>
+                <div className={styles.imagePreview}>🔍 ⌛ ⚖️</div>
               </div>
               <div className={styles.showcaseCaption}>
-                AI-Human Partnership Models
+                Mental Flowcharts for Executive Clarity
               </div>
             </div>
             
             <div className={styles.showcaseCard}>
               <div className={styles.showcaseImage}>
-                <div className={styles.imagePreview}>🎨📈⚡</div>
+                <div className={styles.imagePreview}>⚔️ ♟️ ⚜️</div>
               </div>
               <div className={styles.showcaseCaption}>
-                Cultural Intelligence Infographics
+                AI Partnership Maps
+              </div>
+            </div>
+            
+            <div className={styles.showcaseCard}>
+              <div className={styles.showcaseImage}>
+                <div className={styles.imagePreview}>🔍 ⚖️ ⌛</div>
+              </div>
+              <div className={styles.showcaseCaption}>
+                Legacy Culture Intelligence Visuals
               </div>
             </div>
           </div>
@@ -339,10 +340,10 @@ function FutureYouSection() {
         <div className={styles.pathwayContent}>
           <div className={styles.pathwayHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Your Cognitive Evolution Journey
+              From Clutter to Clarity: The Legacy Mind Shift
             </Heading>
             <p className={styles.sectionSubtitle}>
-              The transformation from cognitive overload to strategic clarity through expert guidance.
+              The transformation from cognitive noise to generational wisdom through bespoke mental infrastructure.
             </p>
           </div>
           
@@ -350,9 +351,9 @@ function FutureYouSection() {
             <div className={styles.pathwayStep}>
               <div className={styles.stepNumber}>1</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>Cognitive Overload</h3>
+                <h3 className={styles.stepTitle}>Mental Noise Audit</h3>
                 <p className={styles.stepDescription}>
-                  Information processing consumes mental bandwidth meant for strategic thinking.
+                  Identify where your family's intellectual capital is being diluted by low-value information processing.
                 </p>
               </div>
             </div>
@@ -362,9 +363,9 @@ function FutureYouSection() {
             <div className={styles.pathwayStep}>
               <div className={styles.stepNumber}>2</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>Framework Discovery</h3>
+                <h3 className={styles.stepTitle}>Private Framework Curation</h3>
                 <p className={styles.stepDescription}>
-                  Learn cognitive optimization techniques through Psychology × AI × Culture insights.
+                  Cultivate bespoke cognitive systems designed for families who shape industries and legacies.
                 </p>
               </div>
             </div>
@@ -374,9 +375,9 @@ function FutureYouSection() {
             <div className={styles.pathwayStep}>
               <div className={styles.stepNumber}>3</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>Strategic Clarity</h3>
+                <h3 className={styles.stepTitle}>Strategic Clarity Execution</h3>
                 <p className={styles.stepDescription}>
-                  Mental energy flows toward high-value pattern recognition and decision-making.
+                  Channel liberated cognitive bandwidth into multi-generational vision and legacy cultivation.
                 </p>
               </div>
             </div>
@@ -395,44 +396,44 @@ function StrategicIntelligenceSection() {
         <div className={styles.actionContent}>
           <div className={styles.actionHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Strategic Intelligence in Action
+              Proprietary Cognitive Systems
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Real frameworks and insights that demonstrate cognitive performance optimization.
+              Bespoke frameworks that cultivate mental clarity and strategic foresight for generational advantage.
             </p>
           </div>
           
           <div className={styles.actionGrid}>
             <div className={styles.actionCard}>
-              <div className={styles.actionIcon}>🎯</div>
-              <h3 className={styles.actionTitle}>Pattern Synthesis Framework</h3>
+              <div className={styles.actionIcon}>♟️</div>
+              <h3 className={styles.actionTitle}>Signal Intelligence Suite</h3>
               <p className={styles.actionDescription}>
-                AI gathers information dots, humans connect them strategically for competitive advantage.
+                Discreet information curation that allows legacy-builders to identify patterns invisible to others.
               </p>
               <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.actionLink}>
-                Explore Framework →
+                Request Private Briefing →
               </Link>
             </div>
             
             <div className={styles.actionCard}>
-              <div className={styles.actionIcon}>🧠</div>
-              <h3 className={styles.actionTitle}>Cognitive Load Distribution</h3>
+              <div className={styles.actionIcon}>⚜️</div>
+              <h3 className={styles.actionTitle}>Cognitive Asset Allocation System</h3>
               <p className={styles.actionDescription}>
-                Optimal division of mental tasks between AI processing and human strategic thinking.
+                Precision delegation of mental resources between AI assistance and your irreplaceable strategic insight.
               </p>
               <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.actionLink}>
-                Learn Method →
+                Schedule Consultation →
               </Link>
             </div>
             
             <div className={styles.actionCard}>
-              <div className={styles.actionIcon}>⚡</div>
-              <h3 className={styles.actionTitle}>Decision Enhancement Systems</h3>
+              <div className={styles.actionIcon}>⚖️</div>
+              <h3 className={styles.actionTitle}>Legacy Decision Architecture Toolkit</h3>
               <p className={styles.actionDescription}>
-                Psychology-backed approaches to improve strategic decision-making under uncertainty.
+                Bespoke frameworks that ensure family decisions maintain precision under complexity and uncertainty.
               </p>
               <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.actionLink}>
-                Access System →
+                Apply for Access →
               </Link>
             </div>
           </div>
@@ -450,33 +451,33 @@ function FinalCtaSection() {
         <div className={styles.finalContent}>
           <div className={styles.finalCard}>
             <div className={styles.finalTitle}>
-              Begin Your Cognitive Optimization
+              Initiate Your Legacy Intelligence Protocol
             </div>
             
             <div className={styles.finalSubtitle}>
-              Ready to optimize how your mind processes information? Join strategic thinkers 
-              who've discovered frameworks that enhance cognitive performance and mental bandwidth.
+              For families who understand that cognitive clarity is their most valuable asset—join the discreet 
+              circle of legacy-builders who've embraced bespoke mental infrastructure for generational advantage.
             </div>
             
             <div className={styles.finalButtons}>
               <Link
                 to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations/intelligence/cognitive-intelligence-foundations"
                 className="button button--primary button--lg">
-                Access the Mental Models
+                Request Family Onboarding
               </Link>
               
               <Link
                 to="/ai/workshops"
                 className="button button--secondary button--lg">
-                Begin Strategic Thinking Journey
+                Schedule Discreet Consultation
               </Link>
             </div>
             
             <div className={styles.finalValue}>
               <div className={styles.valueStatement}>
-                <div className={styles.valueIcon}>✨</div>
+                <div className={styles.valueIcon}>⚜️</div>
                 <div className={styles.valueText}>
-                  Frameworks that optimize cognitive approach through Psychology × AI × Culture insights
+                  Private mental frameworks engineered for those who think in terms of legacy, not quick wins
                 </div>
               </div>
             </div>
