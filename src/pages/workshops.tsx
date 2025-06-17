@@ -49,148 +49,159 @@ interface Workshop {
 
 // Sample workshop data with complete details
 const workshops: Workshop[] = [
-  // ADULT WORKSHOPS
   {
     id: '1',
     slug: 'ai-fluency-next-gen-leaders',
-    title: 'AI Fluency for Next-Gen Leaders',
-    subtitle: 'Strategic Intelligence for Inheritors',
-    description: 'Equip young heirs with strategic AI understanding—from prompt engineering to agent design—through the lens of power and responsibility.',
+    title: 'Mind-AI Partnership for Next-Gen Leaders',
+    subtitle: 'Freeing Your Mental Space for Clarity and Vision',
+    description: 'Learn how to offload information processing to AI so your brilliant mind can focus on what truly matters—vision, relationships, and legacy planning.',
     date: '2024-03-05',
-    time: '3:00 PM - 5:00 PM EST',
+    time: '3:00 PM - 5:30 PM EST',
     format: 'Private Estate',
-    duration: '2 hours',
+    duration: '2.5 hours',
     level: 'Next-Gen',
-    price: 3800,
+    price: 3279,
     originalPrice: 4500,
     seatsRemaining: 4,
     totalSeats: 8,
-    focusArea: 'Strategic',
+    focusArea: 'Cognitive',
     type: 'Legacy Lab',
     audience: 'Student',
     outcomes: [
-      "Master the strategic deployment of AI as a cognitive extension rather than mere convenience",
-      "Develop sophisticated mental models for evaluating AI capabilities against family or enterprise needs",
-      "Create private intelligence systems that maintain discretion while amplifying decision quality",
-      "Establish personal protocols for leveraging AI while preserving independent judgment"
+      "Reclaim 70% of your mental bandwidth currently spent on low-value information processing",
+      "Create your customized AI-human partnership system for eliminating mental noise",
+      "Develop practical methods for maintaining mental clarity under information overload",
+      "Establish personal protocols for balancing AI data processing with human wisdom and judgment"
     ],
     instructor: {
-      name: 'Dr. Alex Kumar',
-      title: 'Chief AI Architect',
-      company: 'Fortune 100 Technology Corporation',
-      expertise: 'Enterprise AI Architecture & Machine Learning Systems',
+      name: 'AutoNate',
+      title: 'Generative AI Software Engineer',
+      company: 'AutoNateAI',
+      expertise: 'AI-Human Cognitive Augmentation & Information Architecture',
       credentials: [
-        'Designed AI infrastructure for $100B+ tech companies',
-        'PhD in Computer Science from Carnegie Mellon',
-        'Former Google AI Research Team Lead',
-        'Author of "Enterprise AI Architecture" (O\'Reilly)'
+        'Designed cognitive architecture systems for ultra-high-net-worth families',
+        'Expert in AI-driven decision frameworks',
+        'Developer of proprietary mental models for strategic clarity',
+        'Pioneer in cognitive load optimization'
       ]
     },
     agenda: [
       {
         time: '3:00 PM',
-        title: 'AI Systems Assessment',
-        description: 'Evaluate current AI capabilities and identify architectural gaps in enterprise environments.'
+        title: 'Mental Bandwidth Assessment',
+        description: 'Evaluate how much of your cognitive energy is currently wasted on information processing versus high-value strategic thinking.'
       },
       {
-        time: '3:45 PM',
-        title: 'Scalable Architecture Design',
-        description: 'Learn principles for designing AI systems that scale with business growth and complexity.'
+        time: '3:30 PM',
+        title: 'The Information Trap',
+        description: 'Understand the psychological mechanisms that keep brilliant minds trapped in information overload.'
+      },
+      {
+        time: '4:00 PM',
+        title: 'AI-Human Partnership Design',
+        description: 'Create your personalized system for delegating information processing to AI while focusing on vision and strategy.'
       },
       {
         time: '4:30 PM',
-        title: 'Implementation Strategies',
-        description: 'Master proven approaches for deploying AI systems in large-scale enterprise environments.'
+        title: 'Decision Clarity Workshop',
+        description: 'Practice using AI-filtered information with human wisdom to make clearer decisions under complexity.'
       },
       {
-        time: '5:15 PM',
-        title: 'Governance & Ethics Framework',
-        description: 'Build comprehensive AI governance systems for responsible enterprise deployment.'
-      },
-      {
-        time: '6:00 PM',
-        title: 'Competitive Advantage Design',
-        description: 'Create sustainable competitive advantages through unique AI system architecture.'
+        time: '5:00 PM',
+        title: 'Your Mental Freedom Plan',
+        description: 'Build your 90-day roadmap for cognitive liberation and strategic focus through AI-human collaboration.'
       }
     ],
     testimonials: [
       {
-        quote: 'This architecture framework helped us scale our AI initiatives from pilot to enterprise-wide deployment.',
+        quote: 'As someone inheriting significant responsibilities, I was feeling constantly overwhelmed by information. This workshop showed me how to partner with AI to free my mind for strategic thinking—it\'s been transformative.',
         author: 'Jennifer Walsh',
-        company: 'Global Financial Services',
-        role: 'Chief Technology Officer'
+        company: 'Next-Gen Family Enterprise',
+        role: 'Incoming Board Member'
+      },
+      {
+        quote: 'The mental models we developed for balancing AI capabilities with human judgment have completely changed how I approach decision-making. I\'m thinking clearer than ever.',
+        author: 'Michael Chen',
+        company: 'Global Family Office',
+        role: 'Next-Generation Leader'
       }
     ]
   },
   {
     id: '2',
     slug: 'raising-minds-worth-inheriting',
-    title: 'Raising Minds Worth Inheriting',
-    subtitle: 'Generational Intelligence Cultivation',
-    description: 'A guided strategy session for parents who want to instill mental clarity, creative discipline, and digital literacy in their children.',
+    title: 'Mental Clarity Across Generations',
+    subtitle: 'The Family Cognitive Sovereignty System',
+    description: 'Create a family environment where every generation maintains mental clarity amid information chaos. Learn how to build cognitive systems that protect young minds from digital overwhelm while fostering strategic thinking.',
     date: '2024-01-22',
-    time: '1:00 PM - 3:30 PM EST',
+    time: '1:00 PM - 4:00 PM EST',
     format: 'Private Estate',
-    duration: '2.5 hours',
+    duration: '3 hours',
     level: 'Legacy',
-    price: 5500,
+    price: 5379,
     originalPrice: 7000,
     seatsRemaining: 4,
     totalSeats: 8,
-    focusArea: 'Legacy',
+    focusArea: 'Cognitive',
     type: 'Family Session',
     audience: 'Adult',
     outcomes: [
-      "Design a bespoke cognitive development framework for your family's next generation",
-      "Implement psychology-backed protocols for cultivating discernment and judgment",
-      "Create private systems for balancing technological fluency with deep thinking",
-      "Establish family traditions that transfer wisdom across generations"
+      "Design a complete family cognitive system that protects mental clarity across generations",
+      "Create practical AI filtering systems that keep information noise away from developing minds",
+      "Implement daily and weekly rituals that strengthen focus and strategic thinking for all family members",
+      "Establish a culture of mental sovereignty where technology serves the family’s vision, not the reverse"
     ],
     instructor: {
-      name: 'Dr. James Wilson',
-      title: 'Director of Intergenerational Intelligence',
-      company: 'Legacy Mind Institute',
-      expertise: 'Family Cognitive Systems & Next-Gen Development',
+      name: 'AutoNate',
+      title: 'Generative AI Software Engineer',
+      company: 'AutoNateAI',
+      expertise: 'AI-Human Cognitive Augmentation & Information Architecture',
       credentials: [
-        'Advised multi-generational families with combined assets exceeding $50B',
-        'PhD in Developmental Psychology from Yale',
-        'Former advisor to three royal families on next-generation education',
-        'Author of "The Inheritor\'s Mind: Cultivating Judgment in Wealth\'s Shadow"'
+        'Designed cognitive architecture systems for ultra-high-net-worth families',
+        'Expert in AI-driven decision frameworks',
+        'Developer of proprietary mental models for strategic clarity',
+        'Pioneer in cognitive load optimization'
       ]
     },
     agenda: [
       {
         time: '1:00 PM',
-        title: 'Psychology of AI Collaboration',
-        description: 'Understand the cognitive principles that make human-AI partnerships successful in strategic environments.'
+        title: 'The Family Cognitive Audit',
+        description: 'Assess how information overload is currently affecting each generation in your family and identify priority intervention areas.'
       },
       {
         time: '1:45 PM',
-        title: 'Workflow Design Principles',
-        description: 'Learn the framework for designing workflows that amplify human creativity while leveraging AI capabilities.'
+        title: 'Digital Environment Design',
+        description: 'Create a family technology environment that protects developing minds from information chaos while fostering wisdom.'
       },
       {
         time: '2:30 PM',
-        title: 'Strategic Automation',
-        description: 'Identify which strategic processes should be automated vs. enhanced vs. preserved as human-only.'
+        title: 'AI-Human Partnership for Families',
+        description: 'Design age-appropriate AI-human collaboration systems that free mental bandwidth without sacrificing development.'
       },
       {
         time: '3:15 PM',
-        title: 'Implementation Strategy',
-        description: 'Create your personalized AI integration roadmap with change management considerations.'
+        title: 'Family Clarity Rituals',
+        description: 'Establish practical daily, weekly and quarterly rituals that strengthen mental clarity for all family members.'
       },
       {
-        time: '4:00 PM',
-        title: 'Competitive Advantage Design',
-        description: 'Build sustainable advantages through unique human-AI collaboration patterns.'
+        time: '3:45 PM',
+        title: 'Implementation Roadmap',
+        description: 'Build your 90-day plan for transforming your family\'s relationship with information and technology.'
       }
     ],
     testimonials: [
       {
-        quote: 'This approach to AI integration is brilliant. It actually enhances human potential rather than replacing it.',
+        quote: 'We implemented the family cognitive system with our three children, and the transformation has been remarkable. They\'re using technology purposefully instead of mindlessly, and our family discussions have never been deeper.',
         author: 'David Kim',
-        company: 'Tech Innovation Corp',
-        role: 'Chief Innovation Officer'
+        company: 'Multi-Generation Enterprise',
+        role: 'Family Principal'
+      },
+      {
+        quote: 'As parents, we were worried about our children\'s relationship with technology. This workshop gave us a practical system for protecting their mental clarity while teaching them to use AI as a tool for thinking better, not thinking less.',
+        author: 'Rachel Morgan',
+        company: 'Legacy Family Office',
+        role: 'Trustee & Parent'
       }
     ]
   },
@@ -201,12 +212,12 @@ const workshops: Workshop[] = [
     subtitle: 'Cognitive Architecture for Next-Generation Leaders',
     description: 'Teach second-gen family members how to think, not what to think. Covers frameworks for clarity, ethics, and future-mapping.',
     date: '2024-03-12',
-    time: '11:00 AM - 1:30 PM EST',
+    time: '11:00 AM - 12:30 PM EST',
     format: 'Private Estate',
-    duration: '2.5 hours',
+    duration: '1.5 hours',
     level: 'Next-Gen',
-    price: 4200,
-    originalPrice: 5000,
+    price: 1279,
+    originalPrice: 2500,
     seatsRemaining: 3,
     totalSeats: 6,
     focusArea: 'Cognitive',
@@ -219,15 +230,15 @@ const workshops: Workshop[] = [
       "Establish cognitive protocols for balancing tradition with innovation in family enterprises"
     ],
     instructor: {
-      name: 'Dr. Rachel Thompson',
-      title: 'Executive Strategy Consultant',
-      company: 'Fortune 100 Strategy Firm',
-      expertise: 'Executive Decision Science & Predictive Analytics',
+      name: 'AutoNate',
+      title: 'Generative AI Software Engineer',
+      company: 'AutoNateAI',
+      expertise: 'AI-Human Cognitive Augmentation & Information Architecture',
       credentials: [
-        'Advised C-suite leaders at 25+ Fortune 500 companies',
-        'PhD in Decision Science from Stanford',
-        'Former BCG Principal and McKinsey Partner',
-        'Harvard Business Review Strategy Contributor'
+        'Designed cognitive architecture systems for ultra-high-net-worth families',
+        'Expert in AI-driven decision frameworks',
+        'Developer of proprietary mental models for strategic clarity',
+        'Pioneer in cognitive load optimization'
       ]
     },
     agenda: [
@@ -266,230 +277,6 @@ const workshops: Workshop[] = [
       }
     ]
   },
-  {
-    id: '5',
-    slug: 'ai-strategic-insight-legacy-edition',
-    title: 'AI for Strategic Insight: Legacy Edition',
-    subtitle: 'Private Intelligence Architecture for Family Offices',
-    description: 'A 90-minute immersive to reframe AI not as threat, but as force multiplier—tailored to family office leaders, advisors, and tech-averse founders.',
-    date: '2024-01-15',
-    time: '2:00 PM - 3:30 PM EST',
-    format: 'Private Estate',
-    duration: '90 minutes',
-    level: 'Legacy',
-    price: 4800,
-    originalPrice: 6000,
-    seatsRemaining: 3,
-    totalSeats: 8,
-    focusArea: 'Strategic',
-    type: 'Private Briefing',
-    audience: 'Adult',
-    outcomes: [
-      'Cultivate a private intelligence architecture for multi-generational advantage',
-      'Establish discreet AI systems that preserve family privacy while amplifying insight',
-      'Design bespoke decision protocols for complex legacy considerations',
-      'Develop strategic foresight capabilities through curated AI partnerships'
-    ],
-    instructor: {
-      name: 'Dr. Sarah Chen',
-      title: 'Director of Private Intelligence Systems',
-      company: 'Global Family Office Advisory',
-      expertise: 'Legacy Intelligence Architecture & Strategic Foresight',
-      credentials: [
-        'Designed intelligence systems for three of the world\'s largest family offices',
-        'PhD in Cognitive Science from Stanford',
-        'Former advisor to ultra-high-net-worth families across three continents',
-        'Author of "The Private Intelligence Advantage" (Oxford University Press)'
-      ]
-    },
-    agenda: [
-      {
-        time: '2:00 PM',
-        title: 'Private Intelligence Assessment',
-        description: 'Discreet evaluation of your family office\'s current intelligence architecture and identification of legacy-critical blind spots.'
-      },
-      {
-        time: '2:20 PM',
-        title: 'Bespoke AI Integration Framework',
-        description: 'Introduction to the proprietary methodology used by select family offices to enhance multi-generational decision quality.'
-      },
-      {
-        time: '2:40 PM',
-        title: 'Legacy Decision Architecture',
-        description: 'Design of customized intelligence protocols for complex, high-stakes family office decisions with generational implications.'
-      },
-      {
-        time: '3:00 PM',
-        title: 'Private Implementation Consultation',
-        description: 'Confidential application of frameworks to your specific family office challenges with discreet expert guidance.'
-      },
-      {
-        time: '3:20 PM',
-        title: 'Intergenerational Intelligence Systems',
-        description: 'Establishment of private systems for strategic foresight that compound your family\'s cognitive advantage across generations.'
-      }
-    ],
-    testimonials: [
-      {
-        quote: 'This private intelligence framework has transformed how our family office approaches multi-generational decisions. The discretion and precision are unparalleled.',
-        author: 'J.W.',
-        company: 'European Legacy Family Office',
-        role: 'Family Principal'
-      },
-      {
-        quote: 'After three generations of wealth creation, we finally have a structured approach to legacy intelligence that preserves our family\'s cognitive advantage.',
-        author: 'E.R.',
-        company: 'Multi-Continental Family Enterprise',
-        role: 'Trustee & Next-Gen Advisor'
-      }
-    ],
-    featured: true
-  },
-  
-  {
-    id: '3',
-    slug: 'mental-clarity-under-complexity',
-    title: 'Mental Clarity Under Complexity',
-    subtitle: 'Decision Architecture for Legacy Leaders',
-    description: 'High-stakes decision enhancement through AI–psychology frameworks, designed for those leading businesses, trusts, or multi-gen estates.',
-    date: '2024-01-29',
-    time: '10:00 AM - 12:30 PM EST',
-    format: 'Private Estate',
-    duration: '2.5 hours',
-    level: 'Legacy',
-    price: 6200,
-    originalPrice: 7500,
-    seatsRemaining: 3,
-    totalSeats: 6,
-    focusArea: 'Decision',
-    type: 'Private Briefing',
-    audience: 'Adult',
-    outcomes: [
-      "Master proprietary frameworks for maintaining mental clarity during high-stakes decisions",
-      "Implement bespoke cognitive protocols for navigating complexity without cognitive overwhelm",
-      "Design private decision architecture systems tailored to your family office or enterprise",
-      "Establish legacy-preserving decision processes that maintain clarity across generations"
-    ],
-    instructor: {
-      name: 'Dr. Maria Santos',
-      title: 'Chief Culture Officer',
-      company: 'Fortune 100 Technology Company',
-      expertise: 'Organizational Design & Strategic Culture Architecture',
-      credentials: [
-        'Transformed culture at 3 Fortune 100 companies',
-        'PhD in Organizational Behavior from Wharton',
-        '20+ years executive leadership experience',
-        'Featured in Harvard Business Review Culture Series'
-      ]
-    },
-    agenda: [
-      {
-        time: '10:00 AM',
-        title: 'Culture Assessment Framework',
-        description: 'Evaluate your current organizational culture and identify strategic alignment gaps.'
-      },
-      {
-        time: '10:45 AM',
-        title: 'Strategic Culture Design',
-        description: 'Learn the methodology for designing cultures that drive specific strategic outcomes.'
-      },
-      {
-        time: '11:30 AM',
-        title: 'Implementation Strategy',
-        description: 'Create your culture transformation roadmap with change management best practices.'
-      },
-      {
-        time: '12:15 PM',
-        title: 'Performance Systems',
-        description: 'Design systems that reinforce desired cultural behaviors and strategic execution.'
-      },
-      {
-        time: '1:00 PM',
-        title: 'Sustainability Framework',
-        description: 'Build mechanisms to maintain and evolve your strategic culture over time.'
-      }
-    ],
-    testimonials: [
-      {
-        quote: 'Our culture transformation using these frameworks led to 40% improvement in strategic initiative success rates.',
-        author: 'Robert Chen',
-        company: 'Global Technology Corp',
-        role: 'Chief Executive Officer'
-      }
-    ]
-  },
-  {
-    id: '4',
-    slug: 'household-cognitive-systems',
-    title: 'Household Cognitive Systems',
-    subtitle: 'Private Intelligence Architecture for Family Offices',
-    description: 'Design custom mind-management systems for your family—leveraging frameworks for calendars, reflections, assistants, and communication clarity.',
-    date: '2024-02-25',
-    time: '9:00 AM - 11:30 AM EST',
-    format: 'Private Estate',
-    duration: '2.5 hours',
-    level: 'Legacy',
-    price: 5800,
-    originalPrice: 7200,
-    seatsRemaining: 2,
-    totalSeats: 6,
-    focusArea: 'Cognitive',
-    type: 'Family Session',
-    audience: 'Adult',
-    outcomes: [
-      "Design bespoke cognitive systems tailored to your family's unique dynamics and legacy goals",
-      "Implement private intelligence protocols that enhance clarity across generations",
-      "Create discreet AI-augmented frameworks for family communication and decision-making",
-      "Establish household mental models that preserve wisdom while adapting to changing circumstances"
-    ],
-    instructor: {
-      name: 'Dr. James Patterson',
-      title: 'Cognitive Systems Researcher',
-      company: 'Advanced Intelligence Institute',
-      expertise: 'Cognitive AI Systems & Strategic Decision Architecture',
-      credentials: [
-        'Led AI strategy implementation for $50B+ revenue division',
-        'PhD in Cognitive Science from Stanford',
-        '15+ years Fortune 100 AI leadership',
-        'Author of "Strategic AI Integration" (Harvard Business Review)'
-      ]
-    },
-    agenda: [
-      {
-        time: '9:00 AM',
-        title: 'Cognitive Load Assessment',
-        description: 'Analyze your current decision-making patterns and identify cognitive bottlenecks affecting strategic performance.'
-      },
-      {
-        time: '9:45 AM',
-        title: 'AI-Augmented Analysis Framework',
-        description: 'Learn the proprietary framework used by Fortune 100 companies to integrate AI insights with human intuition.'
-      },
-      {
-        time: '10:30 AM',
-        title: 'Strategic Decision Protocols',
-        description: 'Design your personalized decision-making system for complex, high-stakes strategic choices.'
-      },
-      {
-        time: '11:15 AM',
-        title: 'Implementation Workshop',
-        description: 'Apply frameworks to your real strategic challenges with expert guidance and peer collaboration.'
-      },
-      {
-        time: '12:00 PM',
-        title: 'Automation & Systems Design',
-        description: 'Build repeatable systems for strategic thinking that compound your cognitive performance over time.'
-      }
-    ],
-    testimonials: [
-      {
-        quote: 'This framework transformed how I approach strategic decisions. The AI integration is game-changing.',
-        author: 'Michael Rodriguez',
-        company: 'Global Manufacturing Corp',
-        role: 'Chief Strategy Officer'
-      }
-    ]
-  }
 ];
 
 // Helper function to format dates in human-readable format
@@ -894,16 +681,10 @@ function UpcomingWorkshops() {
   
   const filterOptions = [
     { value: 'all', label: 'All Offerings' },
-    { value: 'Legacy', label: 'Legacy' },
+    { value: 'Family Session', label: 'Family Sessions' },
     { value: 'Cognitive', label: 'Cognitive' },
-    { value: 'Decision', label: 'Decision' },
-    { value: 'Strategic', label: 'Strategic' },
-    { value: 'Private Briefing', label: 'Private Briefings' },
     { value: 'Legacy Lab', label: 'Legacy Labs' },
     { value: 'Cognitive Ascension', label: 'Cognitive Ascension' },
-    { value: 'Family Session', label: 'Family Sessions' },
-    { value: 'Adult', label: 'For Adults' },
-    { value: 'Student', label: 'For Next Generation' }
   ];
   
   const handleFilter = (filterValue: string) => {
