@@ -15,15 +15,16 @@ interface Workshop {
   description: string;
   date: string;
   time: string;
-  format: 'Virtual' | 'In-Person' | 'Hybrid';
+  format: 'Virtual' | 'In-Person' | 'Hybrid' | 'Private Estate';
   duration: string;
-  level: 'Executive' | 'Professional' | 'Advanced';
+  level: 'Executive' | 'Professional' | 'Advanced' | 'Legacy' | 'Next-Gen';
   price: number;
   originalPrice?: number;
   seatsRemaining: number;
   totalSeats: number;
-  focusArea: 'Psychology' | 'AI' | 'Culture' | 'Strategy';
-  type: 'Intensive' | 'Masterclass' | 'Deep Dive';
+  focusArea: 'Legacy' | 'Decision' | 'Cognitive' | 'Strategic';
+  type: 'Private Briefing' | 'Legacy Lab' | 'Cognitive Ascension' | 'Family Session';
+  audience: 'Adult' | 'Student';
   outcomes: string[];
   instructor: {
     name: string;
@@ -48,116 +49,113 @@ interface Workshop {
 
 // Sample workshop data with complete details
 const workshops: Workshop[] = [
+  // ADULT WORKSHOPS
   {
     id: '1',
-    slug: 'cognitive-load-optimization-executives',
-    title: 'Cognitive Load Optimization for Executives',
-    subtitle: 'AI-Augmented Strategic Decision Making',
-    description: 'Transform your decision-making process with AI-augmented cognitive frameworks proven in Fortune 100 environments.',
-    date: '2024-01-15',
-    time: '2:00 PM - 6:00 PM EST',
-    format: 'Virtual',
-    duration: '4 hours',
-    level: 'Executive',
-    price: 1247,
-    originalPrice: 1797,
-    seatsRemaining: 3,
-    totalSeats: 12,
-    focusArea: 'Strategy',
-    type: 'Intensive',
+    slug: 'ai-fluency-next-gen-leaders',
+    title: 'AI Fluency for Next-Gen Leaders',
+    subtitle: 'Strategic Intelligence for Inheritors',
+    description: 'Equip young heirs with strategic AI understanding—from prompt engineering to agent design—through the lens of power and responsibility.',
+    date: '2024-03-05',
+    time: '3:00 PM - 5:00 PM EST',
+    format: 'Private Estate',
+    duration: '2 hours',
+    level: 'Next-Gen',
+    price: 3800,
+    originalPrice: 4500,
+    seatsRemaining: 4,
+    totalSeats: 8,
+    focusArea: 'Strategic',
+    type: 'Legacy Lab',
+    audience: 'Student',
     outcomes: [
-      'Master cognitive load theory for executive decision-making',
-      'Implement AI-augmented analysis frameworks',
-      'Design personalized decision-making protocols',
-      'Build strategic thinking automation systems'
+      "Master the strategic deployment of AI as a cognitive extension rather than mere convenience",
+      "Develop sophisticated mental models for evaluating AI capabilities against family or enterprise needs",
+      "Create private intelligence systems that maintain discretion while amplifying decision quality",
+      "Establish personal protocols for leveraging AI while preserving independent judgment"
     ],
     instructor: {
-      name: 'Dr. Sarah Chen',
-      title: 'Senior AI Engineer',
-      company: 'Fortune 100 Tech Corporation',
-      expertise: 'Cognitive AI Systems & Strategic Decision Architecture',
+      name: 'Dr. Alex Kumar',
+      title: 'Chief AI Architect',
+      company: 'Fortune 100 Technology Corporation',
+      expertise: 'Enterprise AI Architecture & Machine Learning Systems',
       credentials: [
-        'Led AI strategy implementation for $50B+ revenue division',
-        'PhD in Cognitive Science from Stanford',
-        '15+ years Fortune 100 AI leadership',
-        'Author of "Strategic AI Integration" (Harvard Business Review)'
+        'Designed AI infrastructure for $100B+ tech companies',
+        'PhD in Computer Science from Carnegie Mellon',
+        'Former Google AI Research Team Lead',
+        'Author of "Enterprise AI Architecture" (O\'Reilly)'
       ]
     },
     agenda: [
       {
-        time: '2:00 PM',
-        title: 'Cognitive Load Assessment',
-        description: 'Analyze your current decision-making patterns and identify cognitive bottlenecks affecting strategic performance.'
+        time: '3:00 PM',
+        title: 'AI Systems Assessment',
+        description: 'Evaluate current AI capabilities and identify architectural gaps in enterprise environments.'
       },
       {
-        time: '2:45 PM',
-        title: 'AI-Augmented Analysis Framework',
-        description: 'Learn the proprietary framework used by Fortune 100 companies to integrate AI insights with human intuition.'
+        time: '3:45 PM',
+        title: 'Scalable Architecture Design',
+        description: 'Learn principles for designing AI systems that scale with business growth and complexity.'
       },
       {
-        time: '3:30 PM',
-        title: 'Strategic Decision Protocols',
-        description: 'Design your personalized decision-making system for complex, high-stakes strategic choices.'
+        time: '4:30 PM',
+        title: 'Implementation Strategies',
+        description: 'Master proven approaches for deploying AI systems in large-scale enterprise environments.'
       },
       {
-        time: '4:15 PM',
-        title: 'Implementation Workshop',
-        description: 'Apply frameworks to your real strategic challenges with expert guidance and peer collaboration.'
+        time: '5:15 PM',
+        title: 'Governance & Ethics Framework',
+        description: 'Build comprehensive AI governance systems for responsible enterprise deployment.'
       },
       {
-        time: '5:00 PM',
-        title: 'Automation & Systems Design',
-        description: 'Build repeatable systems for strategic thinking that compound your cognitive performance over time.'
+        time: '6:00 PM',
+        title: 'Competitive Advantage Design',
+        description: 'Create sustainable competitive advantages through unique AI system architecture.'
       }
     ],
     testimonials: [
       {
-        quote: 'This framework transformed how I approach strategic decisions. The AI integration is game-changing.',
-        author: 'Michael Rodriguez',
-        company: 'Global Manufacturing Corp',
-        role: 'Chief Strategy Officer'
-      },
-      {
-        quote: 'Finally, a structured approach to complex decision-making that actually works in high-pressure environments.',
-        author: 'Lisa Thompson',
-        company: 'Fortune 500 Financial Services',
-        role: 'SVP Strategic Planning'
+        quote: 'This architecture framework helped us scale our AI initiatives from pilot to enterprise-wide deployment.',
+        author: 'Jennifer Walsh',
+        company: 'Global Financial Services',
+        role: 'Chief Technology Officer'
       }
-    ],
-    featured: true
+    ]
   },
   {
     id: '2',
-    slug: 'ai-human-partnership-frameworks',
-    title: 'AI-Human Partnership Frameworks',
-    subtitle: 'Psychology-Driven Workflow Design',
-    description: 'Design workflow systems that amplify human creativity while leveraging AI capabilities for maximum strategic impact.',
+    slug: 'raising-minds-worth-inheriting',
+    title: 'Raising Minds Worth Inheriting',
+    subtitle: 'Generational Intelligence Cultivation',
+    description: 'A guided strategy session for parents who want to instill mental clarity, creative discipline, and digital literacy in their children.',
     date: '2024-01-22',
-    time: '1:00 PM - 5:00 PM EST',
-    format: 'Virtual',
-    duration: '4 hours',
-    level: 'Professional',
-    price: 897,
-    seatsRemaining: 7,
-    totalSeats: 15,
-    focusArea: 'Psychology',
-    type: 'Masterclass',
+    time: '1:00 PM - 3:30 PM EST',
+    format: 'Private Estate',
+    duration: '2.5 hours',
+    level: 'Legacy',
+    price: 5500,
+    originalPrice: 7000,
+    seatsRemaining: 4,
+    totalSeats: 8,
+    focusArea: 'Legacy',
+    type: 'Family Session',
+    audience: 'Adult',
     outcomes: [
-      'Design AI-human collaboration frameworks',
-      'Optimize workflow psychology for peak performance',
-      'Implement strategic automation systems',
-      'Build sustainable competitive advantages'
+      "Design a bespoke cognitive development framework for your family's next generation",
+      "Implement psychology-backed protocols for cultivating discernment and judgment",
+      "Create private systems for balancing technological fluency with deep thinking",
+      "Establish family traditions that transfer wisdom across generations"
     ],
     instructor: {
-      name: 'James Mitchell',
-      title: 'Director of AI Strategy',
-      company: 'Fortune 100 Consulting Firm',
-      expertise: 'Human-AI Collaboration & Organizational Psychology',
+      name: 'Dr. James Wilson',
+      title: 'Director of Intergenerational Intelligence',
+      company: 'Legacy Mind Institute',
+      expertise: 'Family Cognitive Systems & Next-Gen Development',
       credentials: [
-        'Designed AI integration strategies for 50+ Fortune 500 companies',
-        'PhD in Organizational Psychology from MIT',
-        'Former McKinsey AI Practice Leader',
-        'TEDx speaker on Human-AI Collaboration'
+        'Advised multi-generational families with combined assets exceeding $50B',
+        'PhD in Developmental Psychology from Yale',
+        'Former advisor to three royal families on next-generation education',
+        'Author of "The Inheritor\'s Mind: Cultivating Judgment in Wealth\'s Shadow"'
       ]
     },
     agenda: [
@@ -198,25 +196,179 @@ const workshops: Workshop[] = [
   },
   {
     id: '3',
-    slug: 'strategic-culture-design',
-    title: 'Strategic Culture Design',
-    subtitle: 'Building High-Performance Teams',
-    description: 'Design organizational cultures that drive strategic execution and sustainable competitive advantages.',
-    date: '2024-01-29',
-    time: '10:00 AM - 2:00 PM EST',
-    format: 'Virtual',
-    duration: '4 hours',
-    level: 'Executive',
-    price: 1197,
-    seatsRemaining: 5,
-    totalSeats: 10,
-    focusArea: 'Culture',
-    type: 'Deep Dive',
+    slug: 'mental-models-for-inheritors',
+    title: 'Mental Models for Inheritors',
+    subtitle: 'Cognitive Architecture for Next-Generation Leaders',
+    description: 'Teach second-gen family members how to think, not what to think. Covers frameworks for clarity, ethics, and future-mapping.',
+    date: '2024-03-12',
+    time: '11:00 AM - 1:30 PM EST',
+    format: 'Private Estate',
+    duration: '2.5 hours',
+    level: 'Next-Gen',
+    price: 4200,
+    originalPrice: 5000,
+    seatsRemaining: 3,
+    totalSeats: 6,
+    focusArea: 'Cognitive',
+    type: 'Cognitive Ascension',
+    audience: 'Student',
     outcomes: [
-      'Design culture systems for strategic execution',
-      'Build high-performance team dynamics',
-      'Create sustainable competitive advantages through culture',
-      'Implement culture change management frameworks'
+      "Master the mental models used by multi-generational wealth stewards and legacy builders",
+      "Develop sophisticated frameworks for ethical decision-making in complex inheritance scenarios",
+      "Create personal systems for maintaining clarity and purpose amid privilege",
+      "Establish cognitive protocols for balancing tradition with innovation in family enterprises"
+    ],
+    instructor: {
+      name: 'Dr. Rachel Thompson',
+      title: 'Executive Strategy Consultant',
+      company: 'Fortune 100 Strategy Firm',
+      expertise: 'Executive Decision Science & Predictive Analytics',
+      credentials: [
+        'Advised C-suite leaders at 25+ Fortune 500 companies',
+        'PhD in Decision Science from Stanford',
+        'Former BCG Principal and McKinsey Partner',
+        'Harvard Business Review Strategy Contributor'
+      ]
+    },
+    agenda: [
+      {
+        time: '11:00 AM',
+        title: 'Decision Quality Assessment',
+        description: 'Analyze current decision-making processes and identify opportunities for optimization.'
+      },
+      {
+        time: '11:45 AM',
+        title: 'Predictive Analytics Framework',
+        description: 'Learn to integrate predictive models into strategic decision-making workflows.'
+      },
+      {
+        time: '12:30 PM',
+        title: 'Executive Intelligence Design',
+        description: 'Build personalized intelligence systems that enhance executive decision quality.'
+      },
+      {
+        time: '1:15 PM',
+        title: 'Implementation Workshop',
+        description: 'Apply frameworks to real executive challenges with expert guidance and peer collaboration.'
+      },
+      {
+        time: '2:00 PM',
+        title: 'Leadership System Design',
+        description: 'Create sustainable systems for evidence-based leadership and strategic execution.'
+      }
+    ],
+    testimonials: [
+      {
+        quote: 'These decision frameworks transformed our strategic planning process. We\'re making better decisions faster.',
+        author: 'Mark Stevens',
+        company: 'Global Manufacturing Corp',
+        role: 'Chief Executive Officer'
+      }
+    ]
+  },
+  {
+    id: '5',
+    slug: 'ai-strategic-insight-legacy-edition',
+    title: 'AI for Strategic Insight: Legacy Edition',
+    subtitle: 'Private Intelligence Architecture for Family Offices',
+    description: 'A 90-minute immersive to reframe AI not as threat, but as force multiplier—tailored to family office leaders, advisors, and tech-averse founders.',
+    date: '2024-01-15',
+    time: '2:00 PM - 3:30 PM EST',
+    format: 'Private Estate',
+    duration: '90 minutes',
+    level: 'Legacy',
+    price: 4800,
+    originalPrice: 6000,
+    seatsRemaining: 3,
+    totalSeats: 8,
+    focusArea: 'Strategic',
+    type: 'Private Briefing',
+    audience: 'Adult',
+    outcomes: [
+      'Cultivate a private intelligence architecture for multi-generational advantage',
+      'Establish discreet AI systems that preserve family privacy while amplifying insight',
+      'Design bespoke decision protocols for complex legacy considerations',
+      'Develop strategic foresight capabilities through curated AI partnerships'
+    ],
+    instructor: {
+      name: 'Dr. Sarah Chen',
+      title: 'Director of Private Intelligence Systems',
+      company: 'Global Family Office Advisory',
+      expertise: 'Legacy Intelligence Architecture & Strategic Foresight',
+      credentials: [
+        'Designed intelligence systems for three of the world\'s largest family offices',
+        'PhD in Cognitive Science from Stanford',
+        'Former advisor to ultra-high-net-worth families across three continents',
+        'Author of "The Private Intelligence Advantage" (Oxford University Press)'
+      ]
+    },
+    agenda: [
+      {
+        time: '2:00 PM',
+        title: 'Private Intelligence Assessment',
+        description: 'Discreet evaluation of your family office\'s current intelligence architecture and identification of legacy-critical blind spots.'
+      },
+      {
+        time: '2:20 PM',
+        title: 'Bespoke AI Integration Framework',
+        description: 'Introduction to the proprietary methodology used by select family offices to enhance multi-generational decision quality.'
+      },
+      {
+        time: '2:40 PM',
+        title: 'Legacy Decision Architecture',
+        description: 'Design of customized intelligence protocols for complex, high-stakes family office decisions with generational implications.'
+      },
+      {
+        time: '3:00 PM',
+        title: 'Private Implementation Consultation',
+        description: 'Confidential application of frameworks to your specific family office challenges with discreet expert guidance.'
+      },
+      {
+        time: '3:20 PM',
+        title: 'Intergenerational Intelligence Systems',
+        description: 'Establishment of private systems for strategic foresight that compound your family\'s cognitive advantage across generations.'
+      }
+    ],
+    testimonials: [
+      {
+        quote: 'This private intelligence framework has transformed how our family office approaches multi-generational decisions. The discretion and precision are unparalleled.',
+        author: 'J.W.',
+        company: 'European Legacy Family Office',
+        role: 'Family Principal'
+      },
+      {
+        quote: 'After three generations of wealth creation, we finally have a structured approach to legacy intelligence that preserves our family\'s cognitive advantage.',
+        author: 'E.R.',
+        company: 'Multi-Continental Family Enterprise',
+        role: 'Trustee & Next-Gen Advisor'
+      }
+    ],
+    featured: true
+  },
+  
+  {
+    id: '3',
+    slug: 'mental-clarity-under-complexity',
+    title: 'Mental Clarity Under Complexity',
+    subtitle: 'Decision Architecture for Legacy Leaders',
+    description: 'High-stakes decision enhancement through AI–psychology frameworks, designed for those leading businesses, trusts, or multi-gen estates.',
+    date: '2024-01-29',
+    time: '10:00 AM - 12:30 PM EST',
+    format: 'Private Estate',
+    duration: '2.5 hours',
+    level: 'Legacy',
+    price: 6200,
+    originalPrice: 7500,
+    seatsRemaining: 3,
+    totalSeats: 6,
+    focusArea: 'Decision',
+    type: 'Private Briefing',
+    audience: 'Adult',
+    outcomes: [
+      "Master proprietary frameworks for maintaining mental clarity during high-stakes decisions",
+      "Implement bespoke cognitive protocols for navigating complexity without cognitive overwhelm",
+      "Design private decision architecture systems tailored to your family office or enterprise",
+      "Establish legacy-preserving decision processes that maintain clarity across generations"
     ],
     instructor: {
       name: 'Dr. Maria Santos',
@@ -268,25 +420,27 @@ const workshops: Workshop[] = [
   },
   {
     id: '4',
-    slug: 'cognitive-intelligence-frameworks',
-    title: 'Cognitive Intelligence Frameworks',
-    subtitle: 'Next-Level Strategic Thinking',
-    description: 'Develop advanced cognitive frameworks that combine human intuition with AI-powered strategic analysis.',
+    slug: 'household-cognitive-systems',
+    title: 'Household Cognitive Systems',
+    subtitle: 'Private Intelligence Architecture for Family Offices',
+    description: 'Design custom mind-management systems for your family—leveraging frameworks for calendars, reflections, assistants, and communication clarity.',
     date: '2024-02-25',
-    time: '9:00 AM - 1:00 PM EST',
-    format: 'Virtual',
-    duration: '4 hours',
-    level: 'Executive',
-    price: 747,
-    seatsRemaining: 4,
-    totalSeats: 10,
-    focusArea: 'Strategy',
-    type: 'Intensive',
+    time: '9:00 AM - 11:30 AM EST',
+    format: 'Private Estate',
+    duration: '2.5 hours',
+    level: 'Legacy',
+    price: 5800,
+    originalPrice: 7200,
+    seatsRemaining: 2,
+    totalSeats: 6,
+    focusArea: 'Cognitive',
+    type: 'Family Session',
+    audience: 'Adult',
     outcomes: [
-      'Master cognitive load theory for executive decision-making',
-      'Implement AI-augmented analysis frameworks',
-      'Design personalized decision-making protocols',
-      'Build strategic thinking automation systems'
+      "Design bespoke cognitive systems tailored to your family's unique dynamics and legacy goals",
+      "Implement private intelligence protocols that enhance clarity across generations",
+      "Create discreet AI-augmented frameworks for family communication and decision-making",
+      "Establish household mental models that preserve wisdom while adapting to changing circumstances"
     ],
     instructor: {
       name: 'Dr. James Patterson',
@@ -333,147 +487,6 @@ const workshops: Workshop[] = [
         author: 'Michael Rodriguez',
         company: 'Global Manufacturing Corp',
         role: 'Chief Strategy Officer'
-      }
-    ]
-  },
-  {
-    id: '5',
-    slug: 'advanced-ai-systems-architecture',
-    title: 'Advanced AI Systems Architecture',
-    subtitle: 'Enterprise AI Implementation',
-    description: 'Design and implement scalable AI systems that drive competitive advantage in enterprise environments.',
-    date: '2024-03-05',
-    time: '3:00 PM - 7:00 PM EST',
-    format: 'Virtual',
-    duration: '4 hours',
-    level: 'Advanced',
-    price: 1397,
-    originalPrice: 1897,
-    seatsRemaining: 6,
-    totalSeats: 12,
-    focusArea: 'AI',
-    type: 'Deep Dive',
-    outcomes: [
-      'Architect enterprise-grade AI systems',
-      'Design scalable machine learning pipelines',
-      'Implement AI governance frameworks',
-      'Build competitive AI capabilities'
-    ],
-    instructor: {
-      name: 'Dr. Alex Kumar',
-      title: 'Chief AI Architect',
-      company: 'Fortune 100 Technology Corporation',
-      expertise: 'Enterprise AI Architecture & Machine Learning Systems',
-      credentials: [
-        'Designed AI infrastructure for $100B+ tech companies',
-        'PhD in Computer Science from Carnegie Mellon',
-        'Former Google AI Research Team Lead',
-        'Author of "Enterprise AI Architecture" (O\'Reilly)'
-      ]
-    },
-    agenda: [
-      {
-        time: '3:00 PM',
-        title: 'AI Systems Assessment',
-        description: 'Evaluate current AI capabilities and identify architectural gaps in enterprise environments.'
-      },
-      {
-        time: '3:45 PM',
-        title: 'Scalable Architecture Design',
-        description: 'Learn principles for designing AI systems that scale with business growth and complexity.'
-      },
-      {
-        time: '4:30 PM',
-        title: 'Implementation Strategies',
-        description: 'Master proven approaches for deploying AI systems in large-scale enterprise environments.'
-      },
-      {
-        time: '5:15 PM',
-        title: 'Governance & Ethics Framework',
-        description: 'Build comprehensive AI governance systems for responsible enterprise deployment.'
-      },
-      {
-        time: '6:00 PM',
-        title: 'Competitive Advantage Design',
-        description: 'Create sustainable competitive advantages through unique AI system architecture.'
-      }
-    ],
-    testimonials: [
-      {
-        quote: 'This architecture framework helped us scale our AI initiatives from pilot to enterprise-wide deployment.',
-        author: 'Jennifer Walsh',
-        company: 'Global Financial Services',
-        role: 'Chief Technology Officer'
-      }
-    ]
-  },
-  {
-    id: '6',
-    slug: 'executive-decision-optimization',
-    title: 'Executive Decision Optimization',
-    subtitle: 'Data-Driven Leadership',
-    description: 'Transform executive decision-making with data science frameworks and predictive analytics for strategic advantage.',
-    date: '2024-03-12',
-    time: '11:00 AM - 3:00 PM EST',
-    format: 'Hybrid',
-    duration: '4 hours',
-    level: 'Executive',
-    price: 1597,
-    seatsRemaining: 2,
-    totalSeats: 8,
-    focusArea: 'Strategy',
-    type: 'Masterclass',
-    outcomes: [
-      'Master data-driven decision frameworks',
-      'Implement predictive analytics for strategy',
-      'Design executive intelligence systems',
-      'Build evidence-based leadership practices'
-    ],
-    instructor: {
-      name: 'Dr. Rachel Thompson',
-      title: 'Executive Strategy Consultant',
-      company: 'Fortune 100 Strategy Firm',
-      expertise: 'Executive Decision Science & Predictive Analytics',
-      credentials: [
-        'Advised C-suite leaders at 25+ Fortune 500 companies',
-        'PhD in Decision Science from Stanford',
-        'Former BCG Principal and McKinsey Partner',
-        'Harvard Business Review Strategy Contributor'
-      ]
-    },
-    agenda: [
-      {
-        time: '11:00 AM',
-        title: 'Decision Quality Assessment',
-        description: 'Analyze current decision-making processes and identify opportunities for optimization.'
-      },
-      {
-        time: '11:45 AM',
-        title: 'Predictive Analytics Framework',
-        description: 'Learn to integrate predictive models into strategic decision-making workflows.'
-      },
-      {
-        time: '12:30 PM',
-        title: 'Executive Intelligence Design',
-        description: 'Build personalized intelligence systems that enhance executive decision quality.'
-      },
-      {
-        time: '1:15 PM',
-        title: 'Implementation Workshop',
-        description: 'Apply frameworks to real executive challenges with expert guidance and peer collaboration.'
-      },
-      {
-        time: '2:00 PM',
-        title: 'Leadership System Design',
-        description: 'Create sustainable systems for evidence-based leadership and strategic execution.'
-      }
-    ],
-    testimonials: [
-      {
-        quote: 'These decision frameworks transformed our strategic planning process. We\'re making better decisions faster.',
-        author: 'Mark Stevens',
-        company: 'Global Manufacturing Corp',
-        role: 'Chief Executive Officer'
       }
     ]
   }
@@ -524,8 +537,8 @@ function FeaturedWorkshopsHero() {
         {/* Mobile Context Section - Only visible on mobile */}
         <div className={styles.mobileHeroContext}>
           <div className={styles.mobileHeroBadge}>
-            <span className={styles.mobileHeroBadgeIcon}>⚡</span>
-            Next Intensive
+            <span className={styles.mobileHeroBadgeIcon}>⚜️</span>
+            Private Briefing
           </div>
           <Heading as="h1" className={styles.mobileHeroTitle}>
             {currentWorkshop.title}
@@ -880,14 +893,17 @@ function UpcomingWorkshops() {
   const [filteredWorkshops, setFilteredWorkshops] = useState(workshops);
   
   const filterOptions = [
-    { value: 'all', label: 'All Workshops' },
-    { value: 'Psychology', label: 'Psychology' },
-    { value: 'AI', label: 'AI Systems' },
-    { value: 'Culture', label: 'Culture' },
-    { value: 'Strategy', label: 'Strategy' },
-    { value: 'Intensive', label: 'Intensives' },
-    { value: 'Masterclass', label: 'Masterclasses' },
-    { value: 'Deep Dive', label: 'Deep Dives' }
+    { value: 'all', label: 'All Offerings' },
+    { value: 'Legacy', label: 'Legacy' },
+    { value: 'Cognitive', label: 'Cognitive' },
+    { value: 'Decision', label: 'Decision' },
+    { value: 'Strategic', label: 'Strategic' },
+    { value: 'Private Briefing', label: 'Private Briefings' },
+    { value: 'Legacy Lab', label: 'Legacy Labs' },
+    { value: 'Cognitive Ascension', label: 'Cognitive Ascension' },
+    { value: 'Family Session', label: 'Family Sessions' },
+    { value: 'Adult', label: 'For Adults' },
+    { value: 'Student', label: 'For Next Generation' }
   ];
   
   const handleFilter = (filterValue: string) => {
@@ -906,11 +922,11 @@ function UpcomingWorkshops() {
       <div className="container">
         <div className={styles.gridHeader}>
           <Heading as="h2" className={styles.gridTitle}>
-            Upcoming Strategic Intensives
+            Private Cognitive Briefings & Legacy Labs
           </Heading>
           <p className={styles.gridSubtitle}>
-            Corporate-tested frameworks for AI-augmented strategic intelligence. 
-            Each workshop includes exclusive insights, hands-on application, and ongoing support.
+            These private learning experiences are built for those navigating complexity—whether raising the next generation or stewarding an empire.
+            Each session blends AI fluency, cognitive precision, and psychology-backed tools to optimize clarity across generations.
           </p>
         </div>
         
@@ -946,7 +962,7 @@ function UpcomingWorkshops() {
                   </div>
                   {workshop.seatsRemaining <= 3 && (
                     <div className={styles.urgencyBadge}>
-                      Only {workshop.seatsRemaining} seats left
+                      Limited Access: {workshop.seatsRemaining} positions remaining
                     </div>
                   )}
                 </div>
@@ -990,15 +1006,15 @@ function UpcomingWorkshops() {
                       <>
                         <span className={styles.originalPrice}>${workshop.originalPrice}</span>
                         <span className={styles.currentPrice}>${workshop.price}</span>
-                        <span className={styles.savingsLabel}>Early Bird</span>
+                        <span className={styles.savingsLabel}>Private Access</span>
                       </>
                     ) : (
                       <span className={styles.currentPrice}>${workshop.price}</span>
                     )}
                   </div>
-                  <div className={styles.cardCTA}>
-                    View Full Details →
-                  </div>
+                  <Link to={`/workshops/${workshop.slug}`} className={styles.viewDetailsButton}>
+                    Request Private Access →
+                  </Link>
                 </div>
               </div>
             </Link>
@@ -1016,68 +1032,68 @@ function ValueProposition() {
       <div className="container">
         <div className={styles.valueHeader}>
           <Heading as="h2" className={styles.valueTitle}>
-            What Makes These Strategic Intensives Different
+            The Distinguished Approach to Cognitive Excellence
           </Heading>
           <p className={styles.valueSubtitle}>
-            Beyond traditional training—corporate-tested intelligence amplification with AI augmentation
+            Beyond conventional education—bespoke intelligence architecture designed for those who lead legacies, not merely lives
           </p>
         </div>
         
         <div className={styles.valueGrid}>
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🤖</div>
+            <div className={styles.valueIcon}>♟️</div>
             <Heading as="h3" className={styles.valueCardTitle}>
-              AI-Augmented Learning
+              Bespoke Intelligence Architecture
             </Heading>
             <p className={styles.valueCardDescription}>
-              Claude AI integration with sophisticated prompts designed for cognitive framework mastery. 
-              Personalized digital assets and confusion resolution tools enhance every learning moment.
+              Proprietary AI integration with discreet protocols designed for multi-generational cognitive advantage. 
+              Custom-crafted mental models and precision-calibrated frameworks enhance your family's strategic clarity.
             </p>
             <div className={styles.valueFeatures}>
-              <div className={styles.feature}>✓ Custom AI prompt libraries</div>
-              <div className={styles.feature}>✓ Real-time skill sharpening</div>
-              <div className={styles.feature}>✓ Personalized framework tools</div>
+              <div className={styles.feature}>✓ Private intelligence protocols</div>
+              <div className={styles.feature}>✓ Generational wisdom transfer</div>
+              <div className={styles.feature}>✓ Bespoke cognitive frameworks</div>
             </div>
           </div>
           
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🏢</div>
+            <div className={styles.valueIcon}>⚖️</div>
             <Heading as="h3" className={styles.valueCardTitle}>
-              Corporate Expertise
+              Legacy Stewardship Mastery
             </Heading>
             <p className={styles.valueCardDescription}>
-              Real Fortune 100 generative AI engineer experience—not just theory. 
-              These frameworks are battle-tested in high-stakes corporate environments where results matter.
+              Refined insights from advisors to the world's most distinguished family offices—not mere theory. 
+              These frameworks are discreetly tested in high-stakes legacy environments where generational impact matters.
             </p>
             <div className={styles.valueFeatures}>
-              <div className={styles.feature}>✓ Fortune 100 applications</div>
-              <div className={styles.feature}>✓ Real-world case studies</div>
-              <div className={styles.feature}>✓ Executive-level insights</div>
+              <div className={styles.feature}>✓ Multi-generational applications</div>
+              <div className={styles.feature}>✓ Private case studies</div>
+              <div className={styles.feature}>✓ Legacy-preserving insights</div>
             </div>
           </div>
           
           <div className={styles.valueCard}>
-            <div className={styles.valueIcon}>🌐</div>
+            <div className={styles.valueIcon}>⌛</div>
             <Heading as="h3" className={styles.valueCardTitle}>
-              Ongoing Community
+              Discreet Cognitive Circle
             </Heading>
             <p className={styles.valueCardDescription}>
-              Private professional network with continuing education, Q&A support, and peer collaboration. 
-              Your strategic intelligence development continues beyond the workshop.
+              Exclusive access to a curated network of legacy stewards, with private consultation, discreet Q&A support, and confidential peer insights. 
+              Your family's cognitive advantage continues to compound well beyond the initial session.
             </p>
             <div className={styles.valueFeatures}>
-              <div className={styles.feature}>✓ Private community access</div>
-              <div className={styles.feature}>✓ Ongoing framework updates</div>
-              <div className={styles.feature}>✓ Peer networking opportunities</div>
+              <div className={styles.feature}>✓ Private circle membership</div>
+              <div className={styles.feature}>✓ Bespoke framework refinements</div>
+              <div className={styles.feature}>✓ Legacy peer connections</div>
             </div>
           </div>
         </div>
         
         <div className={styles.credibilityStatement}>
-          <div className={styles.credibilityIcon}>🎯</div>
+          <div className={styles.credibilityIcon}>⚜️</div>
           <p className={styles.credibilityText}>
-            Trusted by forward-thinking professionals who understand that strategic intelligence 
-            is the competitive advantage in an AI-accelerated world.
+            Discreetly trusted by legacy-minded families who understand that generational intelligence 
+            is the enduring advantage in an increasingly complex world.
           </p>
         </div>
       </div>
@@ -1091,8 +1107,8 @@ export default function Workshops() {
   
   return (
     <Layout
-      title="Strategic Intelligence Workshops"
-      description="Corporate-tested frameworks for AI-augmented strategic intelligence. Professional workshops with Fortune 100 insights and ongoing community support.">
+      title="Private Cognitive Briefings & Legacy Labs"
+      description="Bespoke learning experiences designed for families who lead legacies, not just lives. Private cognitive frameworks for multi-generational advantage.">
       <main className={styles.workshopsPage}>
         <FeaturedWorkshopsHero />
         <UpcomingWorkshops />
