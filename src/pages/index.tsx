@@ -332,18 +332,6 @@ function SocialProofSection() {
                 Clear thinking leads to clear decisions. No more second-guessing yourself into paralysis.
               </p>
             </div>
-            
-            {/* <div className={styles.showcaseCard}>
-              <div className={styles.showcaseImage}>
-                <div className={styles.imagePreview}>💭</div>
-              </div>
-              <div className={styles.showcaseCaption}>
-                "I used to spend hours reading industry reports. Now AI filters them down to the 3 insights that matter. My team thinks I've become psychic, but I'm just thinking clearer."
-              </div>
-              <p className={styles.showcaseDescription}>
-                — Family Office Principal, $2B+ AUM
-              </p>
-            </div> */}
           </div>
         </div>
       </div>

@@ -48,7 +48,7 @@ interface Workshop {
 }
 
 // Sample workshop data with complete details
-const workshops: Workshop[] = [
+export const workshops: Workshop[] = [
   {
     id: '1',
     slug: 'ai-fluency-next-gen-leaders',
