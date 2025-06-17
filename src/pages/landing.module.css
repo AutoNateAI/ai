@@ -356,7 +356,7 @@
 }
 
 .cardTitle {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--autonate-text-primary);
@@ -451,7 +451,7 @@
 .partnershipTitle {
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   color: var(--autonate-text-primary);
 }
 
@@ -462,20 +462,49 @@
   margin-bottom: 2rem;
 }
 
-.partnershipFeatures {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+.partnershipList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   text-align: left;
+  position: relative;
 }
 
-.feature {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: var(--autonate-text-primary);
-  font-size: 0.95rem;
-  font-weight: 500;
+.partnershipList li {
+  padding: 0.6rem 0;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: transform 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.partnershipList li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.partnershipList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: linear-gradient(135deg, 
+    var(--autonate-primary), 
+    var(--autonate-accent));
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.partnershipList li strong {
+  color: var(--autonate-primary);
+  font-weight: 600;
+}
+
+.partnershipList li:hover {
+  transform: translateX(5px);
 }
 
 .feature::before {
@@ -630,6 +659,9 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
 }
 
 .libraryCard::before {
@@ -683,15 +715,23 @@
 
 .libraryMeta {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .readTime {
   color: var(--autonate-text-muted);
   font-size: 0.9rem;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .readMore {
@@ -702,8 +742,10 @@
 }
 
 .readMore:hover {
-  color: var(--autonate-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   text-decoration: none;
+  background: linear-gradient(135deg, var(--autonate-secondary), var(--autonate-accent));
 }
 
 /* Section 5 - Visual Intelligence Showcase */
@@ -758,7 +800,12 @@
 
 .imagePreview {
   font-size: 2.5rem;
-  opacity: 0.7;
+  opacity: 0.9;
+  background-image: linear-gradient(135deg, var(--autonate-primary), var(--autonate-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .showcaseCaption {
@@ -923,6 +970,23 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.actionLink.readMore {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--autonate-primary), var(--autonate-secondary));
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .actionLink:hover {
