@@ -2125,6 +2125,11 @@
 
 /* Enhanced Mobile Responsive Design for Hero Section */
 @media (max-width: 768px) {
+  article {
+    padding-top: 2rem;
+    margin-bottom: unset !important;
+  }
+
   .featuredHero {
     padding: 3rem 0 2rem;
     background-size: 300% 300%;

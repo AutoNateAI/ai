@@ -73,6 +73,8 @@ html, body {
   --ifm-color-primary-light: var(--primary-light-blue);
   --ifm-color-primary-lighter: #7DD3FC;
   --ifm-color-primary-lightest: #BAE6FD;
+  --ifm-menu-color-active: var(--primary-light-teal);
+  --ifm-menu-color: var(--text-primary);
   
   /* Background Colors */
   --ifm-background-color: var(--background-white);
@@ -117,7 +119,14 @@ html, body {
   --docusaurus-highlighted-code-line-bg: rgba(14, 165, 233, 0.1);
 }
 
+a {
+  color: var(--primary-light-teal);
+}
+
 /* Global Professional Styles */
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--ifm-menu-color-active) !important;
+}
 
 /* Typography Enhancements - Executive Level */
 h1, h2, h3, h4, h5, h6 {
@@ -318,7 +327,7 @@ button.clean-btn.navbar-sidebar__close {
 }
 
 button.clean-btn.navbar-sidebar__close:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.4) !important;
   color: rgba(255, 255, 255, 1) !important;
 }
 
@@ -401,6 +410,11 @@ button.clean-btn.navbar-sidebar__close:hover {
   z-index: 1 !important;
   position: relative !important;
   display: block !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  color: var(--ifm-menu-color-active) !important;
 }
 
 /* Prevent any overlapping elements from blocking clicks */
@@ -552,6 +566,11 @@ div.navbar-sidebar_brand {
     transform: translateX(-50%) !important;
     margin: 0 !important;
   }
+
+  .navbar-sidebar__items .menu__link--active, .clean-btn, h3 {
+    color: white !important;
+  } 
+
 }
 
 /* Global Cyberpunk Styles */
@@ -740,7 +759,9 @@ th {
   .navbar__logo {
     height: 2rem;
   }
+  
 }
+
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
