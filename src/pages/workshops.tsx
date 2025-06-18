@@ -1056,7 +1056,7 @@ export default function Workshops() {
       title="Private Cognitive Briefings & Legacy Labs"
       description="Bespoke learning experiences designed for families who lead legacies, not just lives. Private cognitive frameworks for multi-generational advantage.">
       <main className={styles.workshopsPage}>
-        <CognitiveHero />
+        {/* <CognitiveHero /> */}
         <UpcomingWorkshops />
         <MentalModelsSection />
         <AttentionEconomySection />
