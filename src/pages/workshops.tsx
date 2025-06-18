@@ -813,10 +813,10 @@ function ValueProposition() {
       <div className="container">
         <div className={styles.valueHeader}>
           <Heading as="h2" className={styles.valueTitle}>
-            The Distinguished Approach to Cognitive Excellence
+            The Sovereign Mind Architecture
           </Heading>
           <p className={styles.valueSubtitle}>
-            Beyond conventional education—bespoke intelligence architecture designed for those who lead legacies, not merely lives
+            Beyond information management—bespoke cognitive frameworks for families who view mental clarity as their most powerful asset class
           </p>
         </div>
         
@@ -824,48 +824,48 @@ function ValueProposition() {
           <div className={styles.valueCard}>
             <div className={styles.valueIcon}>♟️</div>
             <Heading as="h3" className={styles.valueCardTitle}>
-              Bespoke Intelligence Architecture
+              Neural Mapping System
             </Heading>
             <p className={styles.valueCardDescription}>
-              Proprietary AI integration with discreet protocols designed for multi-generational cognitive advantage. 
-              Custom-crafted mental models and precision-calibrated frameworks enhance your family's strategic clarity.
+              Proprietary cognitive cartography that transforms how information flows through your mind. 
+              Our graph theory approach reveals the hidden connections between decision nodes, creating unprecedented mental clarity.
             </p>
             <div className={styles.valueFeatures}>
-              <div className={styles.feature}>✓ Private intelligence protocols</div>
-              <div className={styles.feature}>✓ Generational wisdom transfer</div>
-              <div className={styles.feature}>✓ Bespoke cognitive frameworks</div>
+              <div className={styles.feature}>✓ Decision node optimization</div>
+              <div className={styles.feature}>✓ Information flow architecture</div>
+              <div className={styles.feature}>✓ Strategic thought modeling</div>
             </div>
           </div>
           
           <div className={styles.valueCard}>
             <div className={styles.valueIcon}>⚖️</div>
             <Heading as="h3" className={styles.valueCardTitle}>
-              Legacy Stewardship Mastery
+              Attention Portfolio Management
             </Heading>
             <p className={styles.valueCardDescription}>
-              Refined insights from advisors to the world's most distinguished family offices—not mere theory. 
-              These frameworks are discreetly tested in high-stakes legacy environments where generational impact matters.
+              Elite minds require elite attention allocation. We architect systematic approaches to treating your mental bandwidth as the scarcest resource in your legacy portfolio. 
+              No more cognitive fragmentation—only deliberate focus deployment.
             </p>
             <div className={styles.valueFeatures}>
-              <div className={styles.feature}>✓ Multi-generational applications</div>
-              <div className={styles.feature}>✓ Private case studies</div>
-              <div className={styles.feature}>✓ Legacy-preserving insights</div>
+              <div className={styles.feature}>✓ Cognitive resource allocation</div>
+              <div className={styles.feature}>✓ Signal-to-noise amplification</div>
+              <div className={styles.feature}>✓ Decision weight calibration</div>
             </div>
           </div>
           
           <div className={styles.valueCard}>
             <div className={styles.valueIcon}>⌛</div>
             <Heading as="h3" className={styles.valueCardTitle}>
-              Discreet Cognitive Circle
+              Generational Intelligence Transfer
             </Heading>
             <p className={styles.valueCardDescription}>
-              Exclusive access to a curated network of legacy stewards, with private consultation, discreet Q&A support, and confidential peer insights. 
-              Your family's cognitive advantage continues to compound well beyond the initial session.
+              Beyond knowledge transfer lies cognitive pattern inheritance—the true wealth of dynasties. Our proprietary methodology ensures mental models, 
+              decision frameworks, and clarity systems transmit seamlessly across generations.
             </p>
             <div className={styles.valueFeatures}>
-              <div className={styles.feature}>✓ Private circle membership</div>
-              <div className={styles.feature}>✓ Bespoke framework refinements</div>
-              <div className={styles.feature}>✓ Legacy peer connections</div>
+              <div className={styles.feature}>✓ Cross-generational modeling</div>
+              <div className={styles.feature}>✓ Mental model inheritance systems</div>
+              <div className={styles.feature}>✓ Wisdom acceleration protocols</div>
             </div>
           </div>
         </div>
@@ -873,9 +873,174 @@ function ValueProposition() {
         <div className={styles.credibilityStatement}>
           <div className={styles.credibilityIcon}>⚜️</div>
           <p className={styles.credibilityText}>
-            Discreetly trusted by legacy-minded families who understand that generational intelligence 
-            is the enduring advantage in an increasingly complex world.
+            Architecting mental models for visionary families who recognize that in an age of universal access to tools and data,
+            cognitive sovereignty is the ultimate competitive advantage.
           </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Hero Section for Workshops Page
+function CognitiveHero() {
+  return (
+    <section id="workshops" className={styles.cognitiveHero}>
+      <div className="container">
+        <div className={styles.heroContent}>
+          <Heading as="h1" className={styles.heroTitle}>
+            The Architecture of Elite Cognition
+          </Heading>
+          <p className={styles.heroSubtitle}>
+            Where AI handles the noise, so you can hear the signal that matters for your legacy
+          </p>
+          <div className={styles.heroCtas}>
+            <Link to="#workshops" className={styles.primaryCta}>
+              Explore Private Sessions
+            </Link>
+            <Link to="#mental-models" className={styles.secondaryCta}>
+              Discover Our Approach
+            </Link>
+          </div>
+        </div>
+        
+        <div className={styles.heroQuote}>
+          <blockquote>
+            "In a world of tools, your advantage becomes how you think. Not just faster or smarter—but more deeply, more connected, more sovereign."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Mental Models & Graph Theory Section
+function MentalModelsSection() {
+  return (
+    <section id="mental-models" className={styles.mentalModelsSection}>
+      <div className="container">
+        <div className={styles.sectionHeader}>
+          <Heading as="h2" className={styles.sectionTitle}>
+            The Connected Intelligence Framework
+          </Heading>
+          <p className={styles.sectionSubtitle}>
+            Where human brilliance meets cognitive cartography
+          </p>
+        </div>
+        
+        <div className={styles.mentalModelsContent}>
+          <div className={styles.modelDescription}>
+            <h3>Beyond Mental Models—Cognitive Mapping for Legacy Decisions</h3>
+            <p>
+              We don't just teach mental models—we architect them. Using advanced graph theory principles, we illuminate the hidden connections between key decision nodes in your cognitive landscape.
+            </p>
+            <p>
+              This isn't abstract theory. It's the precise science of mental clarity under complexity:
+            </p>
+            <ul className={styles.modelFeatures}>
+              <li>
+                <span className={styles.featureIcon}>⚡</span>
+                <div>
+                  <strong>Node Identification</strong>
+                  <p>We map the critical intelligence centers in your cognitive framework, revealing leverage points where optimal decisions emerge</p>
+                </div>
+              </li>
+              <li>
+                <span className={styles.featureIcon}>🔄</span>
+                <div>
+                  <strong>Edge Relationship Mastery</strong>
+                  <p>Visualize how information should flow between decision points, eliminating blindspots and amplifying signal recognition</p>
+                </div>
+              </li>
+              <li>
+                <span className={styles.featureIcon}>🔍</span>
+                <div>
+                  <strong>Pattern Recognition Enhancement</strong>
+                  <p>Train your mind to perceive the higher-order patterns that remain invisible to those without cognitive mapping frameworks</p>
+                </div>
+              </li>
+            </ul>
+            <div className={styles.modelQuote}>
+              <blockquote>
+                "The elite mind doesn't just consume information—it maps it, navigates it, and commands it. This is the difference between reaction and sovereignty."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Attention Economy Section
+function AttentionEconomySection() {
+  return (
+    <section className={styles.attentionSection}>
+      <div className="container">
+        <div className={styles.sectionHeader}>
+          <Heading as="h2" className={styles.sectionTitle}>
+            The Sovereign Mind in an Attention Economy
+          </Heading>
+          <p className={styles.sectionSubtitle}>
+            Building mental bandwidth in an era engineered for distraction
+          </p>
+        </div>
+        
+        <div className={styles.attentionContent}>
+          <div className={styles.attentionLead}>
+            <p>
+              The greatest irony of our age: those with the most resources often have the least protected cognitive bandwidth.
+            </p>
+            <p>
+              While others fight for attention scraps in the digital commons, we architect private information environments where your mental focus—your family's most valuable asset—compounds over time rather than depletes.
+            </p>
+          </div>
+          
+          <div className={styles.attentionStats}>
+            <div className={styles.statCard}>
+              <span className={styles.statNumber}>73%</span>
+              <p className={styles.statDescription}>Of elite decision-makers report their mental bandwidth is fragmented by low-value information processing</p>
+            </div>
+            
+            <div className={styles.statCard}>
+              <span className={styles.statNumber}>4.2x</span>
+              <p className={styles.statDescription}>Strategic clarity improvement when using mental models that separate signal from noise</p>
+            </div>
+            
+            <div className={styles.statCard}>
+              <span className={styles.statNumber}>70%</span>
+              <p className={styles.statDescription}>Of mental resources reclaimed through proper AI-human cognitive partnerships</p>
+            </div>
+          </div>
+          
+          <div className={styles.focusPractices}>
+            <h3>The Four Pillars of Cognitive Sovereignty</h3>
+            <div className={styles.pillarsGrid}>
+              <div className={styles.pillar}>
+                <div className={styles.pillarIcon}>🧠</div>
+                <h4>Pattern Recognition Amplification</h4>
+                <p>Train your mind to identify signal through noise using proprietary visualization frameworks</p>
+              </div>
+              
+              <div className={styles.pillar}>
+                <div className={styles.pillarIcon}>⚖️</div>
+                <h4>Decision Weight Calibration</h4>
+                <p>Establish mental frameworks for appropriate cognitive resource allocation to varying decision types</p>
+              </div>
+              
+              <div className={styles.pillar}>
+                <div className={styles.pillarIcon}>🌎</div>
+                <h4>AI Information Partnership</h4>
+                <p>Create balanced cognitive systems where technology processes while your mind synthesizes and guides</p>
+              </div>
+              
+              <div className={styles.pillar}>
+                <div className={styles.pillarIcon}>⚓</div>
+                <h4>Legacy-Minded Focus Architecture</h4>
+                <p>Build attentional structures that align with multi-generational values and purposes</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -891,8 +1056,10 @@ export default function Workshops() {
       title="Private Cognitive Briefings & Legacy Labs"
       description="Bespoke learning experiences designed for families who lead legacies, not just lives. Private cognitive frameworks for multi-generational advantage.">
       <main className={styles.workshopsPage}>
-        <FeaturedWorkshopsHero />
+        <CognitiveHero />
         <UpcomingWorkshops />
+        <MentalModelsSection />
+        <AttentionEconomySection />
         <ValueProposition />
       </main>
     </Layout>
