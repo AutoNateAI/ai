@@ -13,8 +13,10 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-  // Knowledge Base sidebar with 7 main categories
+  // Knowledge Base sidebar with landing page and 7 main categories
   knowledgeBaseSidebar: [
+    'landing',
+    
     {
       type: 'category',
       label: 'Intelligence',

@@ -105,6 +105,7 @@ const config: Config = {
           sidebarId: 'knowledgeBaseSidebar',
           position: 'left',
           label: 'Knowledge Base',
+          to: '/knowledge-base',
         },
       ],
     },
@@ -116,7 +117,7 @@ const config: Config = {
           items: [
             {
               label: 'Knowledge Base',
-              to: '/knowledge-base/intelligence/cognitive-intelligence-foundations',
+              to: '/knowledge-base',
             },
           ],
         },

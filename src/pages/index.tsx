@@ -44,7 +44,7 @@ function HeroSection() {
           
           <div className={styles.heroCTAGroup}>
             <Link
-              to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations/intelligence/cognitive-intelligence-foundations"
+              to="/ai/knowledge-base"
               className="button button--primary button--lg">
               See How It Works
             </Link>
@@ -474,7 +474,7 @@ function FinalCtaSection() {
             
             <div className={styles.finalButtons}>
               <Link
-                to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations/intelligence/cognitive-intelligence-foundations"
+                to="/ai/knowledge-base"
                 className="button button--primary button--lg">
                 Start Your Transformation
               </Link>

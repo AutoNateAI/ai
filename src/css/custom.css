@@ -119,9 +119,9 @@ html, body {
   --docusaurus-highlighted-code-line-bg: rgba(14, 165, 233, 0.1);
 }
 
-a {
+/* a {
   color: var(--primary-light-teal);
-}
+} */
 
 /* Global Professional Styles */
 .breadcrumbs__item--active .breadcrumbs__link {
