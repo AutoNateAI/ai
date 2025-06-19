@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import BlogPostItems from '@theme/BlogPostItems';
+// Custom blog cards instead of default BlogPostItems
 // Custom search input instead of Docusaurus SearchBar
 import clsx from 'clsx';
 import styles from './styles.module.css';
@@ -149,7 +149,87 @@ export default function BlogListPage(props) {
             
             <div className={styles.blogPosts}>
               {filteredItems.length > 0 ? (
-                <BlogPostItems items={filteredItems} />
+                <div className={styles.blogGrid}>
+                  {filteredItems.map((item, index) => {
+                    const { content: BlogPostContent } = item;
+                    const { metadata } = BlogPostContent;
+                    const { permalink, title, description, date, formattedDate, authors, tags, readingTime } = metadata;
+                    
+                    // Get the first author if available
+                    const author = authors && authors.length > 0 ? authors[0] : null;
+                    
+                    return (
+                      <div key={index} className={styles.blogCard}>
+                        <div className={styles.blogCardInner}>
+                          <div className={styles.blogCardContent}>
+                            <div className={styles.blogCardHeader}>
+                              {tags && tags.length > 0 && (
+                                <div className={styles.blogCardTags}>
+                                  {tags.slice(0, 2).map((tag, tagIndex) => (
+                                    <Link 
+                                      key={tagIndex} 
+                                      to={tag.permalink} 
+                                      className={styles.blogCardTag}
+                                    >
+                                      {tag.label}
+                                    </Link>
+                                  ))}
+                                  {tags.length > 2 && (
+                                    <span className={styles.blogCardTagMore}>+{tags.length - 2}</span>
+                                  )}
+                                </div>
+                              )}
+                              <h2 className={styles.blogCardTitle}>
+                                <Link to={permalink}>{title}</Link>
+                              </h2>
+                            </div>
+                            
+                            {description && (
+                              <p className={styles.blogCardDescription}>{description}</p>
+                            )}
+                            
+                            <div className={styles.blogCardMeta}>
+                              {author && (
+                                <div className={styles.blogCardAuthor}>
+                                  {author.imageURL && (
+                                    <img 
+                                      src={author.imageURL} 
+                                      alt={author.name} 
+                                      className={styles.blogCardAuthorImage} 
+                                    />
+                                  )}
+                                  <span>{author.name}</span>
+                                </div>
+                              )}
+                              
+                              <div className={styles.blogCardDetails}>
+                                {formattedDate && (
+                                  <time dateTime={date} className={styles.blogCardDate}>
+                                    {formattedDate}
+                                  </time>
+                                )}
+                                
+                                {readingTime && (
+                                  <span className={styles.blogCardReadingTime}>
+                                    {Math.ceil(readingTime)} min read
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            
+                            <Link to={permalink} className={styles.blogCardReadMore}>
+                              Read More
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                              </svg>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               ) : (
                 <div className={styles.noPosts}>
                   {searchQuery ? 'No matching posts found. Try a different search term.' : 'No blog posts found.'}
