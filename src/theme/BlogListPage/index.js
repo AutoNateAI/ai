@@ -22,6 +22,25 @@ function BlogSidebarCard({ title, content, image, link }) {
   );
 }
 
+function BannerCard({ title, content, image, link, index }) {
+  return (
+    <div className={styles.bannerCard}>
+      <div className={styles.bannerCardInner}>
+        {image && <img src={image} alt={title} className={styles.bannerImage} />}
+        <div className={styles.bannerContent}>
+          <h3 className={styles.bannerTitle}>{title}</h3>
+          <p className={styles.bannerDescription}>{content}</p>
+          {link && (
+            <Link to={link} className={styles.bannerLink}>
+              Learn more →
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SearchInput({ placeholder, value, onChange }) {
   return (
     <div className={styles.searchInputContainer}>
@@ -94,7 +113,7 @@ export default function BlogListPage(props) {
     {
       title: 'Featured',
       content: 'Discover our most popular articles and resources.',
-      image: '/img/placeholder-1.jpg',
+      image: '/static/img/logo.png',
       link: '/blog/tags/featured',
     },
   ];
@@ -103,8 +122,30 @@ export default function BlogListPage(props) {
     {
       title: 'Categories',
       content: 'Browse articles by category to find exactly what you need.',
-      image: '/img/placeholder-2.jpg',
+      image: '/static/img/logo.png',
       link: '/blog/archive',
+    },
+  ];
+  
+  // Banner cards that will appear every 3 blog posts in single-column layout
+  const bannerCards = [
+    {
+      title: 'Featured Resources',
+      content: 'Access our premium content and exclusive resources.',
+      image: '/static/img/logo.png',
+      link: '/resources',
+    },
+    {
+      title: 'Join Our Newsletter',
+      content: 'Stay updated with our latest articles and insights.',
+      image: '/static/img/logo.png',
+      link: '/newsletter',
+    },
+    {
+      title: 'Upcoming Workshops',
+      content: 'Register for our interactive online workshops and webinars.',
+      image: '/static/img/logo.png',
+      link: '/workshops',
     },
   ];
 
@@ -158,75 +199,83 @@ export default function BlogListPage(props) {
                     // Get the first author if available
                     const author = authors && authors.length > 0 ? authors[0] : null;
                     
+                    // Insert banner card after every 3 blog posts in single-column mode
+                    // The bannerIndex cycles through available banner cards
+                    const bannerIndex = Math.floor(index / 3) % bannerCards.length;
+                    // Only show banners on mobile and tablet (screens < 1200px)
+                    const shouldShowBanner = index > 0 && index % 3 === 0;
+                    
                     return (
-                      <div key={index} className={styles.blogCard}>
-                        <div className={styles.blogCardInner}>
-                          <div className={styles.blogCardContent}>
-                            <div className={styles.blogCardHeader}>
-                              {tags && tags.length > 0 && (
-                                <div className={styles.blogCardTags}>
-                                  {tags.slice(0, 2).map((tag, tagIndex) => (
-                                    <Link 
-                                      key={tagIndex} 
-                                      to={tag.permalink} 
-                                      className={styles.blogCardTag}
-                                    >
-                                      {tag.label}
-                                    </Link>
-                                  ))}
-                                  {tags.length > 2 && (
-                                    <span className={styles.blogCardTagMore}>+{tags.length - 2}</span>
-                                  )}
-                                </div>
-                              )}
+                      <React.Fragment key={`blog-group-${index}`}>
+                        {shouldShowBanner && (
+                          <div className={styles.bannerCardWrapper}>
+                            <BannerCard 
+                              key={`banner-${index}`}
+                              {...bannerCards[bannerIndex]}
+                              index={bannerIndex}
+                            />
+                          </div>
+                        )}
+                        <div key={`blog-${index}`} className={styles.blogCard}>
+                          <div className={styles.blogCardInner}>
+                            <div className={styles.blogCardContent}>
+                              <div className={styles.blogCardHeader}>
+                                {tags && tags.length > 0 && (
+                                  <div className={styles.blogCardTags}>
+                                    {tags.slice(0, 2).map((tag, tagIndex) => (
+                                      <Link
+                                        key={tagIndex}
+                                        to={tag.permalink}
+                                        className={styles.blogCardTag}
+                                      >
+                                        {tag.label}
+                                      </Link>
+                                    ))}
+                                    {tags.length > 2 && (
+                                      <span className={styles.blogCardTag}>
+                                        +{tags.length - 2}
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
                               <h2 className={styles.blogCardTitle}>
                                 <Link to={permalink}>{title}</Link>
                               </h2>
-                            </div>
-                            
-                            {description && (
-                              <p className={styles.blogCardDescription}>{description}</p>
-                            )}
-                            
-                            <div className={styles.blogCardMeta}>
-                              {author && (
-                                <div className={styles.blogCardAuthor}>
-                                  {author.imageURL && (
-                                    <img 
-                                      src={author.imageURL} 
-                                      alt={author.name} 
-                                      className={styles.blogCardAuthorImage} 
-                                    />
-                                  )}
-                                  <span>{author.name}</span>
-                                </div>
+                              {description && (
+                                <p className={styles.blogCardDescription}>{description}</p>
                               )}
-                              
-                              <div className={styles.blogCardDetails}>
-                                {formattedDate && (
-                                  <time dateTime={date} className={styles.blogCardDate}>
-                                    {formattedDate}
-                                  </time>
+                              <div className={styles.blogCardMeta}>
+                                {author && (
+                                  <div className={styles.blogCardAuthor}>
+                                    {author.imageURL && (
+                                      <img
+                                        src={author.imageURL}
+                                        alt={author.name}
+                                        className={styles.blogCardAuthorImage}
+                                      />
+                                    )}
+                                    <span>{author.name}</span>
+                                  </div>
                                 )}
-                                
-                                {readingTime && (
-                                  <span className={styles.blogCardReadingTime}>
-                                    {Math.ceil(readingTime)} min read
-                                  </span>
-                                )}
+                                <div className={styles.blogCardMetaInfo}>
+                                  {formattedDate && (
+                                    <span className={styles.blogCardDate}>{formattedDate}</span>
+                                  )}
+                                  {readingTime && (
+                                    <span className={styles.blogCardReadingTime}>
+                                      {Math.ceil(readingTime)} min read
+                                    </span>
+                                  )}
+                                </div>
                               </div>
+                              <Link to={permalink} className={styles.blogCardReadMore}>
+                                Read More →
+                              </Link>
                             </div>
-                            
-                            <Link to={permalink} className={styles.blogCardReadMore}>
-                              Read More
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="M12 5l7 7-7 7"></path>
-                              </svg>
-                            </Link>
                           </div>
                         </div>
-                      </div>
+                      </React.Fragment>
                     );
                   })}
                 </div>
