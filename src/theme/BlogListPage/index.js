@@ -7,35 +7,48 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-function BlogSidebarCard({ title, content, image, link }) {
+function BlogSidebarCard({ title, content, svg, link }) {
   return (
     <div className={styles.sidebarCard}>
-      {image && <img src={image} alt={title} className={styles.sidebarImage} />}
-      <h3>{title}</h3>
-      <p>{content}</p>
-      {link && (
-        <Link to={link} className={styles.sidebarLink}>
-          Learn more →
-        </Link>
-      )}
-    </div>
-  );
-}
-
-function BannerCard({ title, content, image, link, index }) {
-  return (
-    <div className={styles.bannerCard}>
-      <div className={styles.bannerCardInner}>
-        {image && <img src={image} alt={title} className={styles.bannerImage} />}
-        <div className={styles.bannerContent}>
-          <h3 className={styles.bannerTitle}>{title}</h3>
-          <p className={styles.bannerDescription}>{content}</p>
+      <div className={styles.sidebarCardContent}>
+        {svg && (
+          <div className={styles.sidebarCardSvg}>
+            {svg}
+          </div>
+        )}
+        <div className={styles.sidebarCardText}>
+          <h3 className={styles.sidebarCardTitle}>{title}</h3>
+          <p className={styles.sidebarCardDescription}>{content}</p>
           {link && (
-            <Link to={link} className={styles.bannerLink}>
+            <Link to={link} className={styles.sidebarLink}>
               Learn more →
             </Link>
           )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function BannerCard({ title, content, svg, link, index }) {
+  return (
+    <div className={styles.bannerCard}>
+      <div className={styles.bannerCardInner}>
+        <div className={styles.bannerCardContent}>
+          <div className={styles.bannerCardHeader}>
+            <span className={styles.bannerTag}>Sponsored</span>
+          </div>
+          <h3 className={styles.bannerCardTitle}>{title}</h3>
+          <p className={styles.bannerCardDescription}>{content}</p>
+          <Link to={link} className={styles.bannerLink}>
+            Learn More →
+          </Link>
+        </div>
+        {svg && (
+          <div className={styles.bannerCardImage}>
+            {svg}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -67,6 +80,8 @@ function SearchInput({ placeholder, value, onChange }) {
     </div>
   );
 }
+
+
 
 export default function BlogListPage(props) {
   const { metadata, items } = props;
@@ -111,43 +126,350 @@ export default function BlogListPage(props) {
   // Sample sidebar content - replace with your actual content
   const leftSidebarContent = [
     {
-      title: 'Featured',
-      content: 'Discover our most popular articles and resources.',
-      image: '/static/img/logo.png',
-      link: '/blog/tags/featured',
+      title: "Latest Updates",
+      content: "Stay up to date with our newest features and improvements.",
+      svg: (
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="#6366F1" opacity="0.8" />
+          <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+        </svg>
+      ),
+      link: "#"
     },
+    {
+      title: "Community",
+      content: "Join our growing community of developers and creators.",
+      svg: (
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="#6366F1" opacity="0.8" />
+          <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+        </svg>
+      ),
+      link: "#"
+    }
   ];
 
   const rightSidebarContent = [
     {
-      title: 'Categories',
-      content: 'Browse articles by category to find exactly what you need.',
-      image: '/static/img/logo.png',
-      link: '/blog/archive',
+      title: "Resources",
+      content: "Explore our comprehensive guides and documentation.",
+      svg: (
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="#6366F1" opacity="0.8" />
+          <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+        </svg>
+      ),
+      link: "#"
     },
+    {
+      title: "Support",
+      content: "Get help from our dedicated support team.",
+      svg: (
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="#6366F1" opacity="0.8" />
+          <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+        </svg>
+      ),
+      link: "#"
+    }
   ];
   
   // Banner cards that will appear every 3 blog posts in single-column layout
   const bannerCards = [
     {
-      title: 'Featured Resources',
-      content: 'Access our premium content and exclusive resources.',
-      image: '/static/img/logo.png',
-      link: '/resources',
+      title: "Premium Features",
+      content: "Unlock advanced tools and capabilities with our premium plan.",
+      svg: (
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="#6366F1" opacity="0.8" />
+          <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+        </svg>
+      ),
+      link: "#premium"
     },
     {
-      title: 'Join Our Newsletter',
-      content: 'Stay updated with our latest articles and insights.',
-      image: '/static/img/logo.png',
-      link: '/newsletter',
+      title: "Developer Tools",
+      content: "Streamline your workflow with our powerful developer toolkit.",
+      svg: (
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="#6366F1" opacity="0.8" />
+          <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+        </svg>
+      ),
+      link: "#tools"
     },
     {
-      title: 'Upcoming Workshops',
-      content: 'Register for our interactive online workshops and webinars.',
-      image: '/static/img/logo.png',
-      link: '/workshops',
-    },
+      title: "Enterprise Solutions",
+      content: "Scale your business with our enterprise-grade platform.",
+      svg: (
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="#6366F1" opacity="0.8" />
+          <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+        </svg>
+      ),
+      link: "#enterprise"
+    }
   ];
+  
+  // SVG definitions for sidebar and banner cards
+  const sidebarSvgs = {
+    // SVG for sidebar cards
+    sidebar: (
+      <svg className={styles.sidebarSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sidebar-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#6366F1" />
+            <stop offset="100%" stopColor="#8B5CF6" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="80" fill="url(#sidebar-gradient)" opacity="0.8" />
+        <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+        <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+        <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+      </svg>
+    ),
+  };
+
+  const bannerSvgs = {
+    // SVG for banner cards
+    banner: (
+      <svg className={styles.bannerSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="banner-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#10B981" />
+            <stop offset="100%" stopColor="#3B82F6" />
+          </linearGradient>
+        </defs>
+        <rect x="40" y="40" width="120" height="120" rx="5" fill="url(#banner-gradient)" opacity="0.8" />
+        <rect x="50" y="130" width="20" height="20" fill="white" />
+        <rect x="80" y="110" width="20" height="40" fill="white" />
+        <rect x="110" y="70" width="20" height="80" fill="white" />
+        <rect x="140" y="90" width="20" height="60" fill="white" />
+        <path d="M50,60 L70,40 L100,70 L130,50 L160,65" stroke="white" strokeWidth="3" fill="none" />
+        <circle cx="70" cy="40" r="5" fill="white" />
+        <circle cx="100" cy="70" r="5" fill="white" />
+        <circle cx="130" cy="50" r="5" fill="white" />
+      </svg>
+    ),
+  };
+
+  // Scroll-stopping SVGs for each blog post
+  const blogSvgs = {
+    // AI/Psychology themed SVG - brain with circuit patterns
+    ai_psychology: (
+      <svg className={styles.blogSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="brain-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#6366F1" />
+            <stop offset="100%" stopColor="#8B5CF6" />
+          </linearGradient>
+        </defs>
+        <path d="M100,20 C60,20 30,50 30,90 C30,120 50,140 70,150 C80,155 90,155 100,160 C110,155 120,155 130,150 C150,140 170,120 170,90 C170,50 140,20 100,20 Z" fill="url(#brain-gradient)" opacity="0.9" />
+        <path d="M100,40 L100,60 M80,50 L120,50 M60,70 L140,70 M70,100 L130,100 M80,130 L120,130" stroke="white" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="70" cy="80" r="5" fill="white" />
+        <circle cx="130" cy="80" r="5" fill="white" />
+        <circle cx="90" cy="110" r="5" fill="white" />
+        <circle cx="110" cy="110" r="5" fill="white" />
+      </svg>
+    ),
+    
+    // Social media/riots themed SVG - crowd silhouette with data visualization
+    social_riots: (
+      <svg className={styles.blogSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="crowd-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#10B981" />
+            <stop offset="100%" stopColor="#3B82F6" />
+          </linearGradient>
+        </defs>
+        <rect x="20" y="120" width="160" height="60" rx="5" fill="url(#crowd-gradient)" opacity="0.8" />
+        <path d="M30,120 C40,100 50,110 60,120 C70,100 80,110 90,120 C100,100 110,110 120,120 C130,100 140,110 150,120 C160,100 170,110 180,120" stroke="white" strokeWidth="2" fill="none" />
+        <path d="M20,80 L180,80 M20,60 L180,60 M20,40 L180,40" stroke="white" strokeWidth="1" strokeDasharray="5,3" />
+        <circle cx="50" cy="80" r="8" fill="white" />
+        <circle cx="90" cy="60" r="8" fill="white" />
+        <circle cx="130" cy="40" r="8" fill="white" />
+        <circle cx="170" cy="60" r="8" fill="white" />
+      </svg>
+    ),
+    
+    // Technology/innovation themed SVG - abstract tech pattern
+    tech_innovation: (
+      <svg className={styles.blogSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="tech-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#F43F5E" />
+            <stop offset="100%" stopColor="#EC4899" />
+          </linearGradient>
+        </defs>
+        <rect x="30" y="30" width="140" height="140" rx="10" fill="url(#tech-gradient)" opacity="0.8" />
+        <circle cx="100" cy="100" r="40" stroke="white" strokeWidth="2" fill="none" />
+        <path d="M60,60 L140,140 M60,140 L140,60" stroke="white" strokeWidth="2" />
+        <circle cx="100" cy="60" r="5" fill="white" />
+        <circle cx="60" cy="100" r="5" fill="white" />
+        <circle cx="100" cy="140" r="5" fill="white" />
+        <circle cx="140" cy="100" r="5" fill="white" />
+      </svg>
+    ),
+    
+    // Data analysis themed SVG - charts and graphs
+    data_analysis: (
+      <svg className={styles.blogSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="data-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#0EA5E9" />
+            <stop offset="100%" stopColor="#22D3EE" />
+          </linearGradient>
+        </defs>
+        <rect x="40" y="40" width="120" height="120" rx="5" fill="url(#data-gradient)" opacity="0.8" />
+        <rect x="50" y="130" width="20" height="20" fill="white" />
+        <rect x="80" y="110" width="20" height="40" fill="white" />
+        <rect x="110" y="70" width="20" height="80" fill="white" />
+        <rect x="140" y="90" width="20" height="60" fill="white" />
+        <path d="M50,60 L70,40 L100,70 L130,50 L160,65" stroke="white" strokeWidth="3" fill="none" />
+        <circle cx="70" cy="40" r="5" fill="white" />
+        <circle cx="100" cy="70" r="5" fill="white" />
+        <circle cx="130" cy="50" r="5" fill="white" />
+      </svg>
+    ),
+    
+    // Future trends themed SVG - futuristic abstract pattern
+    future_trends: (
+      <svg className={styles.blogSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="future-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#8B5CF6" />
+            <stop offset="100%" stopColor="#EC4899" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="70" fill="url(#future-gradient)" opacity="0.8" />
+        <path d="M100,30 L100,170 M30,100 L170,100" stroke="white" strokeWidth="2" />
+        <path d="M50,50 L150,150 M50,150 L150,50" stroke="white" strokeWidth="2" />
+        <circle cx="100" cy="100" r="20" stroke="white" strokeWidth="2" fill="none" />
+        <circle cx="100" cy="100" r="40" stroke="white" strokeWidth="1" strokeDasharray="5,3" fill="none" />
+        <circle cx="100" cy="100" r="60" stroke="white" strokeWidth="1" strokeDasharray="2,2" fill="none" />
+      </svg>
+    ),
+    
+    // Business strategy themed SVG - chess pieces and strategy elements
+    business_strategy: (
+      <svg className={styles.blogSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="strategy-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#4F46E5" />
+            <stop offset="100%" stopColor="#7C3AED" />
+          </linearGradient>
+        </defs>
+        <rect x="40" y="40" width="120" height="120" fill="url(#strategy-gradient)" opacity="0.8" />
+        <rect x="50" y="50" width="20" height="20" fill="white" />
+        <rect x="90" y="50" width="20" height="20" fill="white" />
+        <rect x="130" y="50" width="20" height="20" fill="white" />
+        <rect x="50" y="90" width="20" height="20" fill="white" />
+        <rect x="90" y="90" width="20" height="20" fill="white" />
+        <rect x="130" y="90" width="20" height="20" fill="white" />
+        <rect x="50" y="130" width="20" height="20" fill="white" />
+        <rect x="90" y="130" width="20" height="20" fill="white" />
+        <rect x="130" y="130" width="20" height="20" fill="white" />
+        <path d="M60,40 L60,160 M100,40 L100,160 M140,40 L140,160 M40,60 L160,60 M40,100 L160,100 M40,140 L160,140" stroke="white" strokeWidth="1" />
+      </svg>
+    ),
+    
+    // Default SVG for any other blog post
+    default: (
+      <svg className={styles.blogSvg} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="default-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#6366F1" />
+            <stop offset="100%" stopColor="#EC4899" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r="80" fill="url(#default-gradient)" opacity="0.8" />
+        <path d="M60,100 A40,40 0 0,1 140,100 A40,40 0 0,1 60,100 Z" stroke="white" strokeWidth="2" fill="none" />
+        <path d="M80,80 A20,20 0 0,1 120,80 A20,20 0 0,1 80,80 Z" stroke="white" strokeWidth="2" fill="none" />
+        <path d="M100,60 L100,140 M60,100 L140,100" stroke="white" strokeWidth="2" />
+      </svg>
+    )
+  };
+
+  // Helper function to determine which SVG to display for a blog post based on its content
+  function getSvgForBlogPost(metadata) {
+    const { tags = [], title = '', description = '' } = metadata;
+    const tagLabels = tags.map(tag => tag.label?.toLowerCase() || '');
+    const titleLower = title.toLowerCase();
+    const descLower = description.toLowerCase();
+    const content = titleLower + ' ' + descLower;
+    
+    // Check for AI or Psychology related content
+    if (tagLabels.includes('ai') || 
+        tagLabels.includes('psychology') || 
+        content.includes('ai') || 
+        content.includes('psychology') || 
+        content.includes('chatgpt') || 
+        content.includes('brain')) {
+      return blogSvgs.ai_psychology;
+    }
+    
+    // Check for social media or riots related content
+    if (tagLabels.includes('social') || 
+        tagLabels.includes('riots') || 
+        content.includes('social media') || 
+        content.includes('riot') || 
+        content.includes('crowd')) {
+      return blogSvgs.social_riots;
+    }
+    
+    // Check for technology or innovation related content
+    if (tagLabels.includes('tech') || 
+        tagLabels.includes('innovation') || 
+        content.includes('technology') || 
+        content.includes('innovation') || 
+        content.includes('future')) {
+      return blogSvgs.tech_innovation;
+    }
+    
+    // Check for data analysis related content
+    if (tagLabels.includes('data') || 
+        tagLabels.includes('analysis') || 
+        content.includes('data') || 
+        content.includes('analysis') || 
+        content.includes('statistics')) {
+      return blogSvgs.data_analysis;
+    }
+    
+    // Check for future trends related content
+    if (tagLabels.includes('future') || 
+        tagLabels.includes('trends') || 
+        content.includes('future') || 
+        content.includes('trend') || 
+        content.includes('prediction')) {
+      return blogSvgs.future_trends;
+    }
+    
+    // Check for business strategy related content
+    if (tagLabels.includes('business') || 
+        tagLabels.includes('strategy') || 
+        content.includes('business') || 
+        content.includes('strategy') || 
+        content.includes('management')) {
+      return blogSvgs.business_strategy;
+    }
+    
+    // Default SVG if no specific category is matched
+    return blogSvgs.default;
+  }
 
   return (
     <Layout title={blogTitle} description={blogDescription}>
@@ -168,9 +490,12 @@ export default function BlogListPage(props) {
             {leftSidebarContent.map((item, idx) => (
               <BlogSidebarCard key={`left-${idx}`} {...item} />
             ))}
-            {leftSidebarContent.map((item, idx) => (
-              <BlogSidebarCard key={`left-${idx}`} {...item} />
-            ))}
+            {/* Show right sidebar content in left sidebar on mobile/tablet */}
+            <div className={styles.mobileRightSidebarContent}>
+              {rightSidebarContent.map((item, idx) => (
+                <BlogSidebarCard key={`right-mobile-${idx}`} {...item} />
+              ))}
+            </div>
           </aside>
 
           {/* Main Content */}
@@ -218,6 +543,10 @@ export default function BlogListPage(props) {
                         )}
                         <div key={`blog-${index}`} className={styles.blogCard}>
                           <div className={styles.blogCardInner}>
+                            {/* Display appropriate SVG based on blog post tags/content */}
+                            <div className={styles.blogCardSvgContainer}>
+                              {getSvgForBlogPost(metadata)}
+                            </div>
                             <div className={styles.blogCardContent}>
                               <div className={styles.blogCardHeader}>
                                 {tags && tags.length > 0 && (
