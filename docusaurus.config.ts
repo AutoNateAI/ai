@@ -99,6 +99,7 @@ const config: Config = {
       },
       items: [
         {to: '/workshops', label: 'Workshops', position: 'left'},
+        {to: '/courses', label: 'Courses', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'docSidebar',

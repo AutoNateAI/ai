@@ -1,0 +1,520 @@
+/* CourseDetail Component Styling */
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, var(--autonateai-primary-darker) 0%, var(--autonateai-primary) 50%, var(--autonateai-primary-lighter) 100%);
+  padding: 4rem 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 10%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 15%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroBadge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.heroDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.detailIcon {
+  font-size: 1.25rem;
+}
+
+.heroCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.primaryButton {
+  background-color: white;
+  color: var(--autonateai-primary);
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.priceTag {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.currentPrice {
+  color: white;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  opacity: 0.7;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Section Common Styles */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Description Section */
+.descriptionSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.sectionContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.problemStatement {
+  text-align: center;
+}
+
+.descriptionText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Learning Journey Section */
+.journeySection {
+  padding: 4rem 0;
+  background: linear-gradient(to right, rgba(var(--autonateai-primary-rgb), 0.05), rgba(var(--autonateai-primary-rgb), 0.1));
+}
+
+.modulesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.moduleCard {
+  display: flex;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moduleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.moduleNumber {
+  background-color: var(--autonateai-primary);
+  color: white;
+  padding: 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.moduleContent {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.moduleTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-heading-color);
+}
+
+.moduleDescription {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1rem;
+}
+
+.interactiveElements {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 1rem;
+}
+
+.interactiveTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.elementTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.elementTag {
+  background-color: rgba(var(--autonateai-primary-rgb), 0.1);
+  color: var(--autonateai-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Creator Section */
+.creatorSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.creatorProfile {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.creatorInfo {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.creatorName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.creatorTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--autonateai-primary);
+  margin-bottom: 0.5rem;
+}
+
+.creatorInstitution {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.creatorExpertise {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.creatorCredentials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.credentialItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Learning Outcomes Section */
+.outcomesSection {
+  padding: 4rem 0;
+  background: linear-gradient(to right, rgba(var(--autonateai-primary-rgb), 0.05), rgba(var(--autonateai-primary-rgb), 0.1));
+}
+
+.outcomesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.outcomeItem {
+  display: flex;
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.outcomeIcon {
+  color: var(--autonateai-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-right: 1rem;
+  min-width: 20px;
+}
+
+.outcomeText {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-800);
+  margin: 0;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.testimonialsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonialCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+}
+
+.testimonialQuote {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.testimonialAuthor {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 1rem;
+}
+
+.authorName {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ifm-heading-color);
+  margin-bottom: 0.25rem;
+}
+
+.authorRole {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Enroll Section */
+.enrollSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--autonateai-primary-darker) 0%, var(--autonateai-primary) 100%);
+}
+
+.enrollCard {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.enrollContent {
+  padding: 3rem;
+  text-align: center;
+}
+
+.enrollTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.enrollDescription {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.enrollDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.enrollDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.25rem;
+}
+
+.detailValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.enrollAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.finalPrice {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.enrollButton {
+  background-color: var(--autonateai-primary);
+  color: white;
+  padding: 0.75rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(var(--autonateai-primary-rgb), 0.3);
+  display: inline-block;
+}
+
+.enrollButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(var(--autonateai-primary-rgb), 0.4);
+  text-decoration: none;
+  background-color: var(--autonateai-primary-darker);
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+  
+  .moduleCard {
+    flex-direction: column;
+  }
+  
+  .moduleNumber {
+    padding: 0.75rem;
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .enrollContent {
+    padding: 2rem 1.5rem;
+  }
+  
+  .heroDetails {
+    gap: 1rem;
+  }
+  
+  .testimonialsList {
+    grid-template-columns: 1fr;
+  }
+}

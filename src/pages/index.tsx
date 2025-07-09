@@ -16,42 +16,42 @@ function HeroSection() {
         <div className={styles.heroContent}>
           <div className={styles.cognitiveIndicator}>
             <span className={styles.pulseDot}></span>
-            <span className={styles.statusText}>Private Intelligence Suite: Active</span>
+            <span className={styles.statusText}>Research Intelligence Suite: Active</span>
           </div>
           
           <Heading as="h1" className={styles.heroTitle}>
-            Your Mind Is <span className="gradient-text">Maxed Out</span>
+            Your Mind Is <span className="gradient-text-light">Maxed Out</span>
           </Heading>
           
           <p className={styles.heroSubtitle}>
-            You're brilliant. But your brain is doing the work that AI should handle—leaving no space for the strategic thinking that built your family's success.
+            You're brilliant. But your brain is doing the work that AI should handle—leaving no space for the innovative thinking that drives groundbreaking research.
           </p>
           
           <div className={styles.heroValueProps}>
             <div className={styles.valueCard}>
               <div className={styles.valueIcon}>🧠</div>
-              <div className={styles.valueText}>Free Your Mind</div>
+              <div className={styles.valueText}>Accelerate Research</div>
             </div>
             <div className={styles.valueCard}>
               <div className={styles.valueIcon}>⚡</div>
-              <div className={styles.valueText}>Think Strategically</div>
+              <div className={styles.valueText}>Enhance Publications</div>
             </div>
             <div className={styles.valueCard}>
               <div className={styles.valueIcon}>🎯</div>
-              <div className={styles.valueText}>Lead With Clarity</div>
+              <div className={styles.valueText}>Amplify Impact</div>
             </div>
           </div>
           
           <div className={styles.heroCTAGroup}>
             <Link
-              to="/ai/knowledge-base"
+              to="/ai/courses"
               className="button button--primary button--lg">
-              See How It Works
+              Explore AI Courses
             </Link>
             <Link
               to="/ai/workshops"
               className="button button--secondary button--lg">
-              Book a Private Call
+              Request Workshop
             </Link>
           </div>
         </div>
@@ -68,38 +68,38 @@ function RecognitionSection() {
         <div className={styles.sectionContent}>
           <div className={styles.lightHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Picture This: It's 2 AM and Your Mind Won't Stop
+              Picture This: Your Research Deadline Looms and Your Mind Won't Focus
             </Heading>
             <p className={styles.sectionSubtitle}>
-              You're lying awake, not because you lack intelligence—but because your brilliant mind is drowning in information processing when it should be pattern-making.
+              You're struggling to make progress, not because you lack expertise—but because your brilliant mind is drowning in information processing when it should be synthesizing groundbreaking insights.
             </p>
           </div>
           
           <div className={styles.clarityGrid}>
             <div className={styles.clarityCard}>
               <div className={styles.cardIcon}>📊</div>
-              <h3 className={styles.cardTitle}>The Information Trap</h3>
+              <h3 className={styles.cardTitle}>The Literature Review Challenge</h3>
               <p className={styles.cardDescription}>
-                Your brain—designed for strategic insight—spends 70% of its time sorting through data, 
-                reports, and noise instead of seeing the patterns that create opportunities.
+                Your brain—designed for innovative insight—spends 70% of its time sorting through papers, 
+                data, and citations instead of seeing the patterns that create breakthrough discoveries.
               </p>
             </div>
             
             <div className={styles.clarityCard}>
               <div className={styles.cardIcon}>🔄</div>
-              <h3 className={styles.cardTitle}>The Decision Fatigue Cycle</h3>
+              <h3 className={styles.cardTitle}>The Publication Pressure Cycle</h3>
               <p className={styles.cardDescription}>
-                Every small choice drains the mental energy you need for the big decisions that 
-                shape your business, family, and legacy.
+                Every administrative task drains the mental energy you need for the big ideas that 
+                advance your field and secure your academic reputation.
               </p>
             </div>
             
             <div className={styles.clarityCard}>
               <div className={styles.cardIcon}>⏰</div>
-              <h3 className={styles.cardTitle}>The Time Paradox</h3>
+              <h3 className={styles.cardTitle}>The Research Time Paradox</h3>
               <p className={styles.cardDescription}>
-                You have more access to information than ever, but less time to think deeply about 
-                what actually matters for long-term success.
+                You have more access to research than ever, but less time to think deeply about 
+                the connections that could lead to your next breakthrough publication.
               </p>
             </div>
           </div>
@@ -117,10 +117,10 @@ function IntersectionSection() {
         <div className={styles.partnershipContent}>
           <div className={styles.partnershipHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              What If AI Handled the Noise, So You Could Hear the Signal?
+              What If AI Handled the Literature Review, So You Could Focus on Original Insights?
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Think of it like having a brilliant research assistant who never sleeps—one that filters everything so your mind can focus on what only you can do.
+              Think of it like having a brilliant research assistant who never sleeps—one that processes thousands of papers so your mind can focus on what only you can do: generate groundbreaking ideas.
             </p>
           </div>
           
@@ -128,11 +128,11 @@ function IntersectionSection() {
             <div className={styles.partnershipColumn}>
               <div className={styles.partnershipCard}>
                 <div className={styles.partnershipIcon}>🔍</div>
-                <h3 className={styles.partnershipTitle}>The Information Filter</h3>
+                <h3 className={styles.partnershipTitle}>The Research Accelerator</h3>
                 <ul className={styles.partnershipList}>
-                  <li>Instead of you reading 50 reports, AI reads them and shows you the 3 insights that matter</li>
-                  <li>Your brain stays fresh for the strategic thinking that creates value</li>
-                  <li><strong>Example:</strong> "AI scanned 847 market reports. Here are the 2 patterns that could impact your Q4 strategy."</li>
+                  <li>Instead of you reading 200 papers, AI analyzes them and highlights the 5 most relevant to your research</li>
+                  <li>Your brain stays fresh for the innovative thinking that advances your field</li>
+                  <li><strong>Example:</strong> "AI analyzed 1,247 papers in your field. Here are 3 methodological gaps your research could address."</li>
                 </ul>
               </div>
             </div>
@@ -145,12 +145,12 @@ function IntersectionSection() {
             <div className={styles.partnershipColumn}>
               <div className={styles.partnershipCard}>
                 <div className={styles.partnershipIcon}>🎯</div>
-                <h3 className={styles.partnershipTitle}>Your Strategic Focus</h3>
+                <h3 className={styles.partnershipTitle}>Your Academic Focus</h3>
                 <ul className={styles.partnershipList}>
-                  <li>Pattern recognition and strategic interpretation</li>
-                  <li>Creative synthesis and decision-making</li>
-                  <li>Relationship building and legacy planning</li>
-                  <li>Vision-led leadership and timing decisions</li>
+                  <li>Novel hypothesis generation and theoretical frameworks</li>
+                  <li>Creative synthesis and methodological innovation</li>
+                  <li>Interdisciplinary connections and collaboration opportunities</li>
+                  <li>Research agenda development and grant proposal crafting</li>
                 </ul>
               </div>
             </div>
@@ -169,48 +169,48 @@ function BrainPotentialSection() {
         <div className={styles.frameworkContent}>
           <div className={styles.frameworkHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Imagine Your Mind Working Like This...
+              Imagine Your Research Workflow Working Like This...
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Picture walking into a board meeting where you've already seen the patterns others missed, 
-              considered scenarios they haven't thought of, and arrived at clarity while they're still processing data.
+              Picture submitting a paper where you've identified connections others missed, 
+              developed methodologies they haven't considered, and articulated insights while they're still processing literature reviews.
             </p>
           </div>
           
           <div className={styles.frameworkGrid}>
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>01</div>
-              <h3 className={styles.phaseTitle}>Monday Morning Clarity</h3>
+              <h3 className={styles.phaseTitle}>Literature Review Acceleration</h3>
               <p className={styles.phaseDescription}>
-                You start the week with AI-filtered insights instead of a mountain of emails. 
-                Your first hour is spent on strategy, not catching up on noise.
+                You start your research with AI-filtered papers instead of weeks of manual searching. 
+                Your first day is spent on hypothesis development, not drowning in citations.
               </p>
             </div>
             
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>02</div>
-              <h3 className={styles.phaseTitle}>The Investment Decision</h3>
+              <h3 className={styles.phaseTitle}>The Methodology Enhancement</h3>
               <p className={styles.phaseDescription}>
-                Instead of spending weeks analyzing market data, AI presents you with three clear options. 
-                You focus on intuition, values, and long-term vision—not spreadsheets.
+                Instead of spending weeks refining your approach, AI helps identify methodological gaps and opportunities. 
+                You focus on innovation and rigor—not reinventing established protocols.
               </p>
             </div>
             
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>03</div>
-              <h3 className={styles.phaseTitle}>Family Legacy Planning</h3>
+              <h3 className={styles.phaseTitle}>Publication Preparation</h3>
               <p className={styles.phaseDescription}>
-                AI tracks cultural shifts and generational trends. You focus on teaching your children 
-                timeless principles while staying relevant to their world.
+                AI assists with formatting, citations, and language refinement. You focus on communicating 
+                your groundbreaking ideas with clarity and precision for maximum impact.
               </p>
             </div>
             
             <div className={styles.frameworkPhase}>
               <div className={styles.phaseNumber}>04</div>
-              <h3 className={styles.phaseTitle}>The Bottom Line</h3>
+              <h3 className={styles.phaseTitle}>The Academic Impact</h3>
               <p className={styles.phaseDescription}>
-                Your mind gets back to doing what it does best: seeing connections, making judgment calls, 
-                and thinking three moves ahead—while AI handles the heavy lifting of information processing.
+                Your mind gets back to doing what it does best: generating novel hypotheses, designing innovative studies, 
+                and advancing your field—while AI handles the heavy lifting of information processing.
               </p>
             </div>
           </div>
@@ -228,50 +228,50 @@ function CommunitySection() {
         <div className={styles.libraryContent}>
           <div className={styles.libraryHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              You're Not Meant to Figure This Out Alone
+              You're Not Meant to Master AI Research Tools Alone
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Join other high-achievers who've discovered that the real competitive advantage isn't working harder—it's thinking clearer.
+              Join other academic innovators who've discovered that the real research advantage isn't just expertise—it's leveraging AI to amplify your intellectual contributions.
             </p>
           </div>
           
           <div className={styles.libraryGrid}>
             <div className={styles.libraryCard}>
-              <div className={styles.categoryTag}>Mental Models</div>
-              <h3 className={styles.libraryTitle}>Mental Models Library</h3>
+              <div className={styles.categoryTag}>Research Methods</div>
+              <h3 className={styles.libraryTitle}>AI Research Methods</h3>
               <p className={styles.libraryPreview}>
-                Proven thinking frameworks that help you make better decisions under pressure. 
-                No theory—just tools that work when stakes are high.
+                Proven AI workflows that help you accelerate literature reviews and data analysis. 
+                No hype—just tools that work when publication deadlines loom.
               </p>
               <div className={styles.libraryMeta}>
-                <span className={styles.readTime}>Example: "The 10-10-10 Rule for family business decisions"</span>
-                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Access Library →</Link>
+                <span className={styles.readTime}>Example: "Using AI to identify research gaps in interdisciplinary fields"</span>
+                <Link to="/ai/courses" className={styles.readMore}>Access Courses →</Link>
               </div>
             </div>
             
             <div className={styles.libraryCard}>
-              <div className={styles.categoryTag}>Private Circle</div>
-              <h3 className={styles.libraryTitle}>Connect with Peers</h3>
+              <div className={styles.categoryTag}>Academic Community</div>
+              <h3 className={styles.libraryTitle}>Connect with Researchers</h3>
               <p className={styles.libraryPreview}>
-                Connect with other leaders facing similar challenges. Share insights without the noise 
-                of typical networking events or social media.
+                Connect with other professors and researchers leveraging AI. Share methodologies without the 
+                steep learning curve of figuring it out on your own.
               </p>
               <div className={styles.libraryMeta}>
-                <span className={styles.readTime}>Monthly case studies from real family offices</span>
-                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>Join Circle →</Link>
+                <span className={styles.readTime}>Monthly workshops for university departments</span>
+                <Link to="/ai/workshops" className={styles.readMore}>Request Workshop →</Link>
               </div>
             </div>
             
             <div className={styles.libraryCard}>
-              <div className={styles.categoryTag}>AI Tools</div>
-              <h3 className={styles.libraryTitle}>AI Tool Reviews</h3>
+              <div className={styles.categoryTag}>AI Modules</div>
+              <h3 className={styles.libraryTitle}>AI Course Modules</h3>
               <p className={styles.libraryPreview}>
-                We test the latest AI tools so you don't waste time on hype. Get recommendations 
-                that actually save mental energy instead of creating more complexity.
+                We've developed specialized modules for academic research workflows. Learn how to use 
+                ChatGPT, Claude, and other AI tools specifically for research and publication.
               </p>
               <div className={styles.libraryMeta}>
-                <span className={styles.readTime}>Example: "Which AI assistant works best for strategic planning?"</span>
-                <Link to="/ai/knowledge-base/intelligence/cognitive-intelligence-foundations" className={styles.readMore}>See Reviews →</Link>
+                <span className={styles.readTime}>Example: "How to use AI to strengthen your literature review methodology"</span>
+                <Link to="/ai/courses" className={styles.readMore}>Browse Modules →</Link>
               </div>
             </div>
           </div>
@@ -289,10 +289,10 @@ function SocialProofSection() {
         <div className={styles.showcaseContent}>
           <div className={styles.showcaseHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Here's What Happens When You Get Your Mind Back
+              Here's What Happens When You Integrate AI Into Your Research
             </Heading>
             <p className={styles.sectionSubtitle}>
-              Real results from leaders who stopped drowning in information and started swimming in clarity.
+              Real results from academics who stopped drowning in literature reviews and started focusing on original contributions.
             </p>
           </div>
           
@@ -302,10 +302,10 @@ function SocialProofSection() {
                 <div className={styles.imagePreview}>70%</div>
               </div>
               <div className={styles.showcaseCaption}>
-                Less Time on Information Processing
+                Less Time on Literature Reviews
               </div>
               <p className={styles.showcaseDescription}>
-                Instead of spending mornings catching up on reports, you spend them thinking about strategy.
+                Instead of spending weeks on manual citation searches, you spend days synthesizing key insights for your research.
               </p>
             </div>
             
@@ -314,10 +314,10 @@ function SocialProofSection() {
                 <div className={styles.imagePreview}>3x</div>
               </div>
               <div className={styles.showcaseCaption}>
-                Better Strategic Decisions
+                Higher Publication Quality
               </div>
               <p className={styles.showcaseDescription}>
-                When your mind isn't cluttered with noise, you see patterns and opportunities others miss.
+                When your mind isn't exhausted from administrative tasks, you develop stronger methodologies and clearer arguments.
               </p>
             </div>
             
@@ -326,10 +326,10 @@ function SocialProofSection() {
                 <div className={styles.imagePreview}>85%</div>
               </div>
               <div className={styles.showcaseCaption}>
-                More Confidence in Choices
+                More Research Productivity
               </div>
               <p className={styles.showcaseDescription}>
-                Clear thinking leads to clear decisions. No more second-guessing yourself into paralysis.
+                Streamlined workflows lead to more submissions. No more getting stuck in endless literature reviews.
               </p>
             </div>
           </div>
@@ -347,10 +347,10 @@ function FutureYouSection() {
         <div className={styles.pathwayContent}>
           <div className={styles.pathwayHeader}>
             <Heading as="h2" className={styles.sectionTitle}>
-              Picture Yourself Six Months From Now
+              Picture Your Research Six Months From Now
             </Heading>
             <p className={styles.sectionSubtitle}>
-              What would change in your life if your mind was free to focus on vision instead of overwhelm?
+              What would change in your academic output if your mind was free to focus on innovation instead of administration?
             </p>
           </div>
           
@@ -358,10 +358,10 @@ function FutureYouSection() {
             <div className={styles.pathwayStep}>
               <div className={styles.stepNumber}>1</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>Before: Mental Overload</h3>
+                <h3 className={styles.stepTitle}>Before: Research Overload</h3>
                 <p className={styles.stepDescription}>
-                  Mornings spent catching up on endless reports. Decision paralysis from too much information. 
-                  Family time interrupted by work thoughts. Feeling behind despite working constantly.
+                  Weeks spent on manual literature reviews. Analysis paralysis from too many papers. 
+                  Personal time sacrificed for administrative tasks. Feeling behind despite working constantly.
                 </p>
               </div>
             </div>
@@ -371,10 +371,10 @@ function FutureYouSection() {
             <div className={styles.pathwayStep}>
               <div className={styles.stepNumber}>2</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>AI handles the noise</h3>
+                <h3 className={styles.stepTitle}>AI handles the research grunt work</h3>
                 <p className={styles.stepDescription}>
-                  Information filtering, pattern recognition, and data processing—leaving your mind free 
-                  for strategic thinking and creative problem-solving.
+                  Literature analysis, citation management, and data visualization—leaving your mind free 
+                  for theoretical innovation and methodological breakthroughs.
                 </p>
               </div>
             </div>
@@ -384,10 +384,10 @@ function FutureYouSection() {
             <div className={styles.pathwayStep}>
               <div className={styles.stepNumber}>3</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>After: Mental Clarity</h3>
+                <h3 className={styles.stepTitle}>After: Research Clarity</h3>
                 <p className={styles.stepDescription}>
-                  Mornings start with strategic thinking. Confident decisions based on clear insights. 
-                  Present during family moments. Leading from vision, not reaction. Time to consider what really matters.
+                  Research begins with innovative hypotheses. Confident submissions based on comprehensive analysis. 
+                  Better work-life balance. Leading your field with original insights, not just keeping up. Time to pursue what really advances knowledge.
                 </p>
               </div>
             </div>
