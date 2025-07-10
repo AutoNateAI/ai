@@ -607,6 +607,7 @@ h1 {
   background: linear-gradient(135deg, var(--psychology-purple) 0%, var(--culture-orange) 100%);
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
 }
 
 .button--primary:hover {
