@@ -83,6 +83,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  color: black;
 }
 
 .primaryButton {
@@ -136,7 +137,7 @@
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--autonate-text-primary);
 }
 
 /* Description Section */
@@ -278,26 +279,28 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--ifm-heading-color);
+  color: var(--autonate-text-primary);
 }
 
 .creatorTitle {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--autonateai-primary);
+  color: var(--autonate-primary);
   margin-bottom: 0.5rem;
 }
 
 .creatorInstitution {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--autonate-text-secondary);
+  font-weight: 500;
 }
 
 .creatorExpertise {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--autonate-text-secondary);
+  font-weight: 500;
 }
 
 .creatorCredentials {
@@ -314,13 +317,14 @@
   align-items: flex-start;
   gap: 0.5rem;
   font-size: 0.95rem;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--autonate-text-primary);
+  font-weight: 500;
 }
 
 /* Learning Outcomes Section */
 .outcomesSection {
   padding: 4rem 0;
-  background: linear-gradient(to right, rgba(var(--autonateai-primary-rgb), 0.05), rgba(var(--autonateai-primary-rgb), 0.1));
+  background: linear-gradient(to right, rgba(var(--autonate-primary-rgb), 0.05), rgba(var(--autonate-primary-rgb), 0.1));
 }
 
 .outcomesList {
@@ -342,7 +346,7 @@
 }
 
 .outcomeIcon {
-  color: var(--autonateai-primary);
+  color: var(--autonate-primary);
   font-size: 1.25rem;
   font-weight: 700;
   margin-right: 1rem;
@@ -351,8 +355,9 @@
 
 .outcomeText {
   font-size: 1rem;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--autonate-text-primary);
   margin: 0;
+  font-weight: 500;
 }
 
 /* Testimonials Section */
@@ -373,8 +378,9 @@
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  border: 1px solid var(--neutral-light-gray);
 }
 
 .testimonialCard:hover {
@@ -386,7 +392,9 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-style: italic;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--autonate-text-secondary);
+  font-weight: 500;
+  position: relative;
 }
 
 .testimonialAuthor {
@@ -397,19 +405,20 @@
 .authorName {
   font-weight: 700;
   font-size: 1rem;
-  color: var(--ifm-heading-color);
+  color: var(--autonate-text-primary);
   margin-bottom: 0.25rem;
 }
 
 .authorRole {
   font-size: 0.9rem;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--autonate-text-secondary);
+  font-weight: 500;
 }
 
 /* Enroll Section */
 .enrollSection {
   padding: 4rem 0;
-  background: linear-gradient(135deg, var(--autonateai-primary-darker) 0%, var(--autonateai-primary) 100%);
+  background: linear-gradient(135deg, var(--autonate-primary-darker) 0%, var(--autonate-primary) 100%);
 }
 
 .enrollCard {
@@ -430,16 +439,19 @@
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: var(--ifm-heading-color);
+  color: var(--autonate-text-primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .enrollDescription {
   font-size: 1.1rem;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--autonate-text-secondary);
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .enrollDetails {
