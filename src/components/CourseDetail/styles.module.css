@@ -417,30 +417,97 @@
 
 /* Enroll Section */
 .enrollSection {
-  padding: 4rem 0;
+  padding: 6rem 0;
   background: linear-gradient(135deg, var(--autonate-primary-darker) 0%, var(--autonate-primary) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.enrollSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><rect fill="rgba(255,255,255,0.05)" x="25" y="25" width="50" height="50" transform="rotate(45 50 50)"/></svg>');
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .enrollCard {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+  overflow: visible;
   max-width: 900px;
   margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.enrollCard::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 120px;
+  height: 120px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="40" fill="rgba(94, 106, 255, 0.15)" /><circle cx="60" cy="60" r="20" fill="rgba(94, 106, 255, 0.25)" /></svg>');
+  z-index: -1;
+}
+
+.enrollCard::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"><rect x="30" y="30" width="90" height="90" rx="20" fill="rgba(94, 106, 255, 0.1)" transform="rotate(15 75 75)" /><rect x="45" y="45" width="60" height="60" rx="10" fill="rgba(94, 106, 255, 0.2)" transform="rotate(15 75 75)" /></svg>');
+  z-index: -1;
+}
+
+.enrollCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
 }
 
 .enrollContent {
-  padding: 3rem;
+  padding: 3.5rem;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .enrollTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: var(--autonate-text-primary);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--autonate-text-primary) 0%, var(--autonate-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.enrollTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--autonate-primary);
+  border-radius: 2px;
 }
 
 .enrollDescription {
@@ -455,65 +522,196 @@
 }
 
 .enrollDetails {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2.5rem 0;
+  position: relative;
+  z-index: 3;
 }
 
 .enrollDetail {
+  flex: 1;
+  min-width: 180px;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.25rem 1rem;
+  transition: all 0.2s ease;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.enrollDetail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--autonate-primary), transparent);
+}
+
+.enrollDetail:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .detailLabel {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--ifm-color-emphasis-600);
-  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--autonate-text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  background: linear-gradient(120deg, var(--autonate-text-secondary), var(--autonate-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.detailLabel::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 0.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.enrollDetail:nth-child(1) .detailLabel::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%235E6AFF"><path d="M12 2L1 21h22L12 2zm0 4.1L18.6 19H5.4L12 6.1z"/></svg>');
+}
+
+.enrollDetail:nth-child(2) .detailLabel::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%235E6AFF"><path d="M14,17H7V15H14M17,13H7V11H17M17,9H7V7H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z"/></svg>');
+}
+
+.enrollDetail:nth-child(3) .detailLabel::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%235E6AFF"><path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>');
 }
 
 .detailValue {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--ifm-color-emphasis-900);
+  color: var(--autonate-text-primary);
+  position: relative;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
 }
 
 .enrollAction {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  position: relative;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.8));
+  border-radius: 0 0 24px 24px;
 }
 
 .finalPrice {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-right: 0.5rem;
+  color: var(--autonate-primary);;
+}
+
+.finalPrice2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-right: 0.5rem;
+  color: var(--autonate-primary);;
+}
+
+.finalPrice span {
+  position: relative;
+  z-index: 2;
+}
+
+.finalPrice::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 8px;
+  background: rgba(var(--autonate-primary-rgb), 0.2);
+  bottom: 8px;
+  left: -10%;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.finalPrice::before {
+  content: '$';
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, var(--autonate-primary) 0%, var(--autonate-primary-darker) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.8;
 }
 
 .enrollButton {
-  background-color: var(--autonate-primary);
-  color: white;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  box-shadow: 0 5px 15px rgba(var(--autonate-primary-rgb), 0.3);
+  background: white;
+  color: var(--autonate-primary);
+  padding: 1.25rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 10px 25px rgba(var(--autonate-primary-rgb), 0.2);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  transform: translateY(0);
+  margin-top: 1rem;
+}
+
+.enrollButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
+  pointer-events: none;
 }
 
 .enrollButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(var(--autonate-primary-rgb), 0.4);
   text-decoration: none;
-  background-color: var(--autonate-secondary);
-  color: white;
+  background: linear-gradient(135deg, var(--autonate-primary) 0%, var(--autonate-primary-darker) 100%);
+  color: var(--autonate-primary);;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styles */

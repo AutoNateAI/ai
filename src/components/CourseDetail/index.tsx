@@ -219,7 +219,7 @@ export default function CourseDetail({ course }: CourseDetailProps): JSX.Element
               </div>
               <div className={styles.enrollAction}>
                 <div className={styles.finalPrice}>
-                  <span className={styles.currentPrice}>${course.price}</span>
+                  <span className={styles.currentPrice2}>${course.price}</span>
                   {course.originalPrice && (
                     <span className={styles.originalPrice}>${course.originalPrice}</span>
                   )}
