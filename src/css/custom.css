@@ -11,6 +11,14 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
+blockquote {
+  color: navy;
+  background-color: #f5f5f5;
+  font-style: italic;
+  padding: 1rem;
+  font-weight: 500;
+}
+
 /* Fixed navigation at the top */
 .navbar {
   position: fixed !important;
