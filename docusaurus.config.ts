@@ -98,9 +98,6 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-        {to: '/workshops', label: 'Workshops', position: 'left'},
-        {to: '/courses', label: 'Courses', position: 'left'},
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'knowledgeBaseSidebar',
@@ -108,6 +105,10 @@ const config: Config = {
           label: 'Knowledge Base',
           to: '/knowledge-base',
         },
+        {to: '/courses', label: 'Courses', position: 'left'},
+        {to: '/workshops', label: 'Workshops', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/contact', label: 'Contact', position: 'left'},
       ],
     },
     footer: {

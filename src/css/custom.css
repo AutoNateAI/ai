@@ -38,6 +38,7 @@ html, body {
   --neural-blue: #1E40AF; /* Deep Blue */
   --psychology-purple: #7C3AED; /* Purple */
   --culture-orange: #EA580C; /* Orange */
+  --autonate-primary-rgb: 99, 102, 241; /* RGB values for opacity control */
   
   /* AutoNate Text Colors */
   --autonate-text-primary: #1E293B; /* Dark Slate */

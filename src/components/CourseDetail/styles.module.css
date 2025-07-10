@@ -2,11 +2,12 @@
 
 /* Hero Section */
 .heroSection {
-  background: linear-gradient(135deg, var(--autonateai-primary-darker) 0%, var(--autonateai-primary) 50%, var(--autonateai-primary-lighter) 100%);
+  background: linear-gradient(135deg, var(--autonate-primary) 0%, var(--autonate-secondary) 60%, var(--autonate-accent) 100%);
   padding: 4rem 0;
   color: white;
   position: relative;
   overflow: hidden;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .heroSection::before {
@@ -47,6 +48,7 @@
   margin-bottom: 1rem;
   font-weight: 800;
   line-height: 1.2;
+  color: var(--autonate-text-primary);
 }
 
 .heroSubtitle {
@@ -54,6 +56,7 @@
   margin-bottom: 1.5rem;
   opacity: 0.9;
   line-height: 1.6;
+  color: var(--autonate-text-secondary);
 }
 
 .heroDetails {
@@ -155,6 +158,7 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
+  color: var(--autonate-text-primary);
 }
 
 /* Learning Journey Section */
@@ -173,11 +177,13 @@
 
 .moduleCard {
   display: flex;
-  background-color: var(--ifm-background-surface-color);
-  border-radius: 12px;
+  background-color: white;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--neutral-light-gray);
 }
 
 .moduleCard:hover {
@@ -186,7 +192,7 @@
 }
 
 .moduleNumber {
-  background-color: var(--autonateai-primary);
+  background-color: var(--autonate-primary);
   color: white;
   padding: 1.5rem;
   font-weight: 700;
@@ -195,51 +201,57 @@
   align-items: center;
   justify-content: center;
   min-width: 100px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .moduleContent {
   padding: 1.5rem;
-  flex: 1;
+  flex-grow: 1;
+  color: var(--autonate-text-primary);
 }
 
 .moduleTitle {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.5rem;
   margin-bottom: 0.75rem;
-  color: var(--ifm-heading-color);
+  font-weight: 700;
+  color: var(--autonate-text-primary);
 }
 
 .moduleDescription {
   font-size: 1rem;
-  color: var(--ifm-color-emphasis-700);
-  margin-bottom: 1rem;
+  color: var(--autonate-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .interactiveElements {
-  border-top: 1px solid var(--ifm-color-emphasis-200);
+  margin-top: 1rem;
+  border-top: 1px solid var(--neutral-light-gray);
   padding-top: 1rem;
 }
 
 .interactiveTitle {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--autonate-text-primary);
 }
 
 .elementTags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .elementTag {
-  background-color: rgba(var(--autonateai-primary-rgb), 0.1);
-  color: var(--autonateai-primary);
+  background-color: var(--autonate-primary);
+  color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Creator Section */
@@ -258,7 +270,8 @@
   padding: 2rem;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--neutral-light-gray);
 }
 
 .creatorName {
@@ -323,7 +336,9 @@
   background-color: white;
   padding: 1.25rem;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--neutral-light-gray);
 }
 
 .outcomeIcon {
@@ -466,23 +481,26 @@
 }
 
 .enrollButton {
-  background-color: var(--autonateai-primary);
+  background-color: var(--autonate-primary);
   color: white;
-  padding: 0.75rem 2.5rem;
-  border-radius: 30px;
-  font-weight: 600;
+  padding: 0.75rem 2rem;
   font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(var(--autonateai-primary-rgb), 0.3);
   display: inline-block;
+  box-shadow: 0 5px 15px rgba(var(--autonate-primary-rgb), 0.3);
+  border: none;
+  cursor: pointer;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .enrollButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(var(--autonateai-primary-rgb), 0.4);
+  box-shadow: 0 8px 25px rgba(var(--autonate-primary-rgb), 0.4);
   text-decoration: none;
-  background-color: var(--autonateai-primary-darker);
+  background-color: var(--autonate-secondary);
   color: white;
 }
 
